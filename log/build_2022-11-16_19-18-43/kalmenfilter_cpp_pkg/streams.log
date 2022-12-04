@@ -1,0 +1,35 @@
+[0.080s] Invoking command in '/home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zeiad/sonar_ws/install/ping360_sonar:/home/zeiad/sonar_ws/install/opencv_tests:/opt/ros/eloquent /usr/bin/cmake --build /home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg -- -j12 -l12
+[0.219s] [35m[1mScanning dependencies of target state_subscriber[0m
+[0.329s] [ 50%] [32mBuilding CXX object CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o[0m
+[4.475s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:[m[K In member function ‘[01m[Kvoid SubscriberNode::callbackIMU(sensor_msgs::msg::Imu_<std::allocator<void> >::SharedPtr)[m[K’:
+[4.476s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:268:12:[m[K [01;31m[Kerror: [m[K‘[01m[KMatrix3x3[m[K’ is not a member of ‘[01m[Ktf2[m[K’
+[4.477s]        tf2::[01;31m[KMatrix3x3[m[K m(q);
+[4.478s]             [01;31m[K^~~~~~~~~[m[K
+[4.478s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:270:7:[m[K [01;31m[Kerror: [m[K‘[01m[Km[m[K’ was not declared in this scope
+[4.478s]        [01;31m[Km[m[K.getRPY(roll, pitch, yaw);
+[4.478s]        [01;31m[K^[m[K
+[4.480s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:270:7:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Ktm[m[K’
+[4.480s]        [01;36m[Km[m[K.getRPY(roll, pitch, yaw);
+[4.481s]        [01;36m[K^[m[K
+[4.481s]        [32m[Ktm[m[K
+[4.481s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:272:35:[m[K [01;31m[Kerror: [m[K‘[01m[Kvariable[m[K’ was not declared in this scope
+[4.481s]        std::cout << "variable:" << [01;31m[Kvariable[m[K << "\n";
+[4.481s]                                    [01;31m[K^~~~~~~~[m[K
+[4.488s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:272:35:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kmutable[m[K’
+[4.489s]        std::cout << "variable:" << [01;36m[Kvariable[m[K << "\n";
+[4.489s]                                    [01;36m[K^~~~~~~~[m[K
+[4.489s]                                    [32m[Kmutable[m[K
+[4.490s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:273:17:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K<<[m[K’ token
+[4.490s]                  [01;31m[K<<[m[K msg->orientation.x,
+[4.490s]                  [01;31m[K^~[m[K
+[4.984s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:[m[K In member function ‘[01m[Kvoid SubscriberNode::callbackGroundTruth(gazebo_msgs::msg::LinkStates_<std::allocator<void> >::SharedPtr)[m[K’:
+[4.984s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:479:74:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[4.984s]    void callbackGroundTruth(const gazebo_msgs::msg::LinkStates::SharedPtr [01;35m[Kmsg[m[K)
+[4.985s]                                                                           [01;35m[K^~~[m[K
+[13.435s] CMakeFiles/state_subscriber.dir/build.make:62: recipe for target 'CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o' failed
+[13.435s] make[2]: *** [CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o] Error 1
+[13.435s] CMakeFiles/Makefile2:99: recipe for target 'CMakeFiles/state_subscriber.dir/all' failed
+[13.435s] make[1]: *** [CMakeFiles/state_subscriber.dir/all] Error 2
+[13.436s] Makefile:140: recipe for target 'all' failed
+[13.436s] make: *** [all] Error 2
+[13.438s] Invoked command in '/home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zeiad/sonar_ws/install/ping360_sonar:/home/zeiad/sonar_ws/install/opencv_tests:/opt/ros/eloquent /usr/bin/cmake --build /home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg -- -j12 -l12

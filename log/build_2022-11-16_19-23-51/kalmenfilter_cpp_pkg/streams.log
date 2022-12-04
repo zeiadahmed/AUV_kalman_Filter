@@ -1,0 +1,14 @@
+[0.084s] Invoking command in '/home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zeiad/sonar_ws/install/ping360_sonar:/home/zeiad/sonar_ws/install/opencv_tests:/opt/ros/eloquent /usr/bin/cmake --build /home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg -- -j12 -l12
+[0.236s] [35m[1mScanning dependencies of target state_subscriber[0m
+[0.347s] [ 50%] [32mBuilding CXX object CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o[0m
+[0.644s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:12:10:[m[K [01;31m[Kfatal error: [m[KMatrix3x3.h: No such file or directory
+[0.644s]  #include [01;31m[K<Matrix3x3.h>[m[K
+[0.644s]           [01;31m[K^~~~~~~~~~~~~[m[K
+[0.644s] compilation terminated.
+[0.651s] CMakeFiles/state_subscriber.dir/build.make:62: recipe for target 'CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o' failed
+[0.652s] make[2]: *** [CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o] Error 1
+[0.652s] make[1]: *** [CMakeFiles/state_subscriber.dir/all] Error 2
+[0.652s] CMakeFiles/Makefile2:99: recipe for target 'CMakeFiles/state_subscriber.dir/all' failed
+[0.652s] make: *** [all] Error 2
+[0.652s] Makefile:140: recipe for target 'all' failed
+[0.655s] Invoked command in '/home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zeiad/sonar_ws/install/ping360_sonar:/home/zeiad/sonar_ws/install/opencv_tests:/opt/ros/eloquent /usr/bin/cmake --build /home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg -- -j12 -l12

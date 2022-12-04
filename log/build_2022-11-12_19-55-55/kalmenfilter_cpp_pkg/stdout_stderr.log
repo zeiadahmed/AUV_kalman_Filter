@@ -1,0 +1,51 @@
+[35m[1mScanning dependencies of target state_subscriber[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o[0m
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:20:14:[m[K [01;31m[Kerror: [m[K‘[01m[KEigen::Matrix12d[m[K’ has not been declared
+ using Eigen::[01;31m[KMatrix12d[m[K;
+              [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:22:14:[m[K [01;31m[Kerror: [m[K‘[01m[KEigen::Vector12d[m[K’ has not been declared
+ using Eigen::[01;31m[KVector12d[m[K;
+              [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:204:3:[m[K [01;31m[Kerror: [m[K‘[01m[KVector12d[m[K’ does not name a type
+   [01;31m[KVector12d[m[K state_vector ;
+   [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:205:3:[m[K [01;31m[Kerror: [m[K‘[01m[KMatrix12d[m[K’ does not name a type
+   [01;31m[KMatrix12d[m[K cov_matrix;
+   [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:[m[K In member function ‘[01m[KEigen::VectorXd SubscriberNode::getState()[m[K’:
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:63:30:[m[K [01;31m[Kerror: [m[K‘[01m[Kstate_vector[m[K’ was not declared in this scope
+   VectorXd getState(){return [01;31m[Kstate_vector[m[K;}
+                              [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:[m[K In member function ‘[01m[KEigen::MatrixXd SubscriberNode::getCov()[m[K’:
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:64:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kcov_matrix[m[K’ was not declared in this scope
+   MatrixXd getCov(){return [01;31m[Kcov_matrix[m[K;}
+                            [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:[m[K In member function ‘[01m[Kvoid SubscriberNode::setState(const VectorXd&)[m[K’:
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:65:48:[m[K [01;31m[Kerror: [m[K‘[01m[Kstate_vector[m[K’ was not declared in this scope
+   void setState(const VectorXd &current_state){[01;31m[Kstate_vector[m[K=current_state;}
+                                                [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:[m[K In member function ‘[01m[Kvoid SubscriberNode::setCov(const MatrixXd&)[m[K’:
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:66:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kcov_matrix[m[K’ was not declared in this scope
+   void setCov(const MatrixXd &current_cov){[01;31m[Kcov_matrix[m[K=current_cov;}
+                                            [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:[m[K In member function ‘[01m[Kvoid SubscriberNode::prediction_step(sensor_msgs::msg::Imu_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:71:63:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   void prediction_step(const sensor_msgs::msg::Imu::SharedPtr [01;35m[Kmsg[m[K ){
+                                                               [01;35m[K^~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:[m[K In member function ‘[01m[Kvoid SubscriberNode::callbackDVL(geometry_msgs::msg::TwistWithCovarianceStamped_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:125:32:[m[K [01;31m[Kerror: [m[K‘[01m[KVector12d[m[K’ was not declared in this scope
+       VectorXd current_state = [01;31m[KVector12d[m[K;
+                                [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:126:30:[m[K [01;31m[Kerror: [m[K‘[01m[KMatrix12d[m[K’ was not declared in this scope
+       MatrixXd current_cov = [01;31m[KMatrix12d[m[K;
+                              [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:[m[K In member function ‘[01m[Kvoid SubscriberNode::callbackGroundTruth(gazebo_msgs::msg::LinkStates_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:157:74:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   void callbackGroundTruth(const gazebo_msgs::msg::LinkStates::SharedPtr [01;35m[Kmsg[m[K)
+                                                                          [01;35m[K^~~[m[K
+CMakeFiles/state_subscriber.dir/build.make:62: recipe for target 'CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o' failed
+make[2]: *** [CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o] Error 1
+CMakeFiles/Makefile2:99: recipe for target 'CMakeFiles/state_subscriber.dir/all' failed
+make[1]: *** [CMakeFiles/state_subscriber.dir/all] Error 2
+make: *** [all] Error 2
+Makefile:140: recipe for target 'all' failed

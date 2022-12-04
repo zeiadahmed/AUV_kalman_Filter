@@ -1,0 +1,22 @@
+[0.209s] Invoking command in '/home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zeiad/sonar_ws/install/ping360_sonar:/home/zeiad/sonar_ws/install/opencv_tests:/opt/ros/eloquent /usr/bin/cmake --build /home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg -- -j12 -l12
+[0.318s] -- Found ament_cmake: 0.8.3 (/opt/ros/eloquent/share/ament_cmake/cmake)
+[0.515s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.811s] -- Found rclcpp: 0.8.5 (/opt/ros/eloquent/share/rclcpp/cmake)
+[1.871s] -- Found rosidl_adapter: 0.8.3 (/opt/ros/eloquent/share/rosidl_adapter/cmake)
+[1.991s] -- Found rmw_implementation_cmake: 0.8.1 (/opt/ros/eloquent/share/rmw_implementation_cmake/cmake)
+[2.005s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.124s] -- Found std_msgs: 0.8.1 (/opt/ros/eloquent/share/std_msgs/cmake)
+[2.154s] -- Found sensor_msgs: 0.8.1 (/opt/ros/eloquent/share/sensor_msgs/cmake)
+[2.245s] -- Found gazebo_msgs: 3.4.4 (/opt/ros/eloquent/share/gazebo_msgs/cmake)
+[2.407s] -- Found nav_msgs: 0.8.1 (/opt/ros/eloquent/share/nav_msgs/cmake)
+[2.776s] CMake Error at CMakeLists.txt:36 (target_link_libraries):
+[2.778s]   Cannot specify link libraries for target "kalmenfilter_cpp_pkg" which is
+[2.779s]   not built by this project.
+[2.779s] 
+[2.780s] 
+[2.780s] -- Configuring incomplete, errors occurred!
+[2.781s] See also "/home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg/CMakeFiles/CMakeOutput.log".
+[2.781s] See also "/home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg/CMakeFiles/CMakeError.log".
+[2.788s] Makefile:266: recipe for target 'cmake_check_build_system' failed
+[2.788s] make: *** [cmake_check_build_system] Error 1
+[2.791s] Invoked command in '/home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zeiad/sonar_ws/install/ping360_sonar:/home/zeiad/sonar_ws/install/opencv_tests:/opt/ros/eloquent /usr/bin/cmake --build /home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg -- -j12 -l12

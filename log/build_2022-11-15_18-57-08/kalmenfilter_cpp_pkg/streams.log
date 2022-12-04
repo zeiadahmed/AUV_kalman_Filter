@@ -1,0 +1,39 @@
+[0.091s] Invoking command in '/home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zeiad/sonar_ws/install/ping360_sonar:/home/zeiad/sonar_ws/install/opencv_tests:/opt/ros/eloquent /usr/bin/cmake --build /home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg -- -j12 -l12
+[0.278s] [35m[1mScanning dependencies of target state_subscriber[0m
+[0.365s] [ 50%] [32mBuilding CXX object CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o[0m
+[5.723s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:[m[K In member function ‘[01m[Kvoid SubscriberNode::callbackPressure(sensor_msgs::msg::FluidPressure_<std::allocator<void> >::SharedPtr)[m[K’:
+[5.724s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:349:24:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator-[m[K’ (operand types are ‘[01m[Kdouble[m[K’ and ‘[01m[KVectorXd {aka Eigen::Matrix<double, -1, 1>}[m[K’)
+[5.725s]          VectorXd y = [01;31m[Kz - z_hat[m[K;
+[5.725s]                       [01;31m[K~~^~~~~~~[m[K
+[5.725s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:350:54:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator+[m[K’ (operand types are ‘[01m[Kconst Eigen::Product<Eigen::Product<Eigen::Matrix<double, -1, -1>, Eigen::Matrix<double, -1, -1>, 0>, Eigen::Transpose<Eigen::Matrix<double, -1, -1> >, 0>[m[K’ and ‘[01m[Kdouble[m[K’)
+[5.725s]          MatrixXd S = [01;31m[KH * current_cov * H.transpose() + R[m[K;
+[5.725s]                       [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[5.726s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:72:0[m[K,
+[5.726s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[5.726s]                  from [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:8[m[K:
+[5.726s] [01m[K/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseBinaryOps.h:27:28:[m[K [01;36m[Knote: [m[Kcandidate: template<class OtherDerived> const Eigen::CwiseBinaryOp<Eigen::internal::scalar_sum_op<typename Eigen::internal::traits<T>::Scalar, typename Eigen::internal::traits<OtherDerived>::Scalar>, const Derived, const OtherDerived> Eigen::MatrixBase<Derived>::operator+(const Eigen::MatrixBase<OtherDerived>&) const [with OtherDerived = OtherDerived; Derived = Eigen::Product<Eigen::Product<Eigen::Matrix<double, -1, -1>, Eigen::Matrix<double, -1, -1>, 0>, Eigen::Transpose<Eigen::Matrix<double, -1, -1> >, 0>]
+[5.726s]  EIGEN_MAKE_CWISE_BINARY_OP([01;36m[Ko[m[Kperator+,sum)
+[5.726s]                             [01;36m[K^[m[K
+[5.726s] [01m[K/usr/include/eigen3/Eigen/src/Core/util/Macros.h:915:4:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KEIGEN_MAKE_CWISE_BINARY_OP[m[K’
+[5.726s]    ([01;36m[KMETHOD[m[K)(const EIGEN_CURRENT_STORAGE_BASE_CLASS<OtherDerived> &other) const \
+[5.727s]     [01;36m[K^~~~~~[m[K
+[5.727s] [01m[K/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseBinaryOps.h:27:28:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[5.727s]  EIGEN_MAKE_CWISE_BINARY_OP([01;36m[Ko[m[Kperator+,sum)
+[5.727s]                             [01;36m[K^[m[K
+[5.727s] [01m[K/usr/include/eigen3/Eigen/src/Core/util/Macros.h:915:4:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KEIGEN_MAKE_CWISE_BINARY_OP[m[K’
+[5.727s]    ([01;36m[KMETHOD[m[K)(const EIGEN_CURRENT_STORAGE_BASE_CLASS<OtherDerived> &other) const \
+[5.727s]     [01;36m[K^~~~~~[m[K
+[5.728s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:350:56:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst Eigen::MatrixBase<Derived>[m[K’ and ‘[01m[Kdouble[m[K’
+[5.728s]          MatrixXd S = H * current_cov * H.transpose() + [01;36m[KR[m[K;
+[5.728s]                                                         [01;36m[K^[m[K
+[5.731s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:[m[K In member function ‘[01m[Kvoid SubscriberNode::callbackGroundTruth(gazebo_msgs::msg::LinkStates_<std::allocator<void> >::SharedPtr)[m[K’:
+[5.731s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:382:74:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[5.731s]    void callbackGroundTruth(const gazebo_msgs::msg::LinkStates::SharedPtr [01;35m[Kmsg[m[K)
+[5.731s]                                                                           [01;35m[K^~~[m[K
+[15.767s] CMakeFiles/state_subscriber.dir/build.make:62: recipe for target 'CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o' failed
+[15.768s] make[2]: *** [CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o] Error 1
+[15.768s] make[1]: *** [CMakeFiles/state_subscriber.dir/all] Error 2
+[15.768s] CMakeFiles/Makefile2:99: recipe for target 'CMakeFiles/state_subscriber.dir/all' failed
+[15.769s] Makefile:140: recipe for target 'all' failed
+[15.769s] make: *** [all] Error 2
+[15.777s] Invoked command in '/home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zeiad/sonar_ws/install/ping360_sonar:/home/zeiad/sonar_ws/install/opencv_tests:/opt/ros/eloquent /usr/bin/cmake --build /home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg -- -j12 -l12

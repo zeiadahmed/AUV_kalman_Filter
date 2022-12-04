@@ -1,0 +1,47 @@
+[ 25%] Built target news_publisher
+[35m[1mScanning dependencies of target state_subscriber[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o[0m
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:[m[K In member function ‘[01m[Kvoid SubscriberNode::callbackIMU(sensor_msgs::msg::Imu_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:36:59:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   void callbackIMU(const sensor_msgs::msg::Imu::SharedPtr [01;35m[Kmsg[m[K)
+                                                           [01;35m[K^~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:[m[K In member function ‘[01m[Kvoid SubscriberNode::callbackDVL(geometry_msgs::msg::TwistWithCovarianceStamped_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:45:84:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   void callbackDVL(const geometry_msgs::msg::TwistWithCovarianceStamped::SharedPtr [01;35m[Kmsg[m[K)
+                                                                                    [01;35m[K^~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:[m[K In member function ‘[01m[Kvoid SubscriberNode::callbackPressure(sensor_msgs::msg::FluidPressure_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:52:74:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   void callbackPressure(const sensor_msgs::msg::FluidPressure::SharedPtr [01;35m[Kmsg[m[K)
+                                                                          [01;35m[K^~~[m[K
+In file included from [01m[K/opt/ros/eloquent/include/rclcpp/client.hpp:39:0[m[K,
+                 from [01m[K/opt/ros/eloquent/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/eloquent/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/eloquent/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/eloquent/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/eloquent/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/eloquent/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/eloquent/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/eloquent/include/rclcpp/rclcpp.hpp:145[m[K,
+                 from [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:1[m[K:
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:[m[K In member function ‘[01m[Kvoid SubscriberNode::callbackGroundTruth(gazebo_msgs::msg::LinkStates_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:64:32:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[K__gnu_cxx::__alloc_traits<std::allocator<geometry_msgs::msg::Pose_<std::allocator<void> > > >::value_type {aka geometry_msgs::msg::Pose_<std::allocator<void> >}[m[K’
+                 msg->pose.at(0)[01;31m[K-[m[K>position.x,
+                                [01;31m[K^[m[K
+[01m[K/opt/ros/eloquent/include/rcutils/logging_macros.h:72:64:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KRCUTILS_LOG_COND_NAMED[m[K’
+       rcutils_log(&__rcutils_logging_location, severity, name, [01;36m[K__VA_ARGS__[m[K); \
+                                                                [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/opt/ros/eloquent/include/rclcpp/logging.hpp:541:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KRCUTILS_LOG_INFO_NAMED[m[K’
+     [01;36m[KRCUTILS_LOG_INFO_NAMED[m[K( \
+     [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/eloquent/include/rclcpp/logging.hpp:544:9:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KRCLCPP_ALL_BUT_FIRST_ARGS[m[K’
+         [01;36m[KRCLCPP_ALL_BUT_FIRST_ARGS[m[K(__VA_ARGS__,"")); \
+         [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:63:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KRCLCPP_INFO[m[K’
+     [01;36m[KRCLCPP_INFO[m[K(this->get_logger(), "position in x:[%f], y: [%f], z: [%f] ",
+     [01;36m[K^~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o] Error 1
+CMakeFiles/state_subscriber.dir/build.make:62: recipe for target 'CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o' failed
+CMakeFiles/Makefile2:242: recipe for target 'CMakeFiles/state_subscriber.dir/all' failed
+make[1]: *** [CMakeFiles/state_subscriber.dir/all] Error 2
+Makefile:140: recipe for target 'all' failed
+make: *** [all] Error 2

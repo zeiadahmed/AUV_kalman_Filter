@@ -1,0 +1,64 @@
+[35m[1mScanning dependencies of target state_subscriber[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o[0m
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:[m[K In member function ‘[01m[Kvoid SubscriberNode::prediction_step(sensor_msgs::msg::Imu_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:67:63:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   void prediction_step(const sensor_msgs::msg::Imu::SharedPtr [01;35m[Kmsg[m[K ){
+                                                               [01;35m[K^~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:[m[K In member function ‘[01m[Kvoid SubscriberNode::callbackIMU(sensor_msgs::msg::Imu_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:123:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KIMU_init[m[K’ [[01;35m[K-Wunused-variable[m[K]
+       bool [01;35m[KIMU_init[m[K = true;
+            [01;35m[K^~~~~~~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:[m[K In member function ‘[01m[Kvoid SubscriberNode::callbackDVL(geometry_msgs::msg::TwistWithCovarianceStamped_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:147:16:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct geometry_msgs::msg::TwistWithCovarianceStamped_<std::allocator<void> > {aka struct geometry_msgs::msg::TwistWithCovarianceStamped_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Korientation[m[K’
+           msg->[01;31m[Korientation[m[K.x, msg->orientation.y, msg->orientation.z,                // angular pose
+                [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:147:36:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct geometry_msgs::msg::TwistWithCovarianceStamped_<std::allocator<void> > {aka struct geometry_msgs::msg::TwistWithCovarianceStamped_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Korientation[m[K’
+           msg->orientation.x, msg->[01;31m[Korientation[m[K.y, msg->orientation.z,                // angular pose
+                                    [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:147:56:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct geometry_msgs::msg::TwistWithCovarianceStamped_<std::allocator<void> > {aka struct geometry_msgs::msg::TwistWithCovarianceStamped_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Korientation[m[K’
+           msg->orientation.x, msg->orientation.y, msg->[01;31m[Korientation[m[K.z,                // angular pose
+                                                        [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:149:16:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct geometry_msgs::msg::TwistWithCovarianceStamped_<std::allocator<void> > {aka struct geometry_msgs::msg::TwistWithCovarianceStamped_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Kangular_velocity[m[K’
+           msg->[01;31m[Kangular_velocity[m[K.x, msg->angular_velocity.y, msg->angular_velocity.z; // angular velocity
+                [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:149:41:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct geometry_msgs::msg::TwistWithCovarianceStamped_<std::allocator<void> > {aka struct geometry_msgs::msg::TwistWithCovarianceStamped_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Kangular_velocity[m[K’
+           msg->angular_velocity.x, msg->[01;31m[Kangular_velocity[m[K.y, msg->angular_velocity.z; // angular velocity
+                                         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:149:66:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct geometry_msgs::msg::TwistWithCovarianceStamped_<std::allocator<void> > {aka struct geometry_msgs::msg::TwistWithCovarianceStamped_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Kangular_velocity[m[K’
+           msg->angular_velocity.x, msg->angular_velocity.y, msg->[01;31m[Kangular_velocity[m[K.z; // angular velocity
+                                                                  [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:154:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KDVL_init[m[K’ [[01;35m[K-Wunused-variable[m[K]
+       bool [01;35m[KDVL_init[m[K = true;
+            [01;35m[K^~~~~~~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:[m[K In member function ‘[01m[Kvoid SubscriberNode::callbackPressure(sensor_msgs::msg::FluidPressure_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:180:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct sensor_msgs::msg::FluidPressure_<std::allocator<void> > {aka struct sensor_msgs::msg::FluidPressure_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Korientation[m[K’
+             msg->[01;31m[Korientation[m[K.x, msg->orientation.y, msg->orientation.z,                // angular pose
+                  [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:180:38:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct sensor_msgs::msg::FluidPressure_<std::allocator<void> > {aka struct sensor_msgs::msg::FluidPressure_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Korientation[m[K’
+             msg->orientation.x, msg->[01;31m[Korientation[m[K.y, msg->orientation.z,                // angular pose
+                                      [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:180:58:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct sensor_msgs::msg::FluidPressure_<std::allocator<void> > {aka struct sensor_msgs::msg::FluidPressure_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Korientation[m[K’
+             msg->orientation.x, msg->orientation.y, msg->[01;31m[Korientation[m[K.z,                // angular pose
+                                                          [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:182:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct sensor_msgs::msg::FluidPressure_<std::allocator<void> > {aka struct sensor_msgs::msg::FluidPressure_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Kangular_velocity[m[K’
+             msg->[01;31m[Kangular_velocity[m[K.x, msg->angular_velocity.y, msg->angular_velocity.z; // angular velocity
+                  [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:182:43:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct sensor_msgs::msg::FluidPressure_<std::allocator<void> > {aka struct sensor_msgs::msg::FluidPressure_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Kangular_velocity[m[K’
+             msg->angular_velocity.x, msg->[01;31m[Kangular_velocity[m[K.y, msg->angular_velocity.z; // angular velocity
+                                           [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:182:68:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct sensor_msgs::msg::FluidPressure_<std::allocator<void> > {aka struct sensor_msgs::msg::FluidPressure_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Kangular_velocity[m[K’
+             msg->angular_velocity.x, msg->angular_velocity.y, msg->[01;31m[Kangular_velocity[m[K.z; // angular velocity
+                                                                    [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:187:14:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KPressure_init[m[K’ [[01;35m[K-Wunused-variable[m[K]
+         bool [01;35m[KPressure_init[m[K = true;
+              [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:[m[K In member function ‘[01m[Kvoid SubscriberNode::callbackGroundTruth(gazebo_msgs::msg::LinkStates_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:191:74:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   void callbackGroundTruth(const gazebo_msgs::msg::LinkStates::SharedPtr [01;35m[Kmsg[m[K)
+                                                                          [01;35m[K^~~[m[K
+make[2]: *** [CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o] Error 1
+CMakeFiles/state_subscriber.dir/build.make:62: recipe for target 'CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o' failed
+CMakeFiles/Makefile2:99: recipe for target 'CMakeFiles/state_subscriber.dir/all' failed
+make[1]: *** [CMakeFiles/state_subscriber.dir/all] Error 2
+make: *** [all] Error 2
+Makefile:140: recipe for target 'all' failed

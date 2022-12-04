@@ -1,0 +1,7 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o[0m
+CMakeFiles/state_subscriber.dir/build.make:62: recipe for target 'CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o' failed
+make[2]: *** [CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o] Interrupt
+make[1]: *** [CMakeFiles/state_subscriber.dir/all] Interrupt
+CMakeFiles/Makefile2:99: recipe for target 'CMakeFiles/state_subscriber.dir/all' failed
+Makefile:140: recipe for target 'all' failed
+make: *** [all] Interrupt

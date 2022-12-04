@@ -1,0 +1,24 @@
+[0.156s] Invoking command in '/home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zeiad/sonar_ws/install/ping360_sonar:/home/zeiad/sonar_ws/install/opencv_tests:/opt/ros/eloquent /usr/bin/cmake --build /home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg -- -j12 -l12
+[0.312s] CMake Error at CMakeLists.txt:17 (find_package):
+[0.313s]   By not providing "FindEigen.cmake" in CMAKE_MODULE_PATH this project has
+[0.314s]   asked CMake to find a package configuration file provided by "Eigen", but
+[0.314s]   CMake did not find one.
+[0.315s] 
+[0.316s]   Could not find a package configuration file provided by "Eigen" with any of
+[0.318s]   the following names:
+[0.320s] 
+[0.321s]     EigenConfig.cmake
+[0.321s]     eigen-config.cmake
+[0.321s] 
+[0.322s]   Add the installation prefix of "Eigen" to CMAKE_PREFIX_PATH or set
+[0.322s]   "Eigen_DIR" to a directory containing one of the above files.  If "Eigen"
+[0.322s]   provides a separate development package or SDK, be sure it has been
+[0.322s]   installed.
+[0.323s] 
+[0.323s] -- Configuring incomplete, errors occurred!
+[0.324s] See also "/home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg/CMakeFiles/CMakeOutput.log".
+[0.325s] See also "/home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg/CMakeFiles/CMakeError.log".
+[0.326s] 
+[0.338s] make: *** [cmake_check_build_system] Error 1
+[0.340s] Makefile:266: recipe for target 'cmake_check_build_system' failed
+[0.342s] Invoked command in '/home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zeiad/sonar_ws/install/ping360_sonar:/home/zeiad/sonar_ws/install/opencv_tests:/opt/ros/eloquent /usr/bin/cmake --build /home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg -- -j12 -l12

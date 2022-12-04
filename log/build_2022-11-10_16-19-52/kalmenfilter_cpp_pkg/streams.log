@@ -1,0 +1,37 @@
+[0.163s] Invoking command in '/home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zeiad/sonar_ws/install/ping360_sonar:/home/zeiad/sonar_ws/install/opencv_tests:/opt/ros/eloquent /usr/bin/cmake --build /home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg -- -j12 -l12
+[0.528s] [ 33%] Built target cpp_node
+[0.648s] [35m[1mScanning dependencies of target subscriber[0m
+[0.797s] [ 50%] [32mBuilding CXX object CMakeFiles/subscriber.dir/src/subscriber.cpp.o[0m
+[6.643s] In file included from [01m[K/opt/ros/eloquent/include/rclcpp/client.hpp:39:0[m[K,
+[6.643s]                  from [01m[K/opt/ros/eloquent/include/rclcpp/callback_group.hpp:23[m[K,
+[6.643s]                  from [01m[K/opt/ros/eloquent/include/rclcpp/any_executable.hpp:20[m[K,
+[6.643s]                  from [01m[K/opt/ros/eloquent/include/rclcpp/memory_strategy.hpp:24[m[K,
+[6.643s]                  from [01m[K/opt/ros/eloquent/include/rclcpp/memory_strategies.hpp:18[m[K,
+[6.643s]                  from [01m[K/opt/ros/eloquent/include/rclcpp/executor.hpp:33[m[K,
+[6.644s]                  from [01m[K/opt/ros/eloquent/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[6.644s]                  from [01m[K/opt/ros/eloquent/include/rclcpp/executors.hpp:21[m[K,
+[6.644s]                  from [01m[K/opt/ros/eloquent/include/rclcpp/rclcpp.hpp:145[m[K,
+[6.644s]                  from [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/subscriber.cpp:1[m[K:
+[6.644s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/subscriber.cpp:[m[K In member function ‘[01m[Kvoid SubscriberNode::callbackNews(std_msgs::msg::String_<std::allocator<void> >::SharedPtr)[m[K’:
+[6.644s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/subscriber.cpp:19:47:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst SharedPtr {aka const class std::shared_ptr<std_msgs::msg::String_<std::allocator<void> > >}[m[K’ has no member named ‘[01m[Kc_str[m[K’; did you mean ‘[01m[K_M_ptr[m[K’?
+[6.644s]      RCLCPP_INFO(this->get_logger(), "%s", msg.[01;31m[Kc[m[K_str());
+[6.644s]                                                [01;31m[K^[m[K
+[6.644s] [01m[K/opt/ros/eloquent/include/rcutils/logging_macros.h:72:64:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KRCUTILS_LOG_COND_NAMED[m[K’
+[6.645s]        rcutils_log(&__rcutils_logging_location, severity, name, [01;36m[K__VA_ARGS__[m[K); \
+[6.645s]                                                                 [01;36m[K^~~~~~~~~~~[m[K
+[6.645s] [01m[K/opt/ros/eloquent/include/rclcpp/logging.hpp:541:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KRCUTILS_LOG_INFO_NAMED[m[K’
+[6.645s]      [01;36m[KRCUTILS_LOG_INFO_NAMED[m[K( \
+[6.645s]      [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[6.645s] [01m[K/opt/ros/eloquent/include/rclcpp/logging.hpp:544:9:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KRCLCPP_ALL_BUT_FIRST_ARGS[m[K’
+[6.645s]          [01;36m[KRCLCPP_ALL_BUT_FIRST_ARGS[m[K(__VA_ARGS__,"")); \
+[6.645s]          [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[6.646s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/subscriber.cpp:19:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KRCLCPP_INFO[m[K’
+[6.646s]      [01;36m[KRCLCPP_INFO[m[K(this->get_logger(), "%s", msg.c_str());
+[6.646s]      [01;36m[K^~~~~~~~~~~[m[K
+[11.434s] CMakeFiles/subscriber.dir/build.make:62: recipe for target 'CMakeFiles/subscriber.dir/src/subscriber.cpp.o' failed
+[11.435s] make[2]: *** [CMakeFiles/subscriber.dir/src/subscriber.cpp.o] Error 1
+[11.436s] make[1]: *** [CMakeFiles/subscriber.dir/all] Error 2
+[11.437s] CMakeFiles/Makefile2:205: recipe for target 'CMakeFiles/subscriber.dir/all' failed
+[11.437s] make: *** [all] Error 2
+[11.437s] Makefile:140: recipe for target 'all' failed
+[11.455s] Invoked command in '/home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zeiad/sonar_ws/install/ping360_sonar:/home/zeiad/sonar_ws/install/opencv_tests:/opt/ros/eloquent /usr/bin/cmake --build /home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg -- -j12 -l12

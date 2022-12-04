@@ -1,0 +1,67 @@
+[0.141s] Invoking command in '/home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zeiad/sonar_ws/install/ping360_sonar:/home/zeiad/sonar_ws/install/opencv_tests:/opt/ros/eloquent /usr/bin/cmake --build /home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg -- -j12 -l12
+[0.488s] [ 25%] Built target news_publisher
+[0.573s] [35m[1mScanning dependencies of target state_subscriber[0m
+[0.672s] [ 37%] [32mBuilding CXX object CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o[0m
+[5.189s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:[m[K In constructor ‘[01m[KSubscriberNode::SubscriberNode()[m[K’:
+[5.189s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:26:162:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Krclcpp::Subscription<sensor_msgs::msg::Imu_<std::allocator<void> > >::SharedPtr {aka std::shared_ptr<rclcpp::Subscription<sensor_msgs::msg::Imu_<std::allocator<void> > > >}[m[K’ and ‘[01m[Kstd::shared_ptr<rclcpp::Subscription<sensor_msgs::msg::FluidPressure_<std::allocator<void> >, std::allocator<void>, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::FluidPressure_<std::allocator<void> >, std::allocator<void> > > >[m[K’)
+[5.190s]                                                                                          std::bind(&SubscriberNode::callbackPressure, this, std::placeholders::_1)[01;31m[K)[m[K;
+[5.191s]                                                                                                                                                                   [01;31m[K^[m[K
+[5.193s] In file included from [01m[K/usr/include/c++/7/memory:81:0[m[K,
+[5.194s]                  from [01m[K/opt/ros/eloquent/include/rclcpp/rclcpp.hpp:143[m[K,
+[5.194s]                  from [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:1[m[K:
+[5.194s] [01m[K/usr/include/c++/7/bits/shared_ptr.h:296:19:[m[K [01;36m[Knote: [m[Kcandidate: std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Tp>&) [with _Tp = rclcpp::Subscription<sensor_msgs::msg::Imu_<std::allocator<void> > >]
+[5.195s]        shared_ptr& [01;36m[Koperator[m[K=(const shared_ptr&) noexcept = default;
+[5.195s]                    [01;36m[K^~~~~~~~[m[K
+[5.195s] [01m[K/usr/include/c++/7/bits/shared_ptr.h:296:19:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::shared_ptr<rclcpp::Subscription<sensor_msgs::msg::FluidPressure_<std::allocator<void> >, std::allocator<void>, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::FluidPressure_<std::allocator<void> >, std::allocator<void> > > >[m[K’ to ‘[01m[Kconst std::shared_ptr<rclcpp::Subscription<sensor_msgs::msg::Imu_<std::allocator<void> > > >&[m[K’
+[5.196s] [01m[K/usr/include/c++/7/bits/shared_ptr.h:300:2:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Yp> std::shared_ptr<_Tp>::_Assignable<const std::shared_ptr<_Yp>&> std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Yp>&) [with _Yp = _Yp; _Tp = rclcpp::Subscription<sensor_msgs::msg::Imu_<std::allocator<void> > >]
+[5.198s]   [01;36m[Koperator[m[K=(const shared_ptr<_Yp>& __r) noexcept
+[5.202s]   [01;36m[K^~~~~~~~[m[K
+[5.204s] [01m[K/usr/include/c++/7/bits/shared_ptr.h:300:2:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[5.204s] [01m[K/usr/include/c++/7/bits/shared_ptr.h:309:2:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::auto_ptr<_Up> > std::shared_ptr<_Tp>::operator=(std::auto_ptr<_Up>&&) [with _Yp = _Yp; _Tp = rclcpp::Subscription<sensor_msgs::msg::Imu_<std::allocator<void> > >]
+[5.204s]   [01;36m[Koperator[m[K=(auto_ptr<_Yp>&& __r)
+[5.205s]   [01;36m[K^~~~~~~~[m[K
+[5.205s] [01m[K/usr/include/c++/7/bits/shared_ptr.h:309:2:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[5.206s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:26:162:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::shared_ptr<rclcpp::Subscription<sensor_msgs::msg::FluidPressure_<std::allocator<void> >, std::allocator<void>, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::FluidPressure_<std::allocator<void> >, std::allocator<void> > > >[m[K’ is not derived from ‘[01m[Kstd::auto_ptr<_Up>[m[K’
+[5.206s]                                                                                          std::bind(&SubscriberNode::callbackPressure, this, std::placeholders::_1)[01;36m[K)[m[K;
+[5.207s]                                                                                                                                                                   [01;36m[K^[m[K
+[5.207s] In file included from [01m[K/usr/include/c++/7/memory:81:0[m[K,
+[5.207s]                  from [01m[K/opt/ros/eloquent/include/rclcpp/rclcpp.hpp:143[m[K,
+[5.207s]                  from [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:1[m[K:
+[5.207s] [01m[K/usr/include/c++/7/bits/shared_ptr.h:317:7:[m[K [01;36m[Knote: [m[Kcandidate: std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Tp>&&) [with _Tp = rclcpp::Subscription<sensor_msgs::msg::Imu_<std::allocator<void> > >]
+[5.207s]        [01;36m[Koperator[m[K=(shared_ptr&& __r) noexcept
+[5.208s]        [01;36m[K^~~~~~~~[m[K
+[5.208s] [01m[K/usr/include/c++/7/bits/shared_ptr.h:317:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::shared_ptr<rclcpp::Subscription<sensor_msgs::msg::FluidPressure_<std::allocator<void> >, std::allocator<void>, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::FluidPressure_<std::allocator<void> >, std::allocator<void> > > >[m[K’ to ‘[01m[Kstd::shared_ptr<rclcpp::Subscription<sensor_msgs::msg::Imu_<std::allocator<void> > > >&&[m[K’
+[5.208s] [01m[K/usr/include/c++/7/bits/shared_ptr.h:325:2:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::shared_ptr<_Yp> > std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Yp>&&) [with _Yp = _Yp; _Tp = rclcpp::Subscription<sensor_msgs::msg::Imu_<std::allocator<void> > >]
+[5.208s]   [01;36m[Koperator[m[K=(shared_ptr<_Yp>&& __r) noexcept
+[5.208s]   [01;36m[K^~~~~~~~[m[K
+[5.209s] [01m[K/usr/include/c++/7/bits/shared_ptr.h:325:2:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[5.209s] [01m[K/usr/include/c++/7/bits/shared_ptr.h:333:2:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Yp, class _Del> std::shared_ptr<_Tp>::_Assignable<std::unique_ptr<_Up, _Ep> > std::shared_ptr<_Tp>::operator=(std::unique_ptr<_Up, _Ep>&&) [with _Yp = _Yp; _Del = _Del; _Tp = rclcpp::Subscription<sensor_msgs::msg::Imu_<std::allocator<void> > >]
+[5.209s]   [01;36m[Koperator[m[K=(unique_ptr<_Yp, _Del>&& __r)
+[5.209s]   [01;36m[K^~~~~~~~[m[K
+[5.209s] [01m[K/usr/include/c++/7/bits/shared_ptr.h:333:2:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[5.209s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:26:162:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::shared_ptr<rclcpp::Subscription<sensor_msgs::msg::FluidPressure_<std::allocator<void> >, std::allocator<void>, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::FluidPressure_<std::allocator<void> >, std::allocator<void> > > >[m[K’ is not derived from ‘[01m[Kstd::unique_ptr<_Tp, _Dp>[m[K’
+[5.209s]                                                                                          std::bind(&SubscriberNode::callbackPressure, this, std::placeholders::_1)[01;36m[K)[m[K;
+[5.209s]                                                                                                                                                                   [01;36m[K^[m[K
+[5.210s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:[m[K In member function ‘[01m[Kvoid SubscriberNode::callbackIMU(sensor_msgs::msg::Imu_<std::allocator<void> >::SharedPtr)[m[K’:
+[5.210s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:37:59:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[5.210s]    void callbackIMU(const sensor_msgs::msg::Imu::SharedPtr [01;35m[Kmsg[m[K)
+[5.210s]                                                            [01;35m[K^~~[m[K
+[5.210s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:[m[K In member function ‘[01m[Kvoid SubscriberNode::callbackDVL(sensor_msgs::msg::Imu_<std::allocator<void> >::SharedPtr)[m[K’:
+[5.211s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:46:59:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[5.211s]    void callbackDVL(const sensor_msgs::msg::Imu::SharedPtr [01;35m[Kmsg[m[K)
+[5.211s]                                                            [01;35m[K^~~[m[K
+[5.230s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:[m[K In member function ‘[01m[Kvoid SubscriberNode::callbackPressure(sensor_msgs::msg::FluidPressure_<std::allocator<void> >::SharedPtr)[m[K’:
+[5.231s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:53:74:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[5.232s]    void callbackPressure(const sensor_msgs::msg::FluidPressure::SharedPtr [01;35m[Kmsg[m[K)
+[5.234s]                                                                           [01;35m[K^~~[m[K
+[5.235s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:[m[K In member function ‘[01m[Kvoid SubscriberNode::callbackGroundTruth(sensor_msgs::msg::Imu_<std::allocator<void> >::SharedPtr)[m[K’:
+[5.251s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:61:67:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[5.252s]    void callbackGroundTruth(const sensor_msgs::msg::Imu::SharedPtr [01;35m[Kmsg[m[K)
+[5.253s]                                                                    [01;35m[K^~~[m[K
+[10.117s] CMakeFiles/state_subscriber.dir/build.make:62: recipe for target 'CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o' failed
+[10.118s] make[2]: *** [CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o] Error 1
+[10.120s] CMakeFiles/Makefile2:242: recipe for target 'CMakeFiles/state_subscriber.dir/all' failed
+[10.121s] Makefile:140: recipe for target 'all' failed
+[10.128s] make[1]: *** [CMakeFiles/state_subscriber.dir/all] Error 2
+[10.135s] make: *** [all] Error 2
+[10.136s] Invoked command in '/home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zeiad/sonar_ws/install/ping360_sonar:/home/zeiad/sonar_ws/install/opencv_tests:/opt/ros/eloquent /usr/bin/cmake --build /home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg -- -j12 -l12

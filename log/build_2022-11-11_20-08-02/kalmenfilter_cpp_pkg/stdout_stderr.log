@@ -1,0 +1,12 @@
+[35m[1mScanning dependencies of target state_subscriber[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o[0m
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:2:10:[m[K [01;31m[Kfatal error: [m[Kstate_subscriber.hpp: No such file or directory
+ #include [01;31m[K"state_subscriber.hpp"[m[K
+          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+CMakeFiles/state_subscriber.dir/build.make:62: recipe for target 'CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o' failed
+make[2]: *** [CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o] Error 1
+make[1]: *** [CMakeFiles/state_subscriber.dir/all] Error 2
+CMakeFiles/Makefile2:99: recipe for target 'CMakeFiles/state_subscriber.dir/all' failed
+make: *** [all] Error 2
+Makefile:140: recipe for target 'all' failed

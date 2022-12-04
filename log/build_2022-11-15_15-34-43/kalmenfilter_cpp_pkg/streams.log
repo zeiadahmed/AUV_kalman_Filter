@@ -1,0 +1,21 @@
+[0.361s] Invoking command in '/home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zeiad/sonar_ws/install/ping360_sonar:/home/zeiad/sonar_ws/install/opencv_tests:/opt/ros/eloquent /usr/bin/cmake --build /home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg -- -j12 -l12
+[1.766s] [35m[1mScanning dependencies of target state_subscriber[0m
+[1.923s] [ 50%] [32mBuilding CXX object CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o[0m
+[15.280s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:[m[K In member function ‘[01m[Kvoid SubscriberNode::callbackDVL(geometry_msgs::msg::TwistWithCovarianceStamped_<std::allocator<void> >::SharedPtr)[m[K’:
+[15.281s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:287:37:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Ky[m[K’ in ‘[01m[K((const std::__shared_ptr_access<geometry_msgs::msg::TwistWithCovarianceStamped_<std::allocator<void> >, (__gnu_cxx::_Lock_policy)2, false, false>*)(& msg))->std::__shared_ptr_access<geometry_msgs::msg::TwistWithCovarianceStamped_<std::allocator<void> >, (__gnu_cxx::_Lock_policy)2, false, false>::operator->()->geometry_msgs::msg::TwistWithCovarianceStamped_<std::allocator<void> >::twist.geometry_msgs::msg::TwistWithCovariance_<std::allocator<void> >::twist.geometry_msgs::msg::Twist_<std::allocator<void> >::linear.geometry_msgs::msg::Vector3_<std::allocator<void> >::x[m[K’, which is of non-class type ‘[01m[Kgeometry_msgs::msg::Vector3_<std::allocator<void> >::_x_type {aka double}[m[K’
+[15.282s]            msg->twist.twist.linear.x.[01;31m[Ky[m[K,
+[15.282s]                                      [01;31m[K^[m[K
+[15.282s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:288:37:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kz[m[K’ in ‘[01m[K((const std::__shared_ptr_access<geometry_msgs::msg::TwistWithCovarianceStamped_<std::allocator<void> >, (__gnu_cxx::_Lock_policy)2, false, false>*)(& msg))->std::__shared_ptr_access<geometry_msgs::msg::TwistWithCovarianceStamped_<std::allocator<void> >, (__gnu_cxx::_Lock_policy)2, false, false>::operator->()->geometry_msgs::msg::TwistWithCovarianceStamped_<std::allocator<void> >::twist.geometry_msgs::msg::TwistWithCovariance_<std::allocator<void> >::twist.geometry_msgs::msg::Twist_<std::allocator<void> >::linear.geometry_msgs::msg::Vector3_<std::allocator<void> >::x[m[K’, which is of non-class type ‘[01m[Kgeometry_msgs::msg::Vector3_<std::allocator<void> >::_x_type {aka double}[m[K’
+[15.283s]            msg->twist.twist.linear.x.[01;31m[Kz[m[K;
+[15.283s]                                      [01;31m[K^[m[K
+[15.314s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:[m[K In member function ‘[01m[Kvoid SubscriberNode::callbackGroundTruth(gazebo_msgs::msg::LinkStates_<std::allocator<void> >::SharedPtr)[m[K’:
+[15.314s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:364:74:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[15.315s]  nst gazebo_msgs::msg::LinkStates::SharedPtr [01;35m[Kmsg[m[K)
+[15.315s]                                              [01;35m[K^~~[m[K
+[29.776s] CMakeFiles/state_subscriber.dir/build.make:62: recipe for target 'CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o' failed
+[29.777s] make[2]: *** [CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o] Error 1
+[29.777s] make[1]: *** [CMakeFiles/state_subscriber.dir/all] Error 2
+[29.777s] CMakeFiles/Makefile2:99: recipe for target 'CMakeFiles/state_subscriber.dir/all' failed
+[29.777s] Makefile:140: recipe for target 'all' failed
+[29.777s] make: *** [all] Error 2
+[29.783s] Invoked command in '/home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zeiad/sonar_ws/install/ping360_sonar:/home/zeiad/sonar_ws/install/opencv_tests:/opt/ros/eloquent /usr/bin/cmake --build /home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg -- -j12 -l12

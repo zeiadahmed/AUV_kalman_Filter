@@ -1,0 +1,152 @@
+[0.989s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.989s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f3aa7024240>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=12, paths=None, symlink_install=False, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f3aa7024240>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f3aa7024588>)
+[1.100s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.101s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.101s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.101s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.101s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.101s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.101s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/zeiad/sensorfusion_ros2_ws'
+[1.101s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.102s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.102s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.102s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.102s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.102s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.102s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.102s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.102s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.151s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[1.152s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[1.152s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[1.152s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[1.152s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[1.152s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[1.152s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[1.152s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[1.153s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[1.153s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[1.153s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[1.153s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[1.154s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[1.154s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[1.154s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[1.154s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[1.154s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[1.154s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[1.154s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[1.154s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[1.154s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[1.155s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[1.155s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[1.155s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[1.155s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[1.155s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[1.155s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[1.155s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[1.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) by extensions ['ignore', 'ignore_ament_install']
+[1.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) by extension 'ignore'
+[1.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) ignored
+[1.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) by extensions ['ignore', 'ignore_ament_install']
+[1.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) by extension 'ignore'
+[1.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) ignored
+[1.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/kalmenfilter_cpp_pkg) by extensions ['ignore', 'ignore_ament_install']
+[1.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/kalmenfilter_cpp_pkg) by extension 'ignore'
+[1.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/kalmenfilter_cpp_pkg) by extension 'ignore_ament_install'
+[1.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/kalmenfilter_cpp_pkg) by extensions ['colcon_pkg']
+[1.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/kalmenfilter_cpp_pkg) by extension 'colcon_pkg'
+[1.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/kalmenfilter_cpp_pkg) by extensions ['colcon_meta']
+[1.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/kalmenfilter_cpp_pkg) by extension 'colcon_meta'
+[1.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/kalmenfilter_cpp_pkg) by extensions ['ros']
+[1.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/kalmenfilter_cpp_pkg) by extension 'ros'
+[1.166s] DEBUG:colcon.colcon_core.package_identification:Package 'src/kalmenfilter_cpp_pkg' with type 'ros.ament_cmake' and name 'kalmenfilter_cpp_pkg'
+[1.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extensions ['ignore', 'ignore_ament_install']
+[1.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extension 'ignore'
+[1.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) ignored
+[1.167s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[1.168s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[1.168s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[1.168s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[1.169s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.305s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[1.305s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[1.325s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/zeiad/sensorfusion_ros2_ws/install
+[1.343s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 22 installed packages in /home/zeiad/plankton_ros2_ws/install
+[1.349s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 7 installed packages in /home/zeiad/sonar_ws/install
+[1.358s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 244 installed packages in /opt/ros/eloquent
+[1.362s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.688s] Level 5:colcon.colcon_core.verb:set package 'kalmenfilter_cpp_pkg' build argument 'cmake_args' from command line to 'None'
+[1.689s] Level 5:colcon.colcon_core.verb:set package 'kalmenfilter_cpp_pkg' build argument 'cmake_target' from command line to 'None'
+[1.689s] Level 5:colcon.colcon_core.verb:set package 'kalmenfilter_cpp_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.689s] Level 5:colcon.colcon_core.verb:set package 'kalmenfilter_cpp_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[1.689s] Level 5:colcon.colcon_core.verb:set package 'kalmenfilter_cpp_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[1.690s] Level 5:colcon.colcon_core.verb:set package 'kalmenfilter_cpp_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[1.690s] Level 5:colcon.colcon_core.verb:set package 'kalmenfilter_cpp_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[1.690s] Level 5:colcon.colcon_core.verb:set package 'kalmenfilter_cpp_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[1.690s] Level 5:colcon.colcon_core.verb:set package 'kalmenfilter_cpp_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.690s] DEBUG:colcon.colcon_core.verb:Building package 'kalmenfilter_cpp_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg', 'merge_install': False, 'path': '/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg', 'symlink_install': False, 'test_result_base': None}
+[1.702s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.788s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.790s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg' with build type 'ament_cmake'
+[1.791s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg'
+[1.864s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.865s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.866s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.992s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zeiad/sonar_ws/install/ping360_sonar:/home/zeiad/sonar_ws/install/opencv_tests:/opt/ros/eloquent /usr/bin/cmake --build /home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg -- -j12 -l12
+[26.218s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zeiad/sonar_ws/install/ping360_sonar:/home/zeiad/sonar_ws/install/opencv_tests:/opt/ros/eloquent /usr/bin/cmake --build /home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg -- -j12 -l12
+[26.364s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zeiad/sonar_ws/install/ping360_sonar:/home/zeiad/sonar_ws/install/opencv_tests:/opt/ros/eloquent /usr/bin/cmake --build /home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg --target install -- -j12 -l12
+[26.798s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(kalmenfilter_cpp_pkg)
+[26.800s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zeiad/sonar_ws/install/ping360_sonar:/home/zeiad/sonar_ws/install/opencv_tests:/opt/ros/eloquent /usr/bin/cmake --build /home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg --target install -- -j12 -l12
+[26.842s] Level 1:colcon.colcon_core.environment:checking '/home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg' for CMake module files
+[26.845s] Level 1:colcon.colcon_core.environment:checking '/home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg' for CMake config files
+[26.846s] Level 1:colcon.colcon_core.shell:create_environment_hook('kalmenfilter_cpp_pkg', 'cmake_prefix_path')
+[26.864s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/share/kalmenfilter_cpp_pkg/hook/cmake_prefix_path.ps1'
+[26.868s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/share/kalmenfilter_cpp_pkg/hook/cmake_prefix_path.dsv'
+[26.871s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/share/kalmenfilter_cpp_pkg/hook/cmake_prefix_path.sh'
+[26.876s] Level 1:colcon.colcon_core.environment:checking '/home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/lib'
+[26.877s] Level 1:colcon.colcon_core.environment:checking '/home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/bin'
+[26.878s] Level 1:colcon.colcon_core.environment:checking '/home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/lib/pkgconfig/kalmenfilter_cpp_pkg.pc'
+[26.879s] Level 1:colcon.colcon_core.environment:checking '/home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/lib/python3.6/site-packages'
+[26.880s] Level 1:colcon.colcon_core.environment:checking '/home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/bin'
+[26.907s] INFO:colcon.colcon_core.shell:Creating package script '/home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/share/kalmenfilter_cpp_pkg/package.ps1'
+[26.913s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/share/kalmenfilter_cpp_pkg/package.dsv'
+[26.915s] INFO:colcon.colcon_core.shell:Creating package script '/home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/share/kalmenfilter_cpp_pkg/package.sh'
+[26.918s] INFO:colcon.colcon_core.shell:Creating package script '/home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/share/kalmenfilter_cpp_pkg/package.bash'
+[26.923s] INFO:colcon.colcon_core.shell:Creating package script '/home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/share/kalmenfilter_cpp_pkg/package.zsh'
+[26.928s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/share/colcon-core/packages/kalmenfilter_cpp_pkg)
+[27.145s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(kalmenfilter_cpp_pkg)
+[27.173s] Level 1:colcon.colcon_core.environment:checking '/home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg' for CMake module files
+[27.174s] Level 1:colcon.colcon_core.environment:checking '/home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg' for CMake config files
+[27.175s] Level 1:colcon.colcon_core.shell:create_environment_hook('kalmenfilter_cpp_pkg', 'cmake_prefix_path')
+[27.193s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/share/kalmenfilter_cpp_pkg/hook/cmake_prefix_path.ps1'
+[27.200s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/share/kalmenfilter_cpp_pkg/hook/cmake_prefix_path.dsv'
+[27.204s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/share/kalmenfilter_cpp_pkg/hook/cmake_prefix_path.sh'
+[27.214s] Level 1:colcon.colcon_core.environment:checking '/home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/lib'
+[27.215s] Level 1:colcon.colcon_core.environment:checking '/home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/bin'
+[27.216s] Level 1:colcon.colcon_core.environment:checking '/home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/lib/pkgconfig/kalmenfilter_cpp_pkg.pc'
+[27.217s] Level 1:colcon.colcon_core.environment:checking '/home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/lib/python3.6/site-packages'
+[27.218s] Level 1:colcon.colcon_core.environment:checking '/home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/bin'
+[27.235s] INFO:colcon.colcon_core.shell:Creating package script '/home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/share/kalmenfilter_cpp_pkg/package.ps1'
+[27.238s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/share/kalmenfilter_cpp_pkg/package.dsv'
+[27.244s] INFO:colcon.colcon_core.shell:Creating package script '/home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/share/kalmenfilter_cpp_pkg/package.sh'
+[27.247s] INFO:colcon.colcon_core.shell:Creating package script '/home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/share/kalmenfilter_cpp_pkg/package.bash'
+[27.249s] INFO:colcon.colcon_core.shell:Creating package script '/home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/share/kalmenfilter_cpp_pkg/package.zsh'
+[27.252s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/share/colcon-core/packages/kalmenfilter_cpp_pkg)
+[27.253s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[27.255s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[27.256s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[27.257s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[27.309s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[27.310s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[27.310s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[27.324s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[27.350s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/zeiad/sensorfusion_ros2_ws/install/local_setup.ps1'
+[27.352s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/zeiad/sensorfusion_ros2_ws/install/_local_setup_util_ps1.py'
+[27.358s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/zeiad/sensorfusion_ros2_ws/install/setup.ps1'
+[27.375s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/zeiad/sensorfusion_ros2_ws/install/local_setup.sh'
+[27.382s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/zeiad/sensorfusion_ros2_ws/install/_local_setup_util_sh.py'
+[27.390s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/zeiad/sensorfusion_ros2_ws/install/setup.sh'
+[27.405s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/zeiad/sensorfusion_ros2_ws/install/local_setup.bash'
+[27.406s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/zeiad/sensorfusion_ros2_ws/install/setup.bash'
+[27.417s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/zeiad/sensorfusion_ros2_ws/install/local_setup.zsh'
+[27.418s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/zeiad/sensorfusion_ros2_ws/install/setup.zsh'

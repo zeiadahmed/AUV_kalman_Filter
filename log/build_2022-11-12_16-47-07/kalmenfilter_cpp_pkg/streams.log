@@ -1,0 +1,26 @@
+[0.149s] Invoking command in '/home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zeiad/sonar_ws/install/ping360_sonar:/home/zeiad/sonar_ws/install/opencv_tests:/opt/ros/eloquent /usr/bin/cmake --build /home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg -- -j12 -l12
+[0.262s] -- Found ament_cmake: 0.8.3 (/opt/ros/eloquent/share/ament_cmake/cmake)
+[0.374s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.990s] -- Found rclcpp: 0.8.5 (/opt/ros/eloquent/share/rclcpp/cmake)
+[1.029s] -- Found rosidl_adapter: 0.8.3 (/opt/ros/eloquent/share/rosidl_adapter/cmake)
+[1.109s] -- Found rmw_implementation_cmake: 0.8.1 (/opt/ros/eloquent/share/rmw_implementation_cmake/cmake)
+[1.114s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.188s] -- Found std_msgs: 0.8.1 (/opt/ros/eloquent/share/std_msgs/cmake)
+[1.197s] -- Found sensor_msgs: 0.8.1 (/opt/ros/eloquent/share/sensor_msgs/cmake)
+[1.231s] -- Found gazebo_msgs: 3.4.4 (/opt/ros/eloquent/share/gazebo_msgs/cmake)
+[1.292s] -- Found nav_msgs: 0.8.1 (/opt/ros/eloquent/share/nav_msgs/cmake)
+[1.684s] -- Configuring done
+[1.738s] -- Generating done
+[1.746s] -- Build files have been written to: /home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg
+[1.944s] [ 50%] [32mBuilding CXX object CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o[0m
+[2.148s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:7:10:[m[K [01;31m[Kfatal error: [m[KEigen/Dense: No such file or directory
+[2.149s]  #include [01;31m[K<Eigen/Dense>[m[K
+[2.149s]           [01;31m[K^~~~~~~~~~~~~[m[K
+[2.150s] compilation terminated.
+[2.154s] CMakeFiles/state_subscriber.dir/build.make:62: recipe for target 'CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o' failed
+[2.155s] make[2]: *** [CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o] Error 1
+[2.156s] CMakeFiles/Makefile2:99: recipe for target 'CMakeFiles/state_subscriber.dir/all' failed
+[2.157s] make[1]: *** [CMakeFiles/state_subscriber.dir/all] Error 2
+[2.158s] Makefile:140: recipe for target 'all' failed
+[2.159s] make: *** [all] Error 2
+[2.168s] Invoked command in '/home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zeiad/sonar_ws/install/ping360_sonar:/home/zeiad/sonar_ws/install/opencv_tests:/opt/ros/eloquent /usr/bin/cmake --build /home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg -- -j12 -l12

@@ -1,0 +1,507 @@
+[0.000000] (-) TimerEvent: {}
+[0.010414] (kalmenfilter_cpp_pkg) JobQueued: {'identifier': 'kalmenfilter_cpp_pkg', 'dependencies': OrderedDict()}
+[0.014394] (kalmenfilter_cpp_pkg) JobStarted: {'identifier': 'kalmenfilter_cpp_pkg'}
+[0.093290] (-) TimerEvent: {}
+[0.195441] (-) TimerEvent: {}
+[0.210847] (kalmenfilter_cpp_pkg) JobProgress: {'identifier': 'kalmenfilter_cpp_pkg', 'progress': 'cmake'}
+[0.216851] (kalmenfilter_cpp_pkg) JobProgress: {'identifier': 'kalmenfilter_cpp_pkg', 'progress': 'build'}
+[0.220832] (kalmenfilter_cpp_pkg) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg', '--', '-j12', '-l12'], 'cwd': '/home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'zeiad'), ('LC_TIME', 'ar_EG.UTF-8'), ('TEXTDOMAIN', 'im-config'), ('XDG_SEAT', 'seat0'), ('SSH_AGENT_PID', '2438'), ('XDG_SESSION_TYPE', 'x11'), ('LD_LIBRARY_PATH', '/home/zeiad/plankton_ros2_ws/install/uuv_world_ros_plugins/lib:/home/zeiad/plankton_ros2_ws/install/uuv_world_ros_plugins_msgs/lib:/home/zeiad/plankton_ros2_ws/install/uuv_world_plugins/lib:/home/zeiad/plankton_ros2_ws/install/uuv_thruster_manager/lib:/home/zeiad/plankton_ros2_ws/install/uuv_sensor_ros_plugins/lib:/home/zeiad/plankton_ros2_ws/install/uuv_sensor_ros_plugins_msgs/lib:/home/zeiad/plankton_ros2_ws/install/uuv_gazebo_ros_plugins/lib:/home/zeiad/plankton_ros2_ws/install/uuv_gazebo_ros_plugins_msgs/lib:/home/zeiad/plankton_ros2_ws/install/uuv_gazebo_plugins/lib:/home/zeiad/plankton_ros2_ws/install/uuv_control_msgs/lib:/home/zeiad/plankton_ros2_ws/install/uuv_auv_control_allocator/lib:/home/zeiad/sonar_ws/install/image_geometry/lib:/home/zeiad/sonar_ws/install/cv_bridge/lib:/home/zeiad/sonar_ws/install/custom_ros_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-9/plugins:/opt/ros/eloquent/opt/yaml_cpp_vendor/lib:/opt/ros/eloquent/opt/rviz_ogre_vendor/lib:/opt/ros/eloquent/lib/x86_64-linux-gnu:/opt/ros/eloquent/lib:/usr/lib/x86_64-linux-gnu/gazebo-9/plugins'), ('SHLVL', '1'), ('QT4_IM_MODULE', 'xim'), ('HOME', '/home/zeiad'), ('OLDPWD', '/home/zeiad'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GAZEBO_MASTER_URI', 'http://localhost:11345'), ('GTK_MODULES', 'gail:atk-bridge'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'ar_EG.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '7067'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator20x1a6021154d881c'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('COLCON_PREFIX_PATH', '/home/zeiad/sensorfusion_ros2_ws/install:/home/zeiad/plankton_ros2_ws/install:/home/zeiad/sonar_ws/install'), ('IM_CONFIG_PHASE', '2'), ('ROS_DISTRO', 'eloquent'), ('LOGNAME', 'zeiad'), ('GTK_IM_MODULE', 'ibus'), ('_', '/usr/bin/colcon'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('ROS_VERSION', '2'), ('GAZEBO_MODEL_PATH', '/usr/share/gazebo-9/models:'), ('USERNAME', 'zeiad'), ('XDG_SESSION_ID', '1'), ('TERM', 'xterm-256color'), ('RBENV_SHELL', 'bash'), ('ROS_LOCALHOST_ONLY', '0'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('WINDOWPATH', '1'), ('OGRE_RESOURCE_PATH', '/usr/lib/x86_64-linux-gnu/OGRE-1.9.0'), ('PATH', '/home/zeiad/sonar_ws/install/bluerobotics-ping/bin:/opt/ros/eloquent/bin:/home/zeiad/.rbenv/shims:/home/zeiad/.rbenv/bin:/home/zeiad/.rbenv/shims:/home/zeiad/ardupilot/Tools/autotest:/opt/gcc-arm-none-eabi-6-2017-q2-update/bin:/opt/gcc-arm-none-eabi-9-2020-q2-update/bin:/home/zeiad/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/zeiad-IdeaPad-L340-15IRH-Gaming:@/tmp/.ICE-unix/2197,unix/zeiad-IdeaPad-L340-15IRH-Gaming:/tmp/.ICE-unix/2197'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ar_EG.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'ar_EG.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XMODIFIERS', '@im=ibus'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('AMENT_PREFIX_PATH', '/home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg:/home/zeiad/plankton_ros2_ws/install/plankton:/home/zeiad/plankton_ros2_ws/install/uuv_simulator:/home/zeiad/plankton_ros2_ws/install/uuv_world_ros_plugins:/home/zeiad/plankton_ros2_ws/install/uuv_control_utils:/home/zeiad/plankton_ros2_ws/install/uuv_world_ros_plugins_msgs:/home/zeiad/plankton_ros2_ws/install/uuv_world_plugins:/home/zeiad/plankton_ros2_ws/install/uuv_trajectory_control:/home/zeiad/plankton_ros2_ws/install/uuv_teleop:/home/zeiad/plankton_ros2_ws/install/uuv_thruster_manager:/home/zeiad/plankton_ros2_ws/install/uuv_descriptions:/home/zeiad/plankton_ros2_ws/install/uuv_sensor_ros_plugins:/home/zeiad/plankton_ros2_ws/install/uuv_sensor_ros_plugins_msgs:/home/zeiad/plankton_ros2_ws/install/uuv_gazebo_worlds:/home/zeiad/plankton_ros2_ws/install/uuv_gazebo_ros_plugins:/home/zeiad/plankton_ros2_ws/install/uuv_gazebo_ros_plugins_msgs:/home/zeiad/plankton_ros2_ws/install/uuv_gazebo_plugins:/home/zeiad/plankton_ros2_ws/install/uuv_gazebo:/home/zeiad/plankton_ros2_ws/install/uuv_control_msgs:/home/zeiad/plankton_ros2_ws/install/uuv_control_cascaded_pid:/home/zeiad/plankton_ros2_ws/install/uuv_auv_control_allocator:/home/zeiad/plankton_ros2_ws/install/uuv_assistants:/home/zeiad/plankton_ros2_ws/install/plankton_utils:/home/zeiad/sonar_ws/install/vision_opencv:/home/zeiad/sonar_ws/install/ping360_sonar:/home/zeiad/sonar_ws/install/opencv_tests:/home/zeiad/sonar_ws/install/image_geometry:/home/zeiad/sonar_ws/install/cv_bridge:/home/zeiad/sonar_ws/install/custom_ros_interfaces:/opt/ros/eloquent'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('TERMINATOR_UUID', 'urn:uuid:ed21c278-a11c-40fc-801e-15844804fc14'), ('LC_NAME', 'ar_EG.UTF-8'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ar_EG.UTF-8'), ('TEXTDOMAINDIR', '/usr/share/locale/'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-9:'), ('LC_IDENTIFICATION', 'ar_EG.UTF-8'), ('XDG_VTNR', '1'), ('QT_IM_MODULE', 'ibus'), ('GAZEBO_MODEL_DATABASE_URI', 'http://models.gazebosim.org'), ('LC_ALL', 'en_US.UTF-8'), ('PWD', '/home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg'), ('CLUTTER_IM_MODULE', 'xim'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('GAZEBO_PLUGIN_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-9/plugins:'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('LC_NUMERIC', 'ar_EG.UTF-8'), ('PYTHONPATH', '/home/zeiad/plankton_ros2_ws/install/uuv_world_ros_plugins_msgs/lib/python3.6/site-packages:/home/zeiad/plankton_ros2_ws/install/uuv_trajectory_control/lib/python3.6/site-packages:/home/zeiad/plankton_ros2_ws/install/uuv_thruster_manager/lib/python3.6/site-packages:/home/zeiad/plankton_ros2_ws/install/uuv_sensor_ros_plugins_msgs/lib/python3.6/site-packages:/home/zeiad/plankton_ros2_ws/install/uuv_gazebo_ros_plugins_msgs/lib/python3.6/site-packages:/home/zeiad/plankton_ros2_ws/install/uuv_control_msgs/lib/python3.6/site-packages:/home/zeiad/plankton_ros2_ws/install/uuv_control_cascaded_pid/lib/python3.6/site-packages:/home/zeiad/plankton_ros2_ws/install/uuv_auv_control_allocator/lib/python3.6/site-packages:/home/zeiad/plankton_ros2_ws/install/uuv_assistants/lib/python3.6/site-packages:/home/zeiad/plankton_ros2_ws/install/plankton_utils/lib/python3.6/site-packages:/home/zeiad/sonar_ws/install/ping360_sonar/lib/python3.6/site-packages:/home/zeiad/sonar_ws/install/opencv_tests/lib/python3.6/site-packages:/home/zeiad/sonar_ws/install/image_geometry/lib/python3.6/site-packages:/home/zeiad/sonar_ws/install/cv_bridge/lib/python3.6/site-packages:/home/zeiad/sonar_ws/install/custom_ros_interfaces/lib/python3.6/site-packages:/home/zeiad/sonar_ws/install/bluerobotics-ping/lib/python3.6/site-packages:/opt/ros/eloquent/lib/python3.6/site-packages'), ('LC_PAPER', 'ar_EG.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '5202'), ('CMAKE_PREFIX_PATH', '/home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg:/home/zeiad/plankton_ros2_ws/install/plankton:/home/zeiad/plankton_ros2_ws/install/uuv_simulator:/home/zeiad/plankton_ros2_ws/install/uuv_world_ros_plugins:/home/zeiad/plankton_ros2_ws/install/uuv_control_utils:/home/zeiad/plankton_ros2_ws/install/uuv_world_ros_plugins_msgs:/home/zeiad/plankton_ros2_ws/install/uuv_world_plugins:/home/zeiad/plankton_ros2_ws/install/uuv_trajectory_control:/home/zeiad/plankton_ros2_ws/install/uuv_teleop:/home/zeiad/plankton_ros2_ws/install/uuv_thruster_manager:/home/zeiad/plankton_ros2_ws/install/uuv_descriptions:/home/zeiad/plankton_ros2_ws/install/uuv_sensor_ros_plugins:/home/zeiad/plankton_ros2_ws/install/uuv_sensor_ros_plugins_msgs:/home/zeiad/plankton_ros2_ws/install/uuv_gazebo_worlds:/home/zeiad/plankton_ros2_ws/install/uuv_gazebo_ros_plugins:/home/zeiad/plankton_ros2_ws/install/uuv_gazebo_ros_plugins_msgs:/home/zeiad/plankton_ros2_ws/install/uuv_gazebo_plugins:/home/zeiad/plankton_ros2_ws/install/uuv_gazebo:/home/zeiad/plankton_ros2_ws/install/uuv_control_msgs:/home/zeiad/plankton_ros2_ws/install/uuv_control_cascaded_pid:/home/zeiad/plankton_ros2_ws/install/uuv_auv_control_allocator:/home/zeiad/plankton_ros2_ws/install/uuv_assistants:/home/zeiad/plankton_ros2_ws/install/plankton_utils:/home/zeiad/sonar_ws/install/vision_opencv:/home/zeiad/sonar_ws/install/image_geometry:/home/zeiad/sonar_ws/install/cv_bridge:/home/zeiad/sonar_ws/install/custom_ros_interfaces:/home/zeiad/sonar_ws/install/ping360_sonar:/home/zeiad/sonar_ws/install/opencv_tests:/opt/ros/eloquent')]), 'shell': False}
+[0.295472] (-) TimerEvent: {}
+[0.386089] (kalmenfilter_cpp_pkg) StdoutLine: {'line': b'-- Found ament_cmake: 0.8.3 (/opt/ros/eloquent/share/ament_cmake/cmake)\n'}
+[0.397811] (-) TimerEvent: {}
+[0.498442] (-) TimerEvent: {}
+[0.592822] (kalmenfilter_cpp_pkg) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.599125] (-) TimerEvent: {}
+[0.700223] (-) TimerEvent: {}
+[0.802390] (-) TimerEvent: {}
+[0.905770] (-) TimerEvent: {}
+[1.007117] (-) TimerEvent: {}
+[1.108568] (-) TimerEvent: {}
+[1.209761] (-) TimerEvent: {}
+[1.311977] (-) TimerEvent: {}
+[1.413048] (-) TimerEvent: {}
+[1.515767] (-) TimerEvent: {}
+[1.616833] (-) TimerEvent: {}
+[1.717592] (-) TimerEvent: {}
+[1.724132] (kalmenfilter_cpp_pkg) StdoutLine: {'line': b'-- Found rclcpp: 0.8.5 (/opt/ros/eloquent/share/rclcpp/cmake)\n'}
+[1.788738] (kalmenfilter_cpp_pkg) StdoutLine: {'line': b'-- Found rosidl_adapter: 0.8.3 (/opt/ros/eloquent/share/rosidl_adapter/cmake)\n'}
+[1.820504] (-) TimerEvent: {}
+[1.919785] (kalmenfilter_cpp_pkg) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 0.8.1 (/opt/ros/eloquent/share/rmw_implementation_cmake/cmake)\n'}
+[1.920651] (-) TimerEvent: {}
+[1.926488] (kalmenfilter_cpp_pkg) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[2.021155] (-) TimerEvent: {}
+[2.060397] (kalmenfilter_cpp_pkg) StdoutLine: {'line': b'-- Found std_msgs: 0.8.1 (/opt/ros/eloquent/share/std_msgs/cmake)\n'}
+[2.070747] (kalmenfilter_cpp_pkg) StdoutLine: {'line': b'-- Found sensor_msgs: 0.8.1 (/opt/ros/eloquent/share/sensor_msgs/cmake)\n'}
+[2.115414] (kalmenfilter_cpp_pkg) StdoutLine: {'line': b'-- Found gazebo_msgs: 3.4.4 (/opt/ros/eloquent/share/gazebo_msgs/cmake)\n'}
+[2.121411] (-) TimerEvent: {}
+[2.222677] (-) TimerEvent: {}
+[2.323644] (-) TimerEvent: {}
+[2.333290] (kalmenfilter_cpp_pkg) StdoutLine: {'line': b'-- Found nav_msgs: 0.8.1 (/opt/ros/eloquent/share/nav_msgs/cmake)\n'}
+[2.424251] (-) TimerEvent: {}
+[2.527003] (-) TimerEvent: {}
+[2.628489] (-) TimerEvent: {}
+[2.729553] (-) TimerEvent: {}
+[2.831063] (-) TimerEvent: {}
+[2.933181] (-) TimerEvent: {}
+[3.034798] (-) TimerEvent: {}
+[3.094435] (kalmenfilter_cpp_pkg) StdoutLine: {'line': b'-- Configuring done\n'}
+[3.135127] (-) TimerEvent: {}
+[3.188204] (kalmenfilter_cpp_pkg) StdoutLine: {'line': b'-- Generating done\n'}
+[3.192504] (kalmenfilter_cpp_pkg) StdoutLine: {'line': b'-- Build files have been written to: /home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg\n'}
+[3.235565] (-) TimerEvent: {}
+[3.339432] (-) TimerEvent: {}
+[3.366671] (kalmenfilter_cpp_pkg) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target state_subscriber\x1b[0m\n'}
+[3.439572] (-) TimerEvent: {}
+[3.511758] (kalmenfilter_cpp_pkg) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o\x1b[0m\n'}
+[3.542717] (-) TimerEvent: {}
+[3.644741] (-) TimerEvent: {}
+[3.746721] (-) TimerEvent: {}
+[3.848311] (-) TimerEvent: {}
+[3.951230] (-) TimerEvent: {}
+[4.056162] (-) TimerEvent: {}
+[4.157180] (-) TimerEvent: {}
+[4.258398] (-) TimerEvent: {}
+[4.360655] (-) TimerEvent: {}
+[4.463295] (-) TimerEvent: {}
+[4.564153] (-) TimerEvent: {}
+[4.665084] (-) TimerEvent: {}
+[4.766350] (-) TimerEvent: {}
+[4.869161] (-) TimerEvent: {}
+[4.972270] (-) TimerEvent: {}
+[5.073388] (-) TimerEvent: {}
+[5.174476] (-) TimerEvent: {}
+[5.278298] (-) TimerEvent: {}
+[5.379893] (-) TimerEvent: {}
+[5.480869] (-) TimerEvent: {}
+[5.582907] (-) TimerEvent: {}
+[5.684357] (-) TimerEvent: {}
+[5.785496] (-) TimerEvent: {}
+[5.887108] (-) TimerEvent: {}
+[5.988483] (-) TimerEvent: {}
+[6.090311] (-) TimerEvent: {}
+[6.192960] (-) TimerEvent: {}
+[6.294633] (-) TimerEvent: {}
+[6.398832] (-) TimerEvent: {}
+[6.500116] (-) TimerEvent: {}
+[6.601074] (-) TimerEvent: {}
+[6.701843] (-) TimerEvent: {}
+[6.803254] (-) TimerEvent: {}
+[6.905430] (-) TimerEvent: {}
+[7.007200] (-) TimerEvent: {}
+[7.108355] (-) TimerEvent: {}
+[7.210446] (-) TimerEvent: {}
+[7.311526] (-) TimerEvent: {}
+[7.412823] (-) TimerEvent: {}
+[7.514795] (-) TimerEvent: {}
+[7.618115] (-) TimerEvent: {}
+[7.721648] (-) TimerEvent: {}
+[7.822749] (-) TimerEvent: {}
+[7.923336] (-) TimerEvent: {}
+[8.024432] (-) TimerEvent: {}
+[8.125678] (-) TimerEvent: {}
+[8.227112] (-) TimerEvent: {}
+[8.328314] (-) TimerEvent: {}
+[8.430308] (-) TimerEvent: {}
+[8.531411] (-) TimerEvent: {}
+[8.632437] (-) TimerEvent: {}
+[8.734182] (-) TimerEvent: {}
+[8.836247] (-) TimerEvent: {}
+[8.937151] (-) TimerEvent: {}
+[9.038628] (-) TimerEvent: {}
+[9.139932] (-) TimerEvent: {}
+[9.240824] (-) TimerEvent: {}
+[9.341444] (-) TimerEvent: {}
+[9.442524] (-) TimerEvent: {}
+[9.532693] (kalmenfilter_cpp_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid SubscriberNode::callbackGroundTruth(gazebo_msgs::msg::LinkStates_<std::allocator<void> >::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[9.533678] (kalmenfilter_cpp_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:86:74:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kmsg\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[9.533882] (kalmenfilter_cpp_pkg) StderrLine: {'line': b'   void callbackGroundTruth(const gazebo_msgs::msg::LinkStates::SharedPtr \x1b[01;35m\x1b[Kmsg\x1b[m\x1b[K)\n'}
+[9.534046] (kalmenfilter_cpp_pkg) StderrLine: {'line': b'                                                                          \x1b[01;35m\x1b[K^~~\x1b[m\x1b[K\n'}
+[9.542856] (-) TimerEvent: {}
+[9.644693] (-) TimerEvent: {}
+[9.745960] (-) TimerEvent: {}
+[9.848640] (-) TimerEvent: {}
+[9.949775] (-) TimerEvent: {}
+[10.050873] (-) TimerEvent: {}
+[10.153046] (-) TimerEvent: {}
+[10.253806] (-) TimerEvent: {}
+[10.356183] (-) TimerEvent: {}
+[10.457793] (-) TimerEvent: {}
+[10.559158] (-) TimerEvent: {}
+[10.660411] (-) TimerEvent: {}
+[10.762916] (-) TimerEvent: {}
+[10.863972] (-) TimerEvent: {}
+[10.965427] (-) TimerEvent: {}
+[11.068340] (-) TimerEvent: {}
+[11.169878] (-) TimerEvent: {}
+[11.271283] (-) TimerEvent: {}
+[11.372416] (-) TimerEvent: {}
+[11.473334] (-) TimerEvent: {}
+[11.574915] (-) TimerEvent: {}
+[11.676333] (-) TimerEvent: {}
+[11.777471] (-) TimerEvent: {}
+[11.878780] (-) TimerEvent: {}
+[11.979720] (-) TimerEvent: {}
+[12.080453] (-) TimerEvent: {}
+[12.181517] (-) TimerEvent: {}
+[12.284462] (-) TimerEvent: {}
+[12.385594] (-) TimerEvent: {}
+[12.486781] (-) TimerEvent: {}
+[12.587832] (-) TimerEvent: {}
+[12.688746] (-) TimerEvent: {}
+[12.790264] (-) TimerEvent: {}
+[12.891551] (-) TimerEvent: {}
+[12.993191] (-) TimerEvent: {}
+[13.096389] (-) TimerEvent: {}
+[13.199579] (-) TimerEvent: {}
+[13.300945] (-) TimerEvent: {}
+[13.401769] (-) TimerEvent: {}
+[13.503355] (-) TimerEvent: {}
+[13.605157] (-) TimerEvent: {}
+[13.706941] (-) TimerEvent: {}
+[13.808535] (-) TimerEvent: {}
+[13.914042] (-) TimerEvent: {}
+[14.016394] (-) TimerEvent: {}
+[14.117256] (-) TimerEvent: {}
+[14.219047] (-) TimerEvent: {}
+[14.320876] (-) TimerEvent: {}
+[14.423829] (-) TimerEvent: {}
+[14.526135] (-) TimerEvent: {}
+[14.627774] (-) TimerEvent: {}
+[14.730323] (-) TimerEvent: {}
+[14.831711] (-) TimerEvent: {}
+[14.932526] (-) TimerEvent: {}
+[15.034147] (-) TimerEvent: {}
+[15.135671] (-) TimerEvent: {}
+[15.237077] (-) TimerEvent: {}
+[15.338308] (-) TimerEvent: {}
+[15.439518] (-) TimerEvent: {}
+[15.541430] (-) TimerEvent: {}
+[15.642694] (-) TimerEvent: {}
+[15.744331] (-) TimerEvent: {}
+[15.845435] (-) TimerEvent: {}
+[15.946306] (-) TimerEvent: {}
+[16.047247] (-) TimerEvent: {}
+[16.148622] (-) TimerEvent: {}
+[16.249614] (-) TimerEvent: {}
+[16.351018] (-) TimerEvent: {}
+[16.453934] (-) TimerEvent: {}
+[16.555078] (-) TimerEvent: {}
+[16.656790] (-) TimerEvent: {}
+[16.757911] (-) TimerEvent: {}
+[16.859013] (-) TimerEvent: {}
+[16.960667] (-) TimerEvent: {}
+[17.062243] (-) TimerEvent: {}
+[17.164409] (-) TimerEvent: {}
+[17.266084] (-) TimerEvent: {}
+[17.367018] (-) TimerEvent: {}
+[17.468638] (-) TimerEvent: {}
+[17.575274] (-) TimerEvent: {}
+[17.677781] (-) TimerEvent: {}
+[17.779027] (-) TimerEvent: {}
+[17.880929] (-) TimerEvent: {}
+[17.983523] (-) TimerEvent: {}
+[18.084667] (-) TimerEvent: {}
+[18.185489] (-) TimerEvent: {}
+[18.286894] (-) TimerEvent: {}
+[18.388767] (-) TimerEvent: {}
+[18.491549] (-) TimerEvent: {}
+[18.592701] (-) TimerEvent: {}
+[18.694520] (-) TimerEvent: {}
+[18.795538] (-) TimerEvent: {}
+[18.897053] (-) TimerEvent: {}
+[18.999556] (-) TimerEvent: {}
+[19.101174] (-) TimerEvent: {}
+[19.202066] (-) TimerEvent: {}
+[19.303442] (-) TimerEvent: {}
+[19.405506] (-) TimerEvent: {}
+[19.507394] (-) TimerEvent: {}
+[19.608530] (-) TimerEvent: {}
+[19.709963] (-) TimerEvent: {}
+[19.813039] (-) TimerEvent: {}
+[19.914177] (-) TimerEvent: {}
+[20.017369] (-) TimerEvent: {}
+[20.118594] (-) TimerEvent: {}
+[20.219826] (-) TimerEvent: {}
+[20.321622] (-) TimerEvent: {}
+[20.424313] (-) TimerEvent: {}
+[20.525980] (-) TimerEvent: {}
+[20.627162] (-) TimerEvent: {}
+[20.728604] (-) TimerEvent: {}
+[20.830017] (-) TimerEvent: {}
+[20.931563] (-) TimerEvent: {}
+[21.035329] (-) TimerEvent: {}
+[21.136599] (-) TimerEvent: {}
+[21.237296] (-) TimerEvent: {}
+[21.338247] (-) TimerEvent: {}
+[21.439305] (-) TimerEvent: {}
+[21.540837] (-) TimerEvent: {}
+[21.641975] (-) TimerEvent: {}
+[21.743141] (-) TimerEvent: {}
+[21.845378] (-) TimerEvent: {}
+[21.946398] (-) TimerEvent: {}
+[22.048079] (-) TimerEvent: {}
+[22.150390] (-) TimerEvent: {}
+[22.252790] (-) TimerEvent: {}
+[22.354009] (-) TimerEvent: {}
+[22.454836] (-) TimerEvent: {}
+[22.555835] (-) TimerEvent: {}
+[22.656651] (-) TimerEvent: {}
+[22.758530] (-) TimerEvent: {}
+[22.861098] (-) TimerEvent: {}
+[22.961912] (-) TimerEvent: {}
+[23.062600] (-) TimerEvent: {}
+[23.164010] (-) TimerEvent: {}
+[23.268842] (-) TimerEvent: {}
+[23.371673] (-) TimerEvent: {}
+[23.472784] (-) TimerEvent: {}
+[23.573982] (-) TimerEvent: {}
+[23.675609] (-) TimerEvent: {}
+[23.776788] (-) TimerEvent: {}
+[23.877898] (-) TimerEvent: {}
+[23.981820] (-) TimerEvent: {}
+[24.083324] (-) TimerEvent: {}
+[24.184414] (-) TimerEvent: {}
+[24.286140] (-) TimerEvent: {}
+[24.388555] (-) TimerEvent: {}
+[24.490505] (-) TimerEvent: {}
+[24.591866] (-) TimerEvent: {}
+[24.692782] (-) TimerEvent: {}
+[24.794285] (-) TimerEvent: {}
+[24.895737] (-) TimerEvent: {}
+[24.996788] (-) TimerEvent: {}
+[25.098013] (-) TimerEvent: {}
+[25.199010] (-) TimerEvent: {}
+[25.299850] (-) TimerEvent: {}
+[25.401101] (-) TimerEvent: {}
+[25.502214] (-) TimerEvent: {}
+[25.604567] (-) TimerEvent: {}
+[25.706201] (-) TimerEvent: {}
+[25.807789] (-) TimerEvent: {}
+[25.909155] (-) TimerEvent: {}
+[26.012166] (-) TimerEvent: {}
+[26.113426] (-) TimerEvent: {}
+[26.215763] (-) TimerEvent: {}
+[26.316582] (-) TimerEvent: {}
+[26.417858] (-) TimerEvent: {}
+[26.519756] (-) TimerEvent: {}
+[26.620777] (-) TimerEvent: {}
+[26.722412] (-) TimerEvent: {}
+[26.826066] (-) TimerEvent: {}
+[26.927156] (-) TimerEvent: {}
+[27.030304] (-) TimerEvent: {}
+[27.133435] (-) TimerEvent: {}
+[27.234223] (-) TimerEvent: {}
+[27.335706] (-) TimerEvent: {}
+[27.436589] (-) TimerEvent: {}
+[27.537823] (-) TimerEvent: {}
+[27.639133] (-) TimerEvent: {}
+[27.740557] (-) TimerEvent: {}
+[27.842323] (-) TimerEvent: {}
+[27.944239] (-) TimerEvent: {}
+[28.048364] (-) TimerEvent: {}
+[28.149981] (-) TimerEvent: {}
+[28.252242] (-) TimerEvent: {}
+[28.353622] (-) TimerEvent: {}
+[28.456494] (-) TimerEvent: {}
+[28.557831] (-) TimerEvent: {}
+[28.659374] (-) TimerEvent: {}
+[28.760586] (-) TimerEvent: {}
+[28.861558] (-) TimerEvent: {}
+[28.964676] (-) TimerEvent: {}
+[29.066898] (-) TimerEvent: {}
+[29.167692] (-) TimerEvent: {}
+[29.268350] (-) TimerEvent: {}
+[29.369416] (-) TimerEvent: {}
+[29.471537] (-) TimerEvent: {}
+[29.573697] (-) TimerEvent: {}
+[29.674841] (-) TimerEvent: {}
+[29.777116] (-) TimerEvent: {}
+[29.879565] (-) TimerEvent: {}
+[29.981236] (-) TimerEvent: {}
+[30.082679] (-) TimerEvent: {}
+[30.184538] (-) TimerEvent: {}
+[30.287016] (-) TimerEvent: {}
+[30.389692] (-) TimerEvent: {}
+[30.491072] (-) TimerEvent: {}
+[30.594413] (-) TimerEvent: {}
+[30.695947] (-) TimerEvent: {}
+[30.797049] (-) TimerEvent: {}
+[30.898531] (-) TimerEvent: {}
+[31.000020] (-) TimerEvent: {}
+[31.101318] (-) TimerEvent: {}
+[31.203428] (-) TimerEvent: {}
+[31.304877] (-) TimerEvent: {}
+[31.406683] (-) TimerEvent: {}
+[31.509000] (-) TimerEvent: {}
+[31.610794] (-) TimerEvent: {}
+[31.711993] (-) TimerEvent: {}
+[31.813233] (-) TimerEvent: {}
+[31.914234] (-) TimerEvent: {}
+[32.015761] (-) TimerEvent: {}
+[32.117496] (-) TimerEvent: {}
+[32.218638] (-) TimerEvent: {}
+[32.319794] (-) TimerEvent: {}
+[32.420716] (-) TimerEvent: {}
+[32.523085] (-) TimerEvent: {}
+[32.625398] (-) TimerEvent: {}
+[32.727052] (-) TimerEvent: {}
+[32.832997] (-) TimerEvent: {}
+[32.934162] (-) TimerEvent: {}
+[33.035570] (-) TimerEvent: {}
+[33.137159] (-) TimerEvent: {}
+[33.239804] (-) TimerEvent: {}
+[33.341339] (-) TimerEvent: {}
+[33.442463] (-) TimerEvent: {}
+[33.543681] (-) TimerEvent: {}
+[33.646793] (-) TimerEvent: {}
+[33.748172] (-) TimerEvent: {}
+[33.849814] (-) TimerEvent: {}
+[33.953304] (-) TimerEvent: {}
+[34.054935] (-) TimerEvent: {}
+[34.162549] (-) TimerEvent: {}
+[34.264163] (-) TimerEvent: {}
+[34.365755] (-) TimerEvent: {}
+[34.467725] (-) TimerEvent: {}
+[34.569259] (-) TimerEvent: {}
+[34.670314] (-) TimerEvent: {}
+[34.771184] (-) TimerEvent: {}
+[34.872488] (-) TimerEvent: {}
+[34.974775] (-) TimerEvent: {}
+[35.076214] (-) TimerEvent: {}
+[35.178580] (-) TimerEvent: {}
+[35.279961] (-) TimerEvent: {}
+[35.381337] (-) TimerEvent: {}
+[35.483242] (-) TimerEvent: {}
+[35.585951] (-) TimerEvent: {}
+[35.689246] (-) TimerEvent: {}
+[35.791555] (-) TimerEvent: {}
+[35.893182] (-) TimerEvent: {}
+[35.994124] (-) TimerEvent: {}
+[36.095031] (-) TimerEvent: {}
+[36.196997] (-) TimerEvent: {}
+[36.299857] (-) TimerEvent: {}
+[36.400863] (-) TimerEvent: {}
+[36.502387] (-) TimerEvent: {}
+[36.606969] (-) TimerEvent: {}
+[36.708820] (-) TimerEvent: {}
+[36.811567] (-) TimerEvent: {}
+[36.912664] (-) TimerEvent: {}
+[37.013965] (-) TimerEvent: {}
+[37.119768] (-) TimerEvent: {}
+[37.222084] (-) TimerEvent: {}
+[37.324434] (-) TimerEvent: {}
+[37.426579] (-) TimerEvent: {}
+[37.528531] (-) TimerEvent: {}
+[37.632159] (-) TimerEvent: {}
+[37.733465] (-) TimerEvent: {}
+[37.834675] (-) TimerEvent: {}
+[37.936081] (-) TimerEvent: {}
+[38.037754] (-) TimerEvent: {}
+[38.138968] (-) TimerEvent: {}
+[38.240359] (-) TimerEvent: {}
+[38.342272] (-) TimerEvent: {}
+[38.442869] (-) TimerEvent: {}
+[38.544452] (-) TimerEvent: {}
+[38.646624] (-) TimerEvent: {}
+[38.748900] (-) TimerEvent: {}
+[38.850519] (-) TimerEvent: {}
+[38.951389] (-) TimerEvent: {}
+[39.053209] (-) TimerEvent: {}
+[39.154981] (-) TimerEvent: {}
+[39.256809] (-) TimerEvent: {}
+[39.358754] (-) TimerEvent: {}
+[39.460199] (-) TimerEvent: {}
+[39.561551] (-) TimerEvent: {}
+[39.662657] (-) TimerEvent: {}
+[39.764477] (-) TimerEvent: {}
+[39.868495] (-) TimerEvent: {}
+[39.970695] (-) TimerEvent: {}
+[40.071905] (-) TimerEvent: {}
+[40.174607] (-) TimerEvent: {}
+[40.275638] (-) TimerEvent: {}
+[40.376503] (-) TimerEvent: {}
+[40.478556] (-) TimerEvent: {}
+[40.580733] (-) TimerEvent: {}
+[40.682724] (-) TimerEvent: {}
+[40.784268] (-) TimerEvent: {}
+[40.885498] (-) TimerEvent: {}
+[40.959975] (kalmenfilter_cpp_pkg) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable state_subscriber\x1b[0m\n'}
+[40.986169] (-) TimerEvent: {}
+[41.087620] (-) TimerEvent: {}
+[41.188439] (-) TimerEvent: {}
+[41.289471] (-) TimerEvent: {}
+[41.391962] (-) TimerEvent: {}
+[41.493222] (-) TimerEvent: {}
+[41.595518] (-) TimerEvent: {}
+[41.698247] (-) TimerEvent: {}
+[41.800141] (-) TimerEvent: {}
+[41.901349] (-) TimerEvent: {}
+[42.002738] (-) TimerEvent: {}
+[42.104586] (-) TimerEvent: {}
+[42.206507] (-) TimerEvent: {}
+[42.307697] (-) TimerEvent: {}
+[42.408814] (-) TimerEvent: {}
+[42.510320] (-) TimerEvent: {}
+[42.611477] (-) TimerEvent: {}
+[42.713015] (-) TimerEvent: {}
+[42.815301] (-) TimerEvent: {}
+[42.917066] (-) TimerEvent: {}
+[43.019631] (-) TimerEvent: {}
+[43.121451] (-) TimerEvent: {}
+[43.223385] (-) TimerEvent: {}
+[43.324887] (-) TimerEvent: {}
+[43.426498] (-) TimerEvent: {}
+[43.527549] (-) TimerEvent: {}
+[43.628462] (-) TimerEvent: {}
+[43.730124] (-) TimerEvent: {}
+[43.832149] (-) TimerEvent: {}
+[43.937608] (-) TimerEvent: {}
+[44.039355] (-) TimerEvent: {}
+[44.140262] (-) TimerEvent: {}
+[44.205937] (kalmenfilter_cpp_pkg) StdoutLine: {'line': b'[100%] Built target state_subscriber\n'}
+[44.240664] (-) TimerEvent: {}
+[44.272947] (kalmenfilter_cpp_pkg) CommandEnded: {'returncode': 0}
+[44.341205] (-) TimerEvent: {}
+[44.443643] (-) TimerEvent: {}
+[44.530282] (kalmenfilter_cpp_pkg) JobProgress: {'identifier': 'kalmenfilter_cpp_pkg', 'progress': 'install'}
+[44.544144] (-) TimerEvent: {}
+[44.601916] (kalmenfilter_cpp_pkg) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg', '--target', 'install', '--', '-j12', '-l12'], 'cwd': '/home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'zeiad'), ('LC_TIME', 'ar_EG.UTF-8'), ('TEXTDOMAIN', 'im-config'), ('XDG_SEAT', 'seat0'), ('SSH_AGENT_PID', '2438'), ('XDG_SESSION_TYPE', 'x11'), ('LD_LIBRARY_PATH', '/home/zeiad/plankton_ros2_ws/install/uuv_world_ros_plugins/lib:/home/zeiad/plankton_ros2_ws/install/uuv_world_ros_plugins_msgs/lib:/home/zeiad/plankton_ros2_ws/install/uuv_world_plugins/lib:/home/zeiad/plankton_ros2_ws/install/uuv_thruster_manager/lib:/home/zeiad/plankton_ros2_ws/install/uuv_sensor_ros_plugins/lib:/home/zeiad/plankton_ros2_ws/install/uuv_sensor_ros_plugins_msgs/lib:/home/zeiad/plankton_ros2_ws/install/uuv_gazebo_ros_plugins/lib:/home/zeiad/plankton_ros2_ws/install/uuv_gazebo_ros_plugins_msgs/lib:/home/zeiad/plankton_ros2_ws/install/uuv_gazebo_plugins/lib:/home/zeiad/plankton_ros2_ws/install/uuv_control_msgs/lib:/home/zeiad/plankton_ros2_ws/install/uuv_auv_control_allocator/lib:/home/zeiad/sonar_ws/install/image_geometry/lib:/home/zeiad/sonar_ws/install/cv_bridge/lib:/home/zeiad/sonar_ws/install/custom_ros_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-9/plugins:/opt/ros/eloquent/opt/yaml_cpp_vendor/lib:/opt/ros/eloquent/opt/rviz_ogre_vendor/lib:/opt/ros/eloquent/lib/x86_64-linux-gnu:/opt/ros/eloquent/lib:/usr/lib/x86_64-linux-gnu/gazebo-9/plugins'), ('SHLVL', '1'), ('QT4_IM_MODULE', 'xim'), ('HOME', '/home/zeiad'), ('OLDPWD', '/home/zeiad'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GAZEBO_MASTER_URI', 'http://localhost:11345'), ('GTK_MODULES', 'gail:atk-bridge'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'ar_EG.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '7067'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator20x1a6021154d881c'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('COLCON_PREFIX_PATH', '/home/zeiad/sensorfusion_ros2_ws/install:/home/zeiad/plankton_ros2_ws/install:/home/zeiad/sonar_ws/install'), ('IM_CONFIG_PHASE', '2'), ('ROS_DISTRO', 'eloquent'), ('LOGNAME', 'zeiad'), ('GTK_IM_MODULE', 'ibus'), ('_', '/usr/bin/colcon'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('ROS_VERSION', '2'), ('GAZEBO_MODEL_PATH', '/usr/share/gazebo-9/models:'), ('USERNAME', 'zeiad'), ('XDG_SESSION_ID', '1'), ('TERM', 'xterm-256color'), ('RBENV_SHELL', 'bash'), ('ROS_LOCALHOST_ONLY', '0'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('WINDOWPATH', '1'), ('OGRE_RESOURCE_PATH', '/usr/lib/x86_64-linux-gnu/OGRE-1.9.0'), ('PATH', '/home/zeiad/sonar_ws/install/bluerobotics-ping/bin:/opt/ros/eloquent/bin:/home/zeiad/.rbenv/shims:/home/zeiad/.rbenv/bin:/home/zeiad/.rbenv/shims:/home/zeiad/ardupilot/Tools/autotest:/opt/gcc-arm-none-eabi-6-2017-q2-update/bin:/opt/gcc-arm-none-eabi-9-2020-q2-update/bin:/home/zeiad/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/zeiad-IdeaPad-L340-15IRH-Gaming:@/tmp/.ICE-unix/2197,unix/zeiad-IdeaPad-L340-15IRH-Gaming:/tmp/.ICE-unix/2197'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ar_EG.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'ar_EG.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XMODIFIERS', '@im=ibus'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('AMENT_PREFIX_PATH', '/home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg:/home/zeiad/plankton_ros2_ws/install/plankton:/home/zeiad/plankton_ros2_ws/install/uuv_simulator:/home/zeiad/plankton_ros2_ws/install/uuv_world_ros_plugins:/home/zeiad/plankton_ros2_ws/install/uuv_control_utils:/home/zeiad/plankton_ros2_ws/install/uuv_world_ros_plugins_msgs:/home/zeiad/plankton_ros2_ws/install/uuv_world_plugins:/home/zeiad/plankton_ros2_ws/install/uuv_trajectory_control:/home/zeiad/plankton_ros2_ws/install/uuv_teleop:/home/zeiad/plankton_ros2_ws/install/uuv_thruster_manager:/home/zeiad/plankton_ros2_ws/install/uuv_descriptions:/home/zeiad/plankton_ros2_ws/install/uuv_sensor_ros_plugins:/home/zeiad/plankton_ros2_ws/install/uuv_sensor_ros_plugins_msgs:/home/zeiad/plankton_ros2_ws/install/uuv_gazebo_worlds:/home/zeiad/plankton_ros2_ws/install/uuv_gazebo_ros_plugins:/home/zeiad/plankton_ros2_ws/install/uuv_gazebo_ros_plugins_msgs:/home/zeiad/plankton_ros2_ws/install/uuv_gazebo_plugins:/home/zeiad/plankton_ros2_ws/install/uuv_gazebo:/home/zeiad/plankton_ros2_ws/install/uuv_control_msgs:/home/zeiad/plankton_ros2_ws/install/uuv_control_cascaded_pid:/home/zeiad/plankton_ros2_ws/install/uuv_auv_control_allocator:/home/zeiad/plankton_ros2_ws/install/uuv_assistants:/home/zeiad/plankton_ros2_ws/install/plankton_utils:/home/zeiad/sonar_ws/install/vision_opencv:/home/zeiad/sonar_ws/install/ping360_sonar:/home/zeiad/sonar_ws/install/opencv_tests:/home/zeiad/sonar_ws/install/image_geometry:/home/zeiad/sonar_ws/install/cv_bridge:/home/zeiad/sonar_ws/install/custom_ros_interfaces:/opt/ros/eloquent'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('TERMINATOR_UUID', 'urn:uuid:ed21c278-a11c-40fc-801e-15844804fc14'), ('LC_NAME', 'ar_EG.UTF-8'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ar_EG.UTF-8'), ('TEXTDOMAINDIR', '/usr/share/locale/'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-9:'), ('LC_IDENTIFICATION', 'ar_EG.UTF-8'), ('XDG_VTNR', '1'), ('QT_IM_MODULE', 'ibus'), ('GAZEBO_MODEL_DATABASE_URI', 'http://models.gazebosim.org'), ('LC_ALL', 'en_US.UTF-8'), ('PWD', '/home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg'), ('CLUTTER_IM_MODULE', 'xim'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('GAZEBO_PLUGIN_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-9/plugins:'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('LC_NUMERIC', 'ar_EG.UTF-8'), ('PYTHONPATH', '/home/zeiad/plankton_ros2_ws/install/uuv_world_ros_plugins_msgs/lib/python3.6/site-packages:/home/zeiad/plankton_ros2_ws/install/uuv_trajectory_control/lib/python3.6/site-packages:/home/zeiad/plankton_ros2_ws/install/uuv_thruster_manager/lib/python3.6/site-packages:/home/zeiad/plankton_ros2_ws/install/uuv_sensor_ros_plugins_msgs/lib/python3.6/site-packages:/home/zeiad/plankton_ros2_ws/install/uuv_gazebo_ros_plugins_msgs/lib/python3.6/site-packages:/home/zeiad/plankton_ros2_ws/install/uuv_control_msgs/lib/python3.6/site-packages:/home/zeiad/plankton_ros2_ws/install/uuv_control_cascaded_pid/lib/python3.6/site-packages:/home/zeiad/plankton_ros2_ws/install/uuv_auv_control_allocator/lib/python3.6/site-packages:/home/zeiad/plankton_ros2_ws/install/uuv_assistants/lib/python3.6/site-packages:/home/zeiad/plankton_ros2_ws/install/plankton_utils/lib/python3.6/site-packages:/home/zeiad/sonar_ws/install/ping360_sonar/lib/python3.6/site-packages:/home/zeiad/sonar_ws/install/opencv_tests/lib/python3.6/site-packages:/home/zeiad/sonar_ws/install/image_geometry/lib/python3.6/site-packages:/home/zeiad/sonar_ws/install/cv_bridge/lib/python3.6/site-packages:/home/zeiad/sonar_ws/install/custom_ros_interfaces/lib/python3.6/site-packages:/home/zeiad/sonar_ws/install/bluerobotics-ping/lib/python3.6/site-packages:/opt/ros/eloquent/lib/python3.6/site-packages'), ('LC_PAPER', 'ar_EG.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '5202'), ('CMAKE_PREFIX_PATH', '/home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg:/home/zeiad/plankton_ros2_ws/install/plankton:/home/zeiad/plankton_ros2_ws/install/uuv_simulator:/home/zeiad/plankton_ros2_ws/install/uuv_world_ros_plugins:/home/zeiad/plankton_ros2_ws/install/uuv_control_utils:/home/zeiad/plankton_ros2_ws/install/uuv_world_ros_plugins_msgs:/home/zeiad/plankton_ros2_ws/install/uuv_world_plugins:/home/zeiad/plankton_ros2_ws/install/uuv_trajectory_control:/home/zeiad/plankton_ros2_ws/install/uuv_teleop:/home/zeiad/plankton_ros2_ws/install/uuv_thruster_manager:/home/zeiad/plankton_ros2_ws/install/uuv_descriptions:/home/zeiad/plankton_ros2_ws/install/uuv_sensor_ros_plugins:/home/zeiad/plankton_ros2_ws/install/uuv_sensor_ros_plugins_msgs:/home/zeiad/plankton_ros2_ws/install/uuv_gazebo_worlds:/home/zeiad/plankton_ros2_ws/install/uuv_gazebo_ros_plugins:/home/zeiad/plankton_ros2_ws/install/uuv_gazebo_ros_plugins_msgs:/home/zeiad/plankton_ros2_ws/install/uuv_gazebo_plugins:/home/zeiad/plankton_ros2_ws/install/uuv_gazebo:/home/zeiad/plankton_ros2_ws/install/uuv_control_msgs:/home/zeiad/plankton_ros2_ws/install/uuv_control_cascaded_pid:/home/zeiad/plankton_ros2_ws/install/uuv_auv_control_allocator:/home/zeiad/plankton_ros2_ws/install/uuv_assistants:/home/zeiad/plankton_ros2_ws/install/plankton_utils:/home/zeiad/sonar_ws/install/vision_opencv:/home/zeiad/sonar_ws/install/image_geometry:/home/zeiad/sonar_ws/install/cv_bridge:/home/zeiad/sonar_ws/install/custom_ros_interfaces:/home/zeiad/sonar_ws/install/ping360_sonar:/home/zeiad/sonar_ws/install/opencv_tests:/opt/ros/eloquent')]), 'shell': False}
+[44.644667] (-) TimerEvent: {}
+[44.746034] (-) TimerEvent: {}
+[44.848919] (-) TimerEvent: {}
+[44.949842] (-) TimerEvent: {}
+[45.051743] (-) TimerEvent: {}
+[45.154133] (-) TimerEvent: {}
+[45.156724] (kalmenfilter_cpp_pkg) StdoutLine: {'line': b'[100%] Built target state_subscriber\n'}
+[45.254648] (-) TimerEvent: {}
+[45.328771] (kalmenfilter_cpp_pkg) StdoutLine: {'line': b'\x1b[36mInstall the project...\x1b[0m\n'}
+[45.355019] (-) TimerEvent: {}
+[45.401377] (kalmenfilter_cpp_pkg) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[45.403807] (kalmenfilter_cpp_pkg) StdoutLine: {'line': b'-- Installing: /home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/lib/kalmenfilter_cpp_pkg/state_subscriber\n'}
+[45.415628] (kalmenfilter_cpp_pkg) StdoutLine: {'line': b'-- Set runtime path of "/home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/lib/kalmenfilter_cpp_pkg/state_subscriber" to ""\n'}
+[45.416079] (kalmenfilter_cpp_pkg) StdoutLine: {'line': b'-- Installing: /home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/share/ament_index/resource_index/package_run_dependencies/kalmenfilter_cpp_pkg\n'}
+[45.416392] (kalmenfilter_cpp_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/share/ament_index/resource_index/parent_prefix_path/kalmenfilter_cpp_pkg\n'}
+[45.416781] (kalmenfilter_cpp_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/share/kalmenfilter_cpp_pkg/environment/ament_prefix_path.sh\n'}
+[45.417217] (kalmenfilter_cpp_pkg) StdoutLine: {'line': b'-- Installing: /home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/share/kalmenfilter_cpp_pkg/environment/ament_prefix_path.dsv\n'}
+[45.417554] (kalmenfilter_cpp_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/share/kalmenfilter_cpp_pkg/environment/path.sh\n'}
+[45.420728] (kalmenfilter_cpp_pkg) StdoutLine: {'line': b'-- Installing: /home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/share/kalmenfilter_cpp_pkg/environment/path.dsv\n'}
+[45.421296] (kalmenfilter_cpp_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/share/kalmenfilter_cpp_pkg/local_setup.bash\n'}
+[45.421541] (kalmenfilter_cpp_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/share/kalmenfilter_cpp_pkg/local_setup.sh\n'}
+[45.422069] (kalmenfilter_cpp_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/share/kalmenfilter_cpp_pkg/local_setup.zsh\n'}
+[45.422404] (kalmenfilter_cpp_pkg) StdoutLine: {'line': b'-- Installing: /home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/share/kalmenfilter_cpp_pkg/local_setup.dsv\n'}
+[45.422568] (kalmenfilter_cpp_pkg) StdoutLine: {'line': b'-- Installing: /home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/share/kalmenfilter_cpp_pkg/package.dsv\n'}
+[45.422732] (kalmenfilter_cpp_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/share/ament_index/resource_index/packages/kalmenfilter_cpp_pkg\n'}
+[45.423131] (kalmenfilter_cpp_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/share/kalmenfilter_cpp_pkg/cmake/kalmenfilter_cpp_pkgConfig.cmake\n'}
+[45.423307] (kalmenfilter_cpp_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/share/kalmenfilter_cpp_pkg/cmake/kalmenfilter_cpp_pkgConfig-version.cmake\n'}
+[45.423514] (kalmenfilter_cpp_pkg) StdoutLine: {'line': b'-- Installing: /home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/share/kalmenfilter_cpp_pkg/package.xml\n'}
+[45.435061] (kalmenfilter_cpp_pkg) CommandEnded: {'returncode': 0}
+[45.456091] (-) TimerEvent: {}
+[45.558571] (-) TimerEvent: {}
+[45.669955] (-) TimerEvent: {}
+[45.774513] (-) TimerEvent: {}
+[45.877757] (-) TimerEvent: {}
+[45.978898] (-) TimerEvent: {}
+[46.084632] (-) TimerEvent: {}
+[46.206785] (-) TimerEvent: {}
+[46.246445] (kalmenfilter_cpp_pkg) JobEnded: {'identifier': 'kalmenfilter_cpp_pkg', 'rc': 0}
+[46.252190] (-) EventReactorShutdown: {}

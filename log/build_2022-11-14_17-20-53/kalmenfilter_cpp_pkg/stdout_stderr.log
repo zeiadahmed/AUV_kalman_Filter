@@ -1,0 +1,162 @@
+[35m[1mScanning dependencies of target state_subscriber[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o[0m
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:73:35:[m[K [01;31m[Kerror: [m[Knon-static data member ‘[01m[KINIT_POS_STD[m[K’ declared ‘[01m[Kconstexpr[m[K’
+   constexpr double INIT_POS_STD = [01;31m[K0[m[K;
+                                   [01;31m[K^[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:74:35:[m[K [01;31m[Kerror: [m[Knon-static data member ‘[01m[KINIT_VEL_STD[m[K’ declared ‘[01m[Kconstexpr[m[K’
+   constexpr double INIT_VEL_STD = [01;31m[K15[m[K;
+                                   [01;31m[K^~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:75:39:[m[K [01;31m[Kerror: [m[Knon-static data member ‘[01m[KLINEAR_ACCEL_STD[m[K’ declared ‘[01m[Kconstexpr[m[K’
+   constexpr double LINEAR_ACCEL_STD = [01;31m[K0.1[m[K;
+                                       [01;31m[K^~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:76:34:[m[K [01;31m[Kerror: [m[Knon-static data member ‘[01m[KGPS_POS_STD[m[K’ declared ‘[01m[Kconstexpr[m[K’
+   constexpr double GPS_POS_STD = [01;31m[K3.0[m[K;
+                                  [01;31m[K^~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:77:25:[m[K [01;31m[Kerror: [m[Knon-static data member ‘[01m[Kdt[m[K’ declared ‘[01m[Kconstexpr[m[K’
+   constexpr double dt = [01;31m[K0.05[m[K;
+                         [01;31m[K^~~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:12:14:[m[K [01;31m[Kerror: [m[Knon-static data member ‘[01m[KORIANTATION_STD[m[K’ declared ‘[01m[Kconstexpr[m[K’
+ #define M_PI [01;31m[K3[m[K.14159265358979323846
+              [01;31m[K^[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:78:53:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KM_PI[m[K’
+   constexpr double ORIANTATION_STD = 0.01 / 180.0 * [01;36m[KM_PI[m[K;
+                                                     [01;36m[K^~~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:12:14:[m[K [01;31m[Kerror: [m[Knon-static data member ‘[01m[KINIT_PSI_STD[m[K’ declared ‘[01m[Kconstexpr[m[K’
+ #define M_PI [01;31m[K3[m[K.14159265358979323846
+              [01;31m[K^[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:79:50:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KM_PI[m[K’
+   constexpr double INIT_PSI_STD = 45.0 / 180.0 * [01;36m[KM_PI[m[K;
+                                                  [01;36m[K^~~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:12:14:[m[K [01;31m[Kerror: [m[Knon-static data member ‘[01m[KINIT_PSI_ACCEL_STD[m[K’ declared ‘[01m[Kconstexpr[m[K’
+ #define M_PI [01;31m[K3[m[K.14159265358979323846
+              [01;31m[K^[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:80:56:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KM_PI[m[K’
+   constexpr double INIT_PSI_ACCEL_STD = 0.01 / 180.0 * [01;36m[KM_PI[m[K;
+                                                        [01;36m[K^~~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:[m[K In member function ‘[01m[Kvoid SubscriberNode::prediction_step()[m[K’:
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:87:29:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K;[m[K’ before ‘[01m[K::[m[K’ token
+     MatrixXd F = Matrix12d()[01;31m[K::[m[KZero();
+                             [01;31m[K^~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:108:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kmsg[m[K’ was not declared in this scope
+     double LinearXAccel = [01;31m[Kmsg[m[K->linear_acceleration.x;
+                           [01;31m[K^~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:108:27:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+In file included from [01m[K/opt/ros/eloquent/include/builtin_interfaces/msg/duration.hpp:7:0[m[K,
+                 from [01m[K/opt/ros/eloquent/include/rclcpp/duration.hpp:20[m[K,
+                 from [01m[K/opt/ros/eloquent/include/rclcpp/qos.hpp:21[m[K,
+                 from [01m[K/opt/ros/eloquent/include/rclcpp/publisher_base.hpp:31[m[K,
+                 from [01m[K/opt/ros/eloquent/include/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/eloquent/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/eloquent/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/eloquent/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/eloquent/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/eloquent/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/eloquent/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/eloquent/include/rclcpp/rclcpp.hpp:145[m[K,
+                 from [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:1[m[K:
+[01m[K/opt/ros/eloquent/include/builtin_interfaces/msg/duration__struct.hpp:26:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kbuiltin_interfaces::msg[m[K’
+ namespace [01;36m[Kmsg[m[K
+           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/eloquent/include/rcl_interfaces/msg/list_parameters_result.hpp:7:0[m[K,
+                 from [01m[K/opt/ros/eloquent/include/rclcpp/node.hpp:34[m[K,
+                 from [01m[K/opt/ros/eloquent/include/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+                 from [01m[K/opt/ros/eloquent/include/rclcpp/executors.hpp:22[m[K,
+                 from [01m[K/opt/ros/eloquent/include/rclcpp/rclcpp.hpp:145[m[K,
+                 from [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:1[m[K:
+[01m[K/opt/ros/eloquent/include/rcl_interfaces/msg/list_parameters_result__struct.hpp:26:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Krcl_interfaces::msg[m[K’
+ namespace [01;36m[Kmsg[m[K
+           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/eloquent/include/sensor_msgs/msg/imu__struct.hpp:19:0[m[K,
+                 from [01m[K/opt/ros/eloquent/include/sensor_msgs/msg/imu.hpp:7[m[K,
+                 from [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:2[m[K:
+[01m[K/opt/ros/eloquent/include/std_msgs/msg/header__struct.hpp:30:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd_msgs::msg[m[K’
+ namespace [01;36m[Kmsg[m[K
+           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/eloquent/include/sensor_msgs/msg/imu__struct.hpp:21:0[m[K,
+                 from [01m[K/opt/ros/eloquent/include/sensor_msgs/msg/imu.hpp:7[m[K,
+                 from [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:2[m[K:
+[01m[K/opt/ros/eloquent/include/geometry_msgs/msg/quaternion__struct.hpp:26:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kgeometry_msgs::msg[m[K’
+ namespace [01;36m[Kmsg[m[K
+           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/eloquent/include/sensor_msgs/msg/imu.hpp:7:0[m[K,
+                 from [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:2[m[K:
+[01m[K/opt/ros/eloquent/include/sensor_msgs/msg/imu__struct.hpp:35:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksensor_msgs::msg[m[K’
+ namespace [01;36m[Kmsg[m[K
+           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/eloquent/include/gazebo_msgs/msg/link_states.hpp:7:0[m[K,
+                 from [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:3[m[K:
+[01m[K/opt/ros/eloquent/include/gazebo_msgs/msg/link_states__struct.hpp:32:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kgazebo_msgs::msg[m[K’
+ namespace [01;36m[Kmsg[m[K
+           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/eloquent/include/nav_msgs/msg/odometry.hpp:7:0[m[K,
+                 from [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:6[m[K:
+[01m[K/opt/ros/eloquent/include/nav_msgs/msg/odometry__struct.hpp:34:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Knav_msgs::msg[m[K’
+ namespace [01;36m[Kmsg[m[K
+           [01;36m[K^~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:112:32:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K;[m[K’ before ‘[01m[K::[m[K’ token
+     MatrixXd Q = MatrixXd(6, 6)[01;31m[K::[m[KZero();
+                                [01;31m[K^~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:121:33:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K;[m[K’ before ‘[01m[K::[m[K’ token
+     MatrixXd L = MatrixXd(12, 6)[01;31m[K::[m[KZero();
+                                 [01;31m[K^~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:142:5:[m[K [01;31m[Kerror: [m[K‘[01m[KsetCovariance[m[K’ was not declared in this scope
+     [01;31m[KsetCovariance[m[K(current_cov);
+     [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:[m[K In member function ‘[01m[Kvoid SubscriberNode::callbackIMU(sensor_msgs::msg::Imu_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:209:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KIMU_init[m[K’ [[01;35m[K-Wunused-variable[m[K]
+       bool [01;35m[KIMU_init[m[K = true;
+            [01;35m[K^~~~~~~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:[m[K In member function ‘[01m[Kvoid SubscriberNode::callbackDVL(geometry_msgs::msg::TwistWithCovarianceStamped_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:233:16:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct geometry_msgs::msg::TwistWithCovarianceStamped_<std::allocator<void> > {aka struct geometry_msgs::msg::TwistWithCovarianceStamped_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Korientation[m[K’
+           msg->[01;31m[Korientation[m[K.x, msg->orientation.y, msg->orientation.z,                // angular pose
+                [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:233:36:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct geometry_msgs::msg::TwistWithCovarianceStamped_<std::allocator<void> > {aka struct geometry_msgs::msg::TwistWithCovarianceStamped_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Korientation[m[K’
+           msg->orientation.x, msg->[01;31m[Korientation[m[K.y, msg->orientation.z,                // angular pose
+                                    [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:233:56:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct geometry_msgs::msg::TwistWithCovarianceStamped_<std::allocator<void> > {aka struct geometry_msgs::msg::TwistWithCovarianceStamped_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Korientation[m[K’
+           msg->orientation.x, msg->orientation.y, msg->[01;31m[Korientation[m[K.z,                // angular pose
+                                                        [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:235:16:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct geometry_msgs::msg::TwistWithCovarianceStamped_<std::allocator<void> > {aka struct geometry_msgs::msg::TwistWithCovarianceStamped_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Kangular_velocity[m[K’
+           msg->[01;31m[Kangular_velocity[m[K.x, msg->angular_velocity.y, msg->angular_velocity.z; // angular velocity
+                [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:235:41:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct geometry_msgs::msg::TwistWithCovarianceStamped_<std::allocator<void> > {aka struct geometry_msgs::msg::TwistWithCovarianceStamped_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Kangular_velocity[m[K’
+           msg->angular_velocity.x, msg->[01;31m[Kangular_velocity[m[K.y, msg->angular_velocity.z; // angular velocity
+                                         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:235:66:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct geometry_msgs::msg::TwistWithCovarianceStamped_<std::allocator<void> > {aka struct geometry_msgs::msg::TwistWithCovarianceStamped_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Kangular_velocity[m[K’
+           msg->angular_velocity.x, msg->angular_velocity.y, msg->[01;31m[Kangular_velocity[m[K.z; // angular velocity
+                                                                  [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:240:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KDVL_init[m[K’ [[01;35m[K-Wunused-variable[m[K]
+       bool [01;35m[KDVL_init[m[K = true;
+            [01;35m[K^~~~~~~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:[m[K In member function ‘[01m[Kvoid SubscriberNode::callbackPressure(sensor_msgs::msg::FluidPressure_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:266:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct sensor_msgs::msg::FluidPressure_<std::allocator<void> > {aka struct sensor_msgs::msg::FluidPressure_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Korientation[m[K’
+             msg->[01;31m[Korientation[m[K.x, msg->orientation.y, msg->orientation.z,                // angular pose
+                  [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:266:38:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct sensor_msgs::msg::FluidPressure_<std::allocator<void> > {aka struct sensor_msgs::msg::FluidPressure_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Korientation[m[K’
+             msg->orientation.x, msg->[01;31m[Korientation[m[K.y, msg->orientation.z,                // angular pose
+                                      [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:266:58:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct sensor_msgs::msg::FluidPressure_<std::allocator<void> > {aka struct sensor_msgs::msg::FluidPressure_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Korientation[m[K’
+             msg->orientation.x, msg->orientation.y, msg->[01;31m[Korientation[m[K.z,                // angular pose
+                                                          [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:268:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct sensor_msgs::msg::FluidPressure_<std::allocator<void> > {aka struct sensor_msgs::msg::FluidPressure_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Kangular_velocity[m[K’
+             msg->[01;31m[Kangular_velocity[m[K.x, msg->angular_velocity.y, msg->angular_velocity.z; // angular velocity
+                  [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:268:43:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct sensor_msgs::msg::FluidPressure_<std::allocator<void> > {aka struct sensor_msgs::msg::FluidPressure_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Kangular_velocity[m[K’
+             msg->angular_velocity.x, msg->[01;31m[Kangular_velocity[m[K.y, msg->angular_velocity.z; // angular velocity
+                                           [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:268:68:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct sensor_msgs::msg::FluidPressure_<std::allocator<void> > {aka struct sensor_msgs::msg::FluidPressure_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Kangular_velocity[m[K’
+             msg->angular_velocity.x, msg->angular_velocity.y, msg->[01;31m[Kangular_velocity[m[K.z; // angular velocity
+                                                                    [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:273:14:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KPressure_init[m[K’ [[01;35m[K-Wunused-variable[m[K]
+         bool [01;35m[KPressure_init[m[K = true;
+              [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:[m[K In member function ‘[01m[Kvoid SubscriberNode::callbackGroundTruth(gazebo_msgs::msg::LinkStates_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:277:74:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   void callbackGroundTruth(const gazebo_msgs::msg::LinkStates::SharedPtr [01;35m[Kmsg[m[K)
+                                                                          [01;35m[K^~~[m[K
+make[2]: *** [CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o] Error 1
+CMakeFiles/state_subscriber.dir/build.make:62: recipe for target 'CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o' failed
+CMakeFiles/Makefile2:99: recipe for target 'CMakeFiles/state_subscriber.dir/all' failed
+make[1]: *** [CMakeFiles/state_subscriber.dir/all] Error 2
+Makefile:140: recipe for target 'all' failed
+make: *** [all] Error 2

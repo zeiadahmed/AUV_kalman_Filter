@@ -1,0 +1,30 @@
+open the world:
+ros2 launch uuv_gazebo_worlds ocean_waves.launch
+
+render rexrov:
+ros2 launch uuv_descriptions upload_rexrov.launch mode:=default x:=0 y:=0 z:=-10 namespace:=rexrov
+
+enable joystick control:
+ros2 launch uuv_control_cascaded_pid joy_velocity.launch uuv_name:=rexrov model_name:=rexrov joy_id:=0
+
+to show list of topics published:
+ros2 topic list
+
+to echo a topic in terminal:
+ros2 topic echo /topic_name
+
+to know type of topic:
+ros2 topic info /topic_name 
+
+
+handle imu messages:
+https://answers.ros.org/question/237090/subscribe-to-imu-solved/
+http://wiki.ros.org/evarobot_minimu9/Tutorials/indigo/Writing%20a%20Simple%20Subscriber%20for%20IMU
+
+
+to kill all gazebo processes:
+killall gzserver
+
+check xacro file:
+check_urdf <(xacro rexrov_sensors.xacro)
+

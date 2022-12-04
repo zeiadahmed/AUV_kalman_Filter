@@ -1,0 +1,213 @@
+[0.138s] Invoking command in '/home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zeiad/sonar_ws/install/ping360_sonar:/home/zeiad/sonar_ws/install/opencv_tests:/opt/ros/eloquent /usr/bin/cmake --build /home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg -- -j12 -l12
+[0.387s] [35m[1mScanning dependencies of target state_subscriber[0m
+[0.518s] [ 50%] [32mBuilding CXX object CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o[0m
+[9.132s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:[m[K In member function ‘[01m[Kvoid SubscriberNode::callbackIMU(sensor_msgs::msg::Imu_<std::allocator<void> >::SharedPtr)[m[K’:
+[9.133s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:192:45:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator*[m[K’ (operand types are ‘[01m[Ksensor_msgs::msg::Imu_<std::allocator<void> >::_orientation_covariance_type {aka std::array<double, 9>}[m[K’ and ‘[01m[Ksensor_msgs::msg::Imu_<std::allocator<void> >::_orientation_covariance_type {aka std::array<double, 9>}[m[K’)
+[9.133s]        R(0, 0) = [01;31m[Kmsg->orientation_covariance * msg->orientation_covariance[m[K;
+[9.133s]                  [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[9.133s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:80:0[m[K,
+[9.133s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[9.134s]                  from [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:8[m[K:
+[9.134s] [01m[K/usr/include/c++/7/complex:404:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp> std::complex<_Tp> std::operator*(const _Tp&, const std::complex<_Tp>&)
+[9.134s]      [01;36m[Koperator[m[K*(const _Tp& __x, const complex<_Tp>& __y)
+[9.134s]      [01;36m[K^~~~~~~~[m[K
+[9.134s] [01m[K/usr/include/c++/7/complex:404:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[9.135s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:192:52:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksensor_msgs::msg::Imu_<std::allocator<void> >::_orientation_covariance_type {aka std::array<double, 9>}[m[K’ is not derived from ‘[01m[Kconst std::complex<_Tp>[m[K’
+[9.135s]        R(0, 0) = msg->orientation_covariance * msg->[01;36m[Korientation_covariance[m[K;
+[9.135s]                                                     [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[9.135s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:80:0[m[K,
+[9.136s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[9.136s]                  from [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:8[m[K:
+[9.136s] [01m[K/usr/include/c++/7/complex:395:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp> std::complex<_Tp> std::operator*(const std::complex<_Tp>&, const _Tp&)
+[9.136s]      [01;36m[Koperator[m[K*(const complex<_Tp>& __x, const _Tp& __y)
+[9.136s]      [01;36m[K^~~~~~~~[m[K
+[9.137s] [01m[K/usr/include/c++/7/complex:395:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[9.137s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:192:52:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksensor_msgs::msg::Imu_<std::allocator<void> >::_orientation_covariance_type {aka std::array<double, 9>}[m[K’ is not derived from ‘[01m[Kconst std::complex<_Tp>[m[K’
+[9.137s]        R(0, 0) = msg->orientation_covariance * msg->[01;36m[Korientation_covariance[m[K;
+[9.137s]                                                     [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[9.137s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:80:0[m[K,
+[9.138s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[9.138s]                  from [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:8[m[K:
+[9.138s] [01m[K/usr/include/c++/7/complex:386:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp> std::complex<_Tp> std::operator*(const std::complex<_Tp>&, const std::complex<_Tp>&)
+[9.139s]      [01;36m[Koperator[m[K*(const complex<_Tp>& __x, const complex<_Tp>& __y)
+[9.140s]      [01;36m[K^~~~~~~~[m[K
+[9.142s] [01m[K/usr/include/c++/7/complex:386:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[9.143s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:192:52:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksensor_msgs::msg::Imu_<std::allocator<void> >::_orientation_covariance_type {aka std::array<double, 9>}[m[K’ is not derived from ‘[01m[Kconst std::complex<_Tp>[m[K’
+[9.143s]        R(0, 0) = msg->orientation_covariance * msg->[01;36m[Korientation_covariance[m[K;
+[9.143s]                                                     [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[9.143s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:193:45:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator*[m[K’ (operand types are ‘[01m[Ksensor_msgs::msg::Imu_<std::allocator<void> >::_orientation_covariance_type {aka std::array<double, 9>}[m[K’ and ‘[01m[Ksensor_msgs::msg::Imu_<std::allocator<void> >::_orientation_covariance_type {aka std::array<double, 9>}[m[K’)
+[9.144s]        R(1, 1) = [01;31m[Kmsg->orientation_covariance * msg->orientation_covariance[m[K;
+[9.144s]                  [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[9.144s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:80:0[m[K,
+[9.144s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[9.144s]                  from [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:8[m[K:
+[9.144s] [01m[K/usr/include/c++/7/complex:404:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp> std::complex<_Tp> std::operator*(const _Tp&, const std::complex<_Tp>&)
+[9.145s]      [01;36m[Koperator[m[K*(const _Tp& __x, const complex<_Tp>& __y)
+[9.145s]      [01;36m[K^~~~~~~~[m[K
+[9.145s] [01m[K/usr/include/c++/7/complex:404:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[9.145s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:193:52:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksensor_msgs::msg::Imu_<std::allocator<void> >::_orientation_covariance_type {aka std::array<double, 9>}[m[K’ is not derived from ‘[01m[Kconst std::complex<_Tp>[m[K’
+[9.146s]        R(1, 1) = msg->orientation_covariance * msg->[01;36m[Korientation_covariance[m[K;
+[9.146s]                                                     [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[9.147s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:80:0[m[K,
+[9.147s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[9.147s]                  from [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:8[m[K:
+[9.148s] [01m[K/usr/include/c++/7/complex:395:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp> std::complex<_Tp> std::operator*(const std::complex<_Tp>&, const _Tp&)
+[9.148s]      [01;36m[Koperator[m[K*(const complex<_Tp>& __x, const _Tp& __y)
+[9.148s]      [01;36m[K^~~~~~~~[m[K
+[9.149s] [01m[K/usr/include/c++/7/complex:395:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[9.149s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:193:52:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksensor_msgs::msg::Imu_<std::allocator<void> >::_orientation_covariance_type {aka std::array<double, 9>}[m[K’ is not derived from ‘[01m[Kconst std::complex<_Tp>[m[K’
+[9.149s]        R(1, 1) = msg->orientation_covariance * msg->[01;36m[Korientation_covariance[m[K;
+[9.150s]                                                     [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[9.150s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:80:0[m[K,
+[9.150s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[9.150s]                  from [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:8[m[K:
+[9.151s] [01m[K/usr/include/c++/7/complex:386:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp> std::complex<_Tp> std::operator*(const std::complex<_Tp>&, const std::complex<_Tp>&)
+[9.151s]      [01;36m[Koperator[m[K*(const complex<_Tp>& __x, const complex<_Tp>& __y)
+[9.151s]      [01;36m[K^~~~~~~~[m[K
+[9.151s] [01m[K/usr/include/c++/7/complex:386:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[9.151s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:193:52:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksensor_msgs::msg::Imu_<std::allocator<void> >::_orientation_covariance_type {aka std::array<double, 9>}[m[K’ is not derived from ‘[01m[Kconst std::complex<_Tp>[m[K’
+[9.151s]        R(1, 1) = msg->orientation_covariance * msg->[01;36m[Korientation_covariance[m[K;
+[9.152s]                                                     [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[9.152s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:194:45:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator*[m[K’ (operand types are ‘[01m[Ksensor_msgs::msg::Imu_<std::allocator<void> >::_orientation_covariance_type {aka std::array<double, 9>}[m[K’ and ‘[01m[Ksensor_msgs::msg::Imu_<std::allocator<void> >::_orientation_covariance_type {aka std::array<double, 9>}[m[K’)
+[9.152s]        R(2, 2) = [01;31m[Kmsg->orientation_covariance * msg->orientation_covariance[m[K;
+[9.152s]                  [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[9.152s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:80:0[m[K,
+[9.152s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[9.153s]                  from [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:8[m[K:
+[9.153s] [01m[K/usr/include/c++/7/complex:404:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp> std::complex<_Tp> std::operator*(const _Tp&, const std::complex<_Tp>&)
+[9.153s]      [01;36m[Koperator[m[K*(const _Tp& __x, const complex<_Tp>& __y)
+[9.153s]      [01;36m[K^~~~~~~~[m[K
+[9.153s] [01m[K/usr/include/c++/7/complex:404:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[9.153s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:194:52:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksensor_msgs::msg::Imu_<std::allocator<void> >::_orientation_covariance_type {aka std::array<double, 9>}[m[K’ is not derived from ‘[01m[Kconst std::complex<_Tp>[m[K’
+[9.153s]        R(2, 2) = msg->orientation_covariance * msg->[01;36m[Korientation_covariance[m[K;
+[9.154s]                                                     [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[9.154s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:80:0[m[K,
+[9.154s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[9.155s]                  from [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:8[m[K:
+[9.155s] [01m[K/usr/include/c++/7/complex:395:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp> std::complex<_Tp> std::operator*(const std::complex<_Tp>&, const _Tp&)
+[9.156s]      [01;36m[Koperator[m[K*(const complex<_Tp>& __x, const _Tp& __y)
+[9.156s]      [01;36m[K^~~~~~~~[m[K
+[9.156s] [01m[K/usr/include/c++/7/complex:395:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[9.157s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:194:52:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksensor_msgs::msg::Imu_<std::allocator<void> >::_orientation_covariance_type {aka std::array<double, 9>}[m[K’ is not derived from ‘[01m[Kconst std::complex<_Tp>[m[K’
+[9.157s]        R(2, 2) = msg->orientation_covariance * msg->[01;36m[Korientation_covariance[m[K;
+[9.157s]                                                     [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[9.157s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:80:0[m[K,
+[9.157s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[9.158s]                  from [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:8[m[K:
+[9.158s] [01m[K/usr/include/c++/7/complex:386:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp> std::complex<_Tp> std::operator*(const std::complex<_Tp>&, const std::complex<_Tp>&)
+[9.158s]      [01;36m[Koperator[m[K*(const complex<_Tp>& __x, const complex<_Tp>& __y)
+[9.159s]      [01;36m[K^~~~~~~~[m[K
+[9.159s] [01m[K/usr/include/c++/7/complex:386:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[9.160s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:194:52:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksensor_msgs::msg::Imu_<std::allocator<void> >::_orientation_covariance_type {aka std::array<double, 9>}[m[K’ is not derived from ‘[01m[Kconst std::complex<_Tp>[m[K’
+[9.160s]        R(2, 2) = msg->orientation_covariance * msg->[01;36m[Korientation_covariance[m[K;
+[9.160s]                                                     [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[9.160s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:195:50:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator*[m[K’ (operand types are ‘[01m[Ksensor_msgs::msg::Imu_<std::allocator<void> >::_angular_velocity_covariance_type {aka std::array<double, 9>}[m[K’ and ‘[01m[Ksensor_msgs::msg::Imu_<std::allocator<void> >::_angular_velocity_covariance_type {aka std::array<double, 9>}[m[K’)
+[9.161s]        R(3, 3) = [01;31m[Kmsg->angular_velocity_covariance * msg->angular_velocity_covariance[m[K;
+[9.161s]                  [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[9.161s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:80:0[m[K,
+[9.161s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[9.161s]                  from [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:8[m[K:
+[9.162s] [01m[K/usr/include/c++/7/complex:404:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp> std::complex<_Tp> std::operator*(const _Tp&, const std::complex<_Tp>&)
+[9.162s]      [01;36m[Koperator[m[K*(const _Tp& __x, const complex<_Tp>& __y)
+[9.162s]      [01;36m[K^~~~~~~~[m[K
+[9.162s] [01m[K/usr/include/c++/7/complex:404:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[9.162s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:195:57:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksensor_msgs::msg::Imu_<std::allocator<void> >::_angular_velocity_covariance_type {aka std::array<double, 9>}[m[K’ is not derived from ‘[01m[Kconst std::complex<_Tp>[m[K’
+[9.163s]        R(3, 3) = msg->angular_velocity_covariance * msg->[01;36m[Kangular_velocity_covariance[m[K;
+[9.163s]                                                          [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[9.163s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:80:0[m[K,
+[9.163s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[9.163s]                  from [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:8[m[K:
+[9.163s] [01m[K/usr/include/c++/7/complex:395:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp> std::complex<_Tp> std::operator*(const std::complex<_Tp>&, const _Tp&)
+[9.163s]      [01;36m[Koperator[m[K*(const complex<_Tp>& __x, const _Tp& __y)
+[9.164s]      [01;36m[K^~~~~~~~[m[K
+[9.164s] [01m[K/usr/include/c++/7/complex:395:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[9.164s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:195:57:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksensor_msgs::msg::Imu_<std::allocator<void> >::_angular_velocity_covariance_type {aka std::array<double, 9>}[m[K’ is not derived from ‘[01m[Kconst std::complex<_Tp>[m[K’
+[9.164s]        R(3, 3) = msg->angular_velocity_covariance * msg->[01;36m[Kangular_velocity_covariance[m[K;
+[9.164s]                                                          [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[9.164s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:80:0[m[K,
+[9.165s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[9.165s]                  from [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:8[m[K:
+[9.165s] [01m[K/usr/include/c++/7/complex:386:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp> std::complex<_Tp> std::operator*(const std::complex<_Tp>&, const std::complex<_Tp>&)
+[9.165s]      [01;36m[Koperator[m[K*(const complex<_Tp>& __x, const complex<_Tp>& __y)
+[9.166s]      [01;36m[K^~~~~~~~[m[K
+[9.166s] [01m[K/usr/include/c++/7/complex:386:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[9.167s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:195:57:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksensor_msgs::msg::Imu_<std::allocator<void> >::_angular_velocity_covariance_type {aka std::array<double, 9>}[m[K’ is not derived from ‘[01m[Kconst std::complex<_Tp>[m[K’
+[9.167s]        R(3, 3) = msg->angular_velocity_covariance * msg->[01;36m[Kangular_velocity_covariance[m[K;
+[9.167s]                                                          [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[9.167s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:196:50:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator*[m[K’ (operand types are ‘[01m[Ksensor_msgs::msg::Imu_<std::allocator<void> >::_angular_velocity_covariance_type {aka std::array<double, 9>}[m[K’ and ‘[01m[Ksensor_msgs::msg::Imu_<std::allocator<void> >::_angular_velocity_covariance_type {aka std::array<double, 9>}[m[K’)
+[9.168s]        R(4, 4) = [01;31m[Kmsg->angular_velocity_covariance * msg->angular_velocity_covariance[m[K;
+[9.168s]                  [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[9.168s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:80:0[m[K,
+[9.168s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[9.168s]                  from [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:8[m[K:
+[9.168s] [01m[K/usr/include/c++/7/complex:404:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp> std::complex<_Tp> std::operator*(const _Tp&, const std::complex<_Tp>&)
+[9.168s]      [01;36m[Koperator[m[K*(const _Tp& __x, const complex<_Tp>& __y)
+[9.168s]      [01;36m[K^~~~~~~~[m[K
+[9.169s] [01m[K/usr/include/c++/7/complex:404:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[9.169s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:196:57:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksensor_msgs::msg::Imu_<std::allocator<void> >::_angular_velocity_covariance_type {aka std::array<double, 9>}[m[K’ is not derived from ‘[01m[Kconst std::complex<_Tp>[m[K’
+[9.169s]        R(4, 4) = msg->angular_velocity_covariance * msg->[01;36m[Kangular_velocity_covariance[m[K;
+[9.169s]                                                          [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[9.169s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:80:0[m[K,
+[9.169s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[9.169s]                  from [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:8[m[K:
+[9.169s] [01m[K/usr/include/c++/7/complex:395:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp> std::complex<_Tp> std::operator*(const std::complex<_Tp>&, const _Tp&)
+[9.170s]      [01;36m[Koperator[m[K*(const complex<_Tp>& __x, const _Tp& __y)
+[9.170s]      [01;36m[K^~~~~~~~[m[K
+[9.170s] [01m[K/usr/include/c++/7/complex:395:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[9.170s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:196:57:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksensor_msgs::msg::Imu_<std::allocator<void> >::_angular_velocity_covariance_type {aka std::array<double, 9>}[m[K’ is not derived from ‘[01m[Kconst std::complex<_Tp>[m[K’
+[9.170s]        R(4, 4) = msg->angular_velocity_covariance * msg->[01;36m[Kangular_velocity_covariance[m[K;
+[9.170s]                                                          [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[9.170s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:80:0[m[K,
+[9.171s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[9.171s]                  from [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:8[m[K:
+[9.172s] [01m[K/usr/include/c++/7/complex:386:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp> std::complex<_Tp> std::operator*(const std::complex<_Tp>&, const std::complex<_Tp>&)
+[9.173s]      [01;36m[Koperator[m[K*(const complex<_Tp>& __x, const complex<_Tp>& __y)
+[9.173s]      [01;36m[K^~~~~~~~[m[K
+[9.174s] [01m[K/usr/include/c++/7/complex:386:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[9.174s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:196:57:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksensor_msgs::msg::Imu_<std::allocator<void> >::_angular_velocity_covariance_type {aka std::array<double, 9>}[m[K’ is not derived from ‘[01m[Kconst std::complex<_Tp>[m[K’
+[9.174s]        R(4, 4) = msg->angular_velocity_covariance * msg->[01;36m[Kangular_velocity_covariance[m[K;
+[9.174s]                                                          [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[9.175s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:197:50:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator*[m[K’ (operand types are ‘[01m[Ksensor_msgs::msg::Imu_<std::allocator<void> >::_angular_velocity_covariance_type {aka std::array<double, 9>}[m[K’ and ‘[01m[Ksensor_msgs::msg::Imu_<std::allocator<void> >::_angular_velocity_covariance_type {aka std::array<double, 9>}[m[K’)
+[9.175s]        R(5, 5) = [01;31m[Kmsg->angular_velocity_covariance * msg->angular_velocity_covariance[m[K;
+[9.175s]                  [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[9.175s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:80:0[m[K,
+[9.176s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[9.176s]                  from [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:8[m[K:
+[9.176s] [01m[K/usr/include/c++/7/complex:404:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp> std::complex<_Tp> std::operator*(const _Tp&, const std::complex<_Tp>&)
+[9.176s]      [01;36m[Koperator[m[K*(const _Tp& __x, const complex<_Tp>& __y)
+[9.176s]      [01;36m[K^~~~~~~~[m[K
+[9.176s] [01m[K/usr/include/c++/7/complex:404:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[9.177s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:197:57:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksensor_msgs::msg::Imu_<std::allocator<void> >::_angular_velocity_covariance_type {aka std::array<double, 9>}[m[K’ is not derived from ‘[01m[Kconst std::complex<_Tp>[m[K’
+[9.177s]        R(5, 5) = msg->angular_velocity_covariance * msg->[01;36m[Kangular_velocity_covariance[m[K;
+[9.177s]                                                          [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[9.178s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:80:0[m[K,
+[9.178s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[9.181s]                  from [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:8[m[K:
+[9.181s] [01m[K/usr/include/c++/7/complex:395:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp> std::complex<_Tp> std::operator*(const std::complex<_Tp>&, const _Tp&)
+[9.182s]      [01;36m[Koperator[m[K*(const complex<_Tp>& __x, const _Tp& __y)
+[9.182s]      [01;36m[K^~~~~~~~[m[K
+[9.182s] [01m[K/usr/include/c++/7/complex:395:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[9.182s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:197:57:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksensor_msgs::msg::Imu_<std::allocator<void> >::_angular_velocity_covariance_type {aka std::array<double, 9>}[m[K’ is not derived from ‘[01m[Kconst std::complex<_Tp>[m[K’
+[9.183s]        R(5, 5) = msg->angular_velocity_covariance * msg->[01;36m[Kangular_velocity_covariance[m[K;
+[9.183s]                                                          [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[9.183s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:80:0[m[K,
+[9.183s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[9.184s]                  from [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:8[m[K:
+[9.184s] [01m[K/usr/include/c++/7/complex:386:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp> std::complex<_Tp> std::operator*(const std::complex<_Tp>&, const std::complex<_Tp>&)
+[9.184s]      [01;36m[Koperator[m[K*(const complex<_Tp>& __x, const complex<_Tp>& __y)
+[9.184s]      [01;36m[K^~~~~~~~[m[K
+[9.185s] [01m[K/usr/include/c++/7/complex:386:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[9.185s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:197:57:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksensor_msgs::msg::Imu_<std::allocator<void> >::_angular_velocity_covariance_type {aka std::array<double, 9>}[m[K’ is not derived from ‘[01m[Kconst std::complex<_Tp>[m[K’
+[9.186s]        R(5, 5) = msg->angular_velocity_covariance * msg->[01;36m[Kangular_velocity_covariance[m[K;
+[9.186s]                                                          [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[9.640s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:[m[K In member function ‘[01m[Kvoid SubscriberNode::callbackGroundTruth(gazebo_msgs::msg::LinkStates_<std::allocator<void> >::SharedPtr)[m[K’:
+[9.641s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:330:74:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[9.642s]    void callbackGroundTruth(const gazebo_msgs::msg::LinkStates::SharedPtr [01;35m[Kmsg[m[K)
+[9.642s]                                                                           [01;35m[K^~~[m[K
+[26.869s] CMakeFiles/state_subscriber.dir/build.make:62: recipe for target 'CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o' failed
+[26.873s] make[2]: *** [CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o] Error 1
+[26.873s] CMakeFiles/Makefile2:99: recipe for target 'CMakeFiles/state_subscriber.dir/all' failed
+[26.874s] Makefile:140: recipe for target 'all' failed
+[26.874s] make[1]: *** [CMakeFiles/state_subscriber.dir/all] Error 2
+[26.874s] make: *** [all] Error 2
+[26.878s] Invoked command in '/home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zeiad/sonar_ws/install/ping360_sonar:/home/zeiad/sonar_ws/install/opencv_tests:/opt/ros/eloquent /usr/bin/cmake --build /home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg -- -j12 -l12
