@@ -8,9 +8,14 @@ CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o: /opt/ros/eloquent/in
 CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o: /opt/ros/eloquent/include/builtin_interfaces/msg/time.hpp
 CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o: /opt/ros/eloquent/include/builtin_interfaces/msg/time__struct.hpp
 CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o: /opt/ros/eloquent/include/builtin_interfaces/msg/time__traits.hpp
+CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o: /opt/ros/eloquent/include/gazebo_msgs/msg/entity_state__struct.hpp
+CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o: /opt/ros/eloquent/include/gazebo_msgs/msg/entity_state__traits.hpp
 CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o: /opt/ros/eloquent/include/gazebo_msgs/msg/link_states.hpp
 CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o: /opt/ros/eloquent/include/gazebo_msgs/msg/link_states__struct.hpp
 CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o: /opt/ros/eloquent/include/gazebo_msgs/msg/link_states__traits.hpp
+CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o: /opt/ros/eloquent/include/gazebo_msgs/srv/set_entity_state.hpp
+CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o: /opt/ros/eloquent/include/gazebo_msgs/srv/set_entity_state__struct.hpp
+CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o: /opt/ros/eloquent/include/gazebo_msgs/srv/set_entity_state__traits.hpp
 CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o: /opt/ros/eloquent/include/geometry_msgs/msg/point__struct.hpp
 CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o: /opt/ros/eloquent/include/geometry_msgs/msg/point__traits.hpp
 CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o: /opt/ros/eloquent/include/geometry_msgs/msg/pose__struct.hpp
