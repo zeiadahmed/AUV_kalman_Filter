@@ -1,0 +1,32 @@
+[0.081s] Invoking command in '/home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zeiad/sonar_ws/install/ping360_sonar:/home/zeiad/sonar_ws/install/opencv_tests:/opt/ros/eloquent /usr/bin/cmake --build /home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg -- -j12 -l12
+[0.228s] [35m[1mScanning dependencies of target state_subscriber[0m
+[0.369s] [ 50%] [32mBuilding CXX object CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o[0m
+[5.500s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:[m[K In member function ‘[01m[Kvoid SubscriberNode::callbackGroundTruth(gazebo_msgs::msg::LinkStates_<std::allocator<void> >::SharedPtr)[m[K’:
+[5.501s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:593:74:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[5.501s]    void callbackGroundTruth(const gazebo_msgs::msg::LinkStates::SharedPtr [01;35m[Kmsg[m[K)
+[5.501s]                                                                           [01;35m[K^~~[m[K
+[24.687s] [100%] [32m[1mLinking CXX executable state_subscriber[0m
+[26.489s] [100%] Built target state_subscriber
+[26.515s] Invoked command in '/home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zeiad/sonar_ws/install/ping360_sonar:/home/zeiad/sonar_ws/install/opencv_tests:/opt/ros/eloquent /usr/bin/cmake --build /home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg -- -j12 -l12
+[26.623s] Invoking command in '/home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zeiad/sonar_ws/install/ping360_sonar:/home/zeiad/sonar_ws/install/opencv_tests:/opt/ros/eloquent /usr/bin/cmake --build /home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg --target install -- -j12 -l12
+[26.782s] [100%] Built target state_subscriber
+[26.826s] [36mInstall the project...[0m
+[26.844s] -- Install configuration: ""
+[26.845s] -- Installing: /home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/lib/kalmenfilter_cpp_pkg/state_subscriber
+[26.862s] -- Set runtime path of "/home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/lib/kalmenfilter_cpp_pkg/state_subscriber" to ""
+[26.862s] -- Up-to-date: /home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/share/ament_index/resource_index/package_run_dependencies/kalmenfilter_cpp_pkg
+[26.863s] -- Up-to-date: /home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/share/ament_index/resource_index/parent_prefix_path/kalmenfilter_cpp_pkg
+[26.863s] -- Up-to-date: /home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/share/kalmenfilter_cpp_pkg/environment/ament_prefix_path.sh
+[26.863s] -- Up-to-date: /home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/share/kalmenfilter_cpp_pkg/environment/ament_prefix_path.dsv
+[26.863s] -- Up-to-date: /home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/share/kalmenfilter_cpp_pkg/environment/path.sh
+[26.864s] -- Up-to-date: /home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/share/kalmenfilter_cpp_pkg/environment/path.dsv
+[26.864s] -- Up-to-date: /home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/share/kalmenfilter_cpp_pkg/local_setup.bash
+[26.864s] -- Up-to-date: /home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/share/kalmenfilter_cpp_pkg/local_setup.sh
+[26.864s] -- Up-to-date: /home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/share/kalmenfilter_cpp_pkg/local_setup.zsh
+[26.864s] -- Up-to-date: /home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/share/kalmenfilter_cpp_pkg/local_setup.dsv
+[26.865s] -- Installing: /home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/share/kalmenfilter_cpp_pkg/package.dsv
+[26.865s] -- Up-to-date: /home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/share/ament_index/resource_index/packages/kalmenfilter_cpp_pkg
+[26.865s] -- Up-to-date: /home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/share/kalmenfilter_cpp_pkg/cmake/kalmenfilter_cpp_pkgConfig.cmake
+[26.865s] -- Up-to-date: /home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/share/kalmenfilter_cpp_pkg/cmake/kalmenfilter_cpp_pkgConfig-version.cmake
+[26.865s] -- Up-to-date: /home/zeiad/sensorfusion_ros2_ws/install/kalmenfilter_cpp_pkg/share/kalmenfilter_cpp_pkg/package.xml
+[26.870s] Invoked command in '/home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zeiad/sonar_ws/install/ping360_sonar:/home/zeiad/sonar_ws/install/opencv_tests:/opt/ros/eloquent /usr/bin/cmake --build /home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg --target install -- -j12 -l12

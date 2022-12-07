@@ -2,6 +2,7 @@
 #include "sensor_msgs/msg/imu.hpp"
 #include "gazebo_msgs/msg/link_states.hpp"
 #include "geometry_msgs/msg/twist_with_covariance_stamped.hpp"
+#include "gazebo_msgs/srv/set_entity_state.hpp"
 #include "sensor_msgs/msg/fluid_pressure.hpp"
 #include "nav_msgs/msg/odometry.hpp"
 
@@ -63,9 +64,36 @@ public:
     // timer_prediction_ = this->create_wall_timer(std::chrono::milliseconds(5),
     //                                  std::bind(&SubscriberNode::prediction_step, this));
 
+   
+    
     RCLCPP_INFO(this->get_logger(), "publisher started");
+    Client_ = this->create_client<gazebo_msgs::srv::SetEntityState>("/gazebo/set_entity_state");
+    while(!Client_->wait_for_service(std::chrono::seconds(1))){
+      RCLCPP_WARN(this->get_logger(),"waiting for service to be up....");
+          }
+    RCLCPP_INFO(this->get_logger(), "client created");
+    }
+  void update_simulator_state(double px, double py, double pz, double pitch, double yaw, double roll)
+  {
+    auto request = std::make_shared<gazebo_msgs::srv::SetEntityState::Request>();
+    request->state.pose.position.set__x(px);
+    request->state.pose.position.set__y(py);
+    request->state.pose.position.set__z(pz);
+    request->state.set__name("submarine_z");
+    tf2::Quaternion Q;
 
+    Q.setRPY(pitch, yaw, roll);
+
+    Q = Q.normalize();
+
+    request->state.pose.orientation.set__w(Q.getW());
+    request->state.pose.orientation.set__x(Q.getX());
+    request->state.pose.orientation.set__y(Q.getY());
+    request->state.pose.orientation.set__z(Q.getZ());
+
+    Client_->async_send_request(request);
   }
+
 protected:
 
   VectorXd getState(){return state_vector;}
@@ -102,7 +130,7 @@ private:
   const double INIT_POS_STD = 0;
   const double INIT_VEL_STD = 15;
   const double LINEAR_ACCEL_STD = 0.1;
-  const double GPS_POS_STD = 3.0;
+  const double GPS_POS_STD = 0.0;
   const double dt = 0.02;
   const double ORIANTATION_STD = 0.01 / 180.0 * M_PI;
   const double INIT_PSI_STD = 45.0 / 180.0 * M_PI;
@@ -139,9 +167,9 @@ private:
     F(7 ,10)= dt;
     F(8 ,11)= dt;
   
-    double LinearXAccel = rounding(msg->linear_acceleration.x);
-    double LinearYAccel = rounding(msg->linear_acceleration.y);
-    double LinearZAccel = rounding(msg->linear_acceleration.z);
+    double LinearXAccel = msg->linear_acceleration.x;
+    double LinearYAccel = msg->linear_acceleration.y;
+    double LinearZAccel = msg->linear_acceleration.z;
 
     MatrixXd Q = MatrixXd::Zero(6,6);
 
@@ -204,13 +232,13 @@ private:
     double thetavy = current_state(10);
     double thetavz = current_state(11);
 
-    double LinearXAccel = rounding(msg->linear_acceleration.x);
-    double LinearYAccel = rounding(msg->linear_acceleration.y);
-    double LinearZAccel = rounding(msg->linear_acceleration.z);
+    double LinearXAccel = msg->linear_acceleration.x;
+    double LinearYAccel = msg->linear_acceleration.y;
+    double LinearZAccel = msg->linear_acceleration.z;
 
-    double px_new = px + dt * vx * cos(thetaz) - dt * vy * sin(thetaz);
+    double px_new = px + dt*vx*cos(thetaz) - dt*vy*sin(thetaz);
     double py_new = py + dt*vy*cos(thetaz) + dt*vx*sin(thetaz);
-    double pz_new = pz + dt * vz;
+    double pz_new = pz + dt*vz;
 
     // tf2::Quaternion q(
     //     msg->orientation.x,
@@ -220,18 +248,28 @@ private:
     // tf2::Matrix3x3 m(q);
     // double roll, pitch, yaw;
     // m.getRPY(roll, pitch, yaw);
+    // if (dt * vx * cos(thetaz) != 0){
+    //   std::cout << "px_new       reading  :" << px + dt * vx * cos(thetaz) - dt * vy * sin(thetaz) << "\n";
+    //   std::cout << "py_new       reading  :" << py + dt * vy * cos(thetaz) + dt * vx * sin(thetaz) << "\n";
+    //   std::cout << "theta                 :" << thetaz<< "\n";
+    // }   
 
-    // std::cout << "px_new calculation        reading:" << dt * 0.2 * cos(yaw) - dt * 0.2 * sin(yaw) << "\n";
-    // std::cout << "py_new calculation        reading:" << dt * 0.2 * cos(yaw) + dt * 0.2 * sin(yaw) << "\n";
-    // std::cout << "pz_new calculation        reading:" << dt * 0.2                                       << "\n";
 
-    double vx_new = dt * LinearXAccel;
-    double vy_new = dt * LinearYAccel;
-    double vz_new = dt * LinearZAccel;
 
-    double thetax_new = wrapAngle(thetax + dt * rounding(msg->angular_velocity.x));
-    double thetay_new = wrapAngle(thetay + dt * rounding(msg->angular_velocity.y));
-    double thetaz_new = wrapAngle(thetaz + dt * rounding(msg->angular_velocity.z));
+    double vx_new = vx + dt * LinearXAccel;
+    double vy_new = vy + dt * LinearYAccel;
+    double vz_new = vz ;
+   
+
+   //assume vx , vy and vz 0 to debug the other trades of the filter 
+
+    // double vx_new = 0; 
+    // double vy_new = 0; 
+    // double vz_new = 0;
+
+    double thetax_new = wrapAngle(thetax + dt * msg->angular_velocity.x);
+    double thetay_new = wrapAngle(thetay + dt * msg->angular_velocity.y);
+    double thetaz_new = wrapAngle(thetaz + dt * msg->angular_velocity.z);
     
  
 
@@ -271,9 +309,14 @@ private:
     F(8,11) = dt;
 
 
-    Q(6, 6)   = dt*dt*(LinearXAccel * LinearXAccel);
-    Q(7, 7)   = dt*dt*(LinearYAccel * LinearYAccel);
-    Q(8, 8)   = dt*dt*(LinearZAccel * LinearZAccel);
+    Q(3, 3)   = dt*dt*(LinearXAccel * LinearXAccel);
+    Q(4, 4)   = dt*dt*(LinearYAccel * LinearYAccel);
+    Q(5, 5)   = dt*dt*(LinearZAccel * LinearZAccel);
+
+    Q(6, 6) = dt * dt * (ORIANTATION_STD * ORIANTATION_STD);
+    Q(7, 7) = dt * dt * (ORIANTATION_STD * ORIANTATION_STD);
+    Q(8, 8) = dt * dt * (ORIANTATION_STD * ORIANTATION_STD);
+
     Q(9, 9)   = dt*dt*(ORIANTATION_STD * ORIANTATION_STD);
     Q(10, 10) = dt*dt*(ORIANTATION_STD * ORIANTATION_STD);
     Q(11, 11) = dt*dt*(ORIANTATION_STD * ORIANTATION_STD);
@@ -340,6 +383,8 @@ private:
           msg->angular_velocity.y,
           msg->angular_velocity.z;
 
+      // std::cout << "yaw speed:"<< msg->angular_velocity.z<<"\n";
+
       H(0,  6) = 1;
       H(1,  7) = 1;
       H(2,  8) = 1;
@@ -350,9 +395,12 @@ private:
       R(0, 0) = IMU_STD * IMU_STD;
       R(1, 1) = IMU_STD * IMU_STD;
       R(2, 2) = IMU_STD * IMU_STD;
-      R(3, 3) = IMU_STD * IMU_STD;
-      R(4, 4) = IMU_STD * IMU_STD;
-      R(5, 5) = IMU_STD * IMU_STD;
+      
+      //adding zeros to angular velocity stds to get direct feedback from readings
+      
+      R(3, 3) = 0 ;
+      R(4, 4) = 0 ;
+      R(5, 5) = 0 ;
 
       VectorXd z_hat = H * current_state;
       VectorXd y = z - z_hat;
@@ -459,9 +507,9 @@ private:
       MatrixXd H = MatrixXd::Zero(3, 12);
       MatrixXd R = Matrix3d::Zero();
 
-      z <<rounding(msg->twist.twist.linear.z),
-          rounding(msg->twist.twist.linear.y),
-          rounding(msg->twist.twist.linear.x);
+      z <<msg->twist.twist.linear.z,
+          msg->twist.twist.linear.y,
+          msg->twist.twist.linear.x;
 
       // std::cout << "vz        reading:" << msg->twist.twist.linear.z << "\n";
       // std::cout << "vy        reading:" << msg->twist.twist.linear.y << "\n";
@@ -635,9 +683,17 @@ private:
                 state_vector(10),
                 state_vector(11));
 
+    update_simulator_state(state_vector(0),
+                           state_vector(1),
+                           state_vector(2),
+                           state_vector(6),
+                           state_vector(7),
+                           state_vector(8));
+    // tf2::Quaternion myQuaternion;
 
+    // myQuaternion.setRPY(state_vector(6), state_vector(7), state_vector(8));
 
-
+    // myQuaternion = myQuaternion.normalize();
 
     State_publisher_->publish(state);
   }
@@ -656,6 +712,7 @@ private:
   rclcpp::Publisher<nav_msgs::msg::Odometry>::SharedPtr State_publisher_;
   rclcpp::TimerBase::SharedPtr timer_;
   rclcpp::TimerBase::SharedPtr timer_prediction_;
+  rclcpp::Client<gazebo_msgs::srv::SetEntityState>::SharedPtr Client_;
 };
 
 int main(int argc, char **argv)

@@ -1,0 +1,24 @@
+[0.174s] Invoking command in '/home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zeiad/sonar_ws/install/ping360_sonar:/home/zeiad/sonar_ws/install/opencv_tests:/opt/ros/eloquent /usr/bin/cmake --build /home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg -- -j12 -l12
+[0.485s] [35m[1mScanning dependencies of target state_subscriber[0m
+[0.660s] [ 50%] [32mBuilding CXX object CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o[0m
+[10.769s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:[m[K In member function ‘[01m[Kvoid SubscriberNode::callbackGroundTruth(gazebo_msgs::msg::LinkStates_<std::allocator<void> >::SharedPtr)[m[K’:
+[10.769s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:622:74:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[10.770s]    void callbackGroundTruth(const gazebo_msgs::msg::LinkStates::SharedPtr [01;35m[Kmsg[m[K)
+[10.770s]                                                                           [01;35m[K^~~[m[K
+[56.801s] [100%] [32m[1mLinking CXX executable state_subscriber[0m
+[60.283s] [100%] Built target state_subscriber
+[60.371s] Invoked command in '/home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zeiad/sonar_ws/install/ping360_sonar:/home/zeiad/sonar_ws/install/opencv_tests:/opt/ros/eloquent /usr/bin/cmake --build /home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg -- -j12 -l12
+[60.610s] Invoking command in '/home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zeiad/sonar_ws/install/ping360_sonar:/home/zeiad/sonar_ws/install/opencv_tests:/opt/ros/eloquent /usr/bin/cmake --build /home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg --target install -- -j12 -l12
+[60.931s] [35m[1mScanning dependencies of target state_subscriber[0m
+[61.086s] [ 50%] [32mBuilding CXX object CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o[0m
+[70.900s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:[m[K In member function ‘[01m[Kvoid SubscriberNode::callbackGroundTruth(gazebo_msgs::msg::LinkStates_<std::allocator<void> >::SharedPtr)[m[K’:
+[70.900s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:622:74:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[70.901s]    void callbackGroundTruth(const gazebo_msgs::msg::LinkStates::SharedPtr [01;35m[Kmsg[m[K)
+[70.902s]                                                                           [01;35m[K^~~[m[K
+[75.150s] CMakeFiles/state_subscriber.dir/build.make:62: recipe for target 'CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o' failed
+[75.151s] make[2]: *** [CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o] Interrupt
+[75.152s] CMakeFiles/Makefile2:99: recipe for target 'CMakeFiles/state_subscriber.dir/all' failed
+[75.153s] make[1]: *** [CMakeFiles/state_subscriber.dir/all] Interrupt
+[75.155s] Makefile:140: recipe for target 'all' failed
+[75.156s] make: *** [all] Interrupt
+[75.201s] Invoked command in '/home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg' returned '-2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zeiad/sonar_ws/install/ping360_sonar:/home/zeiad/sonar_ws/install/opencv_tests:/opt/ros/eloquent /usr/bin/cmake --build /home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg --target install -- -j12 -l12

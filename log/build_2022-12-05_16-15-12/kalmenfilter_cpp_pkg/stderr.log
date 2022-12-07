@@ -1,0 +1,50 @@
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:[m[K In member function ‘[01m[Kvoid SubscriberNode::update_simulator_state(double, double, double, double, double, double)[m[K’:
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:77:41:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kgeometry_msgs::msg::Point_<std::allocator<void> >::set__x()[m[K’
+     request->state.pose.position.set__x([01;31m[K)[m[K;
+                                         [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/eloquent/include/geometry_msgs/msg/pose__struct.hpp:19:0[m[K,
+                 from [01m[K/opt/ros/eloquent/include/gazebo_msgs/msg/link_states__struct.hpp:19[m[K,
+                 from [01m[K/opt/ros/eloquent/include/gazebo_msgs/msg/link_states.hpp:7[m[K,
+                 from [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:3[m[K:
+[01m[K/opt/ros/eloquent/include/geometry_msgs/msg/point__struct.hpp:70:10:[m[K [01;36m[Knote: [m[Kcandidate: geometry_msgs::msg::Point_<ContainerAllocator>::Type& geometry_msgs::msg::Point_<ContainerAllocator>::set__x(const double&) [with ContainerAllocator = std::allocator<void>; geometry_msgs::msg::Point_<ContainerAllocator>::Type = geometry_msgs::msg::Point_<std::allocator<void> >]
+   Type & [01;36m[Kset__x[m[K(
+          [01;36m[K^~~~~~[m[K
+[01m[K/opt/ros/eloquent/include/geometry_msgs/msg/point__struct.hpp:70:10:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:78:41:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kgeometry_msgs::msg::Point_<std::allocator<void> >::set__y()[m[K’
+     request->state.pose.position.set__y([01;31m[K)[m[K;
+                                         [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/eloquent/include/geometry_msgs/msg/pose__struct.hpp:19:0[m[K,
+                 from [01m[K/opt/ros/eloquent/include/gazebo_msgs/msg/link_states__struct.hpp:19[m[K,
+                 from [01m[K/opt/ros/eloquent/include/gazebo_msgs/msg/link_states.hpp:7[m[K,
+                 from [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:3[m[K:
+[01m[K/opt/ros/eloquent/include/geometry_msgs/msg/point__struct.hpp:76:10:[m[K [01;36m[Knote: [m[Kcandidate: geometry_msgs::msg::Point_<ContainerAllocator>::Type& geometry_msgs::msg::Point_<ContainerAllocator>::set__y(const double&) [with ContainerAllocator = std::allocator<void>; geometry_msgs::msg::Point_<ContainerAllocator>::Type = geometry_msgs::msg::Point_<std::allocator<void> >]
+   Type & [01;36m[Kset__y[m[K(
+          [01;36m[K^~~~~~[m[K
+[01m[K/opt/ros/eloquent/include/geometry_msgs/msg/point__struct.hpp:76:10:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:79:41:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kgeometry_msgs::msg::Point_<std::allocator<void> >::set__z()[m[K’
+     request->state.pose.position.set__z([01;31m[K)[m[K;
+                                         [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/eloquent/include/geometry_msgs/msg/pose__struct.hpp:19:0[m[K,
+                 from [01m[K/opt/ros/eloquent/include/gazebo_msgs/msg/link_states__struct.hpp:19[m[K,
+                 from [01m[K/opt/ros/eloquent/include/gazebo_msgs/msg/link_states.hpp:7[m[K,
+                 from [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:3[m[K:
+[01m[K/opt/ros/eloquent/include/geometry_msgs/msg/point__struct.hpp:82:10:[m[K [01;36m[Knote: [m[Kcandidate: geometry_msgs::msg::Point_<ContainerAllocator>::Type& geometry_msgs::msg::Point_<ContainerAllocator>::set__z(const double&) [with ContainerAllocator = std::allocator<void>; geometry_msgs::msg::Point_<ContainerAllocator>::Type = geometry_msgs::msg::Point_<std::allocator<void> >]
+   Type & [01;36m[Kset__z[m[K(
+          [01;36m[K^~~~~~[m[K
+[01m[K/opt/ros/eloquent/include/geometry_msgs/msg/point__struct.hpp:82:10:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:74:38:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpx[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   void update_simulator_state(double [01;35m[Kpx[m[K, double py, double pz, double pitch, double yaw, double roll)
+                                      [01;35m[K^~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:74:49:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpy[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   void update_simulator_state(double px, double [01;35m[Kpy[m[K, double pz, double pitch, double yaw, double roll)
+                                                 [01;35m[K^~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:74:60:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpz[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   void update_simulator_state(double px, double py, double [01;35m[Kpz[m[K, double pitch, double yaw, double roll)
+                                                            [01;35m[K^~[m[K
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:[m[K In member function ‘[01m[Kvoid SubscriberNode::callbackGroundTruth(gazebo_msgs::msg::LinkStates_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:615:74:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   void callbackGroundTruth(const gazebo_msgs::msg::LinkStates::SharedPtr [01;35m[Kmsg[m[K)
+                                                                          [01;35m[K^~~[m[K
+make[2]: *** [CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o] Error 1
+make[1]: *** [CMakeFiles/state_subscriber.dir/all] Error 2
+make: *** [all] Error 2

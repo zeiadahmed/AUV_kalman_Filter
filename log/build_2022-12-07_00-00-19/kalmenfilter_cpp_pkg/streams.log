@@ -1,0 +1,15 @@
+[0.229s] Invoking command in '/home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zeiad/sonar_ws/install/ping360_sonar:/home/zeiad/sonar_ws/install/opencv_tests:/opt/ros/eloquent /usr/bin/cmake --build /home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg -- -j12 -l12
+[0.757s] [35m[1mScanning dependencies of target state_subscriber[0m
+[0.997s] [ 50%] [32mBuilding CXX object CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o[0m
+[12.204s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:[m[K In member function ‘[01m[Kvoid SubscriberNode::callbackGroundTruth(gazebo_msgs::msg::LinkStates_<std::allocator<void> >::SharedPtr)[m[K’:
+[12.205s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:622:74:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[12.206s]    void callbackGroundTruth(const gazebo_msgs::msg::LinkStates::SharedPtr [01;35m[Kmsg[m[K)
+[12.206s]                                                                           [01;35m[K^~~[m[K
+[60.615s] CMakeFiles/state_subscriber.dir/build.make:62: recipe for target 'CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o' failed
+[60.616s] make[2]: *** [CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o] Interrupt
+[60.625s] make[1]: *** wait: No child processes.  Stop.
+[60.625s] make[1]: *** Waiting for unfinished jobs....
+[60.625s] make[1]: *** wait: No child processes.  Stop.
+[60.626s] Makefile:140: recipe for target 'all' failed
+[60.626s] make: *** [all] Error 2
+[60.868s] Invoked command in '/home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg' returned '-2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zeiad/sonar_ws/install/ping360_sonar:/home/zeiad/sonar_ws/install/opencv_tests:/opt/ros/eloquent /usr/bin/cmake --build /home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg -- -j12 -l12

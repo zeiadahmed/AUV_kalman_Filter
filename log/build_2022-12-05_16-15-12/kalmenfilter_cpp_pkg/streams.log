@@ -1,0 +1,57 @@
+[0.275s] Invoking command in '/home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zeiad/sonar_ws/install/ping360_sonar:/home/zeiad/sonar_ws/install/opencv_tests:/opt/ros/eloquent /usr/bin/cmake --build /home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg -- -j12 -l12
+[1.032s] [35m[1mScanning dependencies of target state_subscriber[0m
+[1.162s] [ 50%] [32mBuilding CXX object CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o[0m
+[7.316s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:[m[K In member function ‘[01m[Kvoid SubscriberNode::update_simulator_state(double, double, double, double, double, double)[m[K’:
+[7.316s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:77:41:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kgeometry_msgs::msg::Point_<std::allocator<void> >::set__x()[m[K’
+[7.316s]      request->state.pose.position.set__x([01;31m[K)[m[K;
+[7.316s]                                          [01;31m[K^[m[K
+[7.316s] In file included from [01m[K/opt/ros/eloquent/include/geometry_msgs/msg/pose__struct.hpp:19:0[m[K,
+[7.317s]                  from [01m[K/opt/ros/eloquent/include/gazebo_msgs/msg/link_states__struct.hpp:19[m[K,
+[7.317s]                  from [01m[K/opt/ros/eloquent/include/gazebo_msgs/msg/link_states.hpp:7[m[K,
+[7.317s]                  from [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:3[m[K:
+[7.317s] [01m[K/opt/ros/eloquent/include/geometry_msgs/msg/point__struct.hpp:70:10:[m[K [01;36m[Knote: [m[Kcandidate: geometry_msgs::msg::Point_<ContainerAllocator>::Type& geometry_msgs::msg::Point_<ContainerAllocator>::set__x(const double&) [with ContainerAllocator = std::allocator<void>; geometry_msgs::msg::Point_<ContainerAllocator>::Type = geometry_msgs::msg::Point_<std::allocator<void> >]
+[7.317s]    Type & [01;36m[Kset__x[m[K(
+[7.318s]           [01;36m[K^~~~~~[m[K
+[7.318s] [01m[K/opt/ros/eloquent/include/geometry_msgs/msg/point__struct.hpp:70:10:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[7.318s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:78:41:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kgeometry_msgs::msg::Point_<std::allocator<void> >::set__y()[m[K’
+[7.318s]      request->state.pose.position.set__y([01;31m[K)[m[K;
+[7.318s]                                          [01;31m[K^[m[K
+[7.318s] In file included from [01m[K/opt/ros/eloquent/include/geometry_msgs/msg/pose__struct.hpp:19:0[m[K,
+[7.318s]                  from [01m[K/opt/ros/eloquent/include/gazebo_msgs/msg/link_states__struct.hpp:19[m[K,
+[7.318s]                  from [01m[K/opt/ros/eloquent/include/gazebo_msgs/msg/link_states.hpp:7[m[K,
+[7.319s]                  from [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:3[m[K:
+[7.319s] [01m[K/opt/ros/eloquent/include/geometry_msgs/msg/point__struct.hpp:76:10:[m[K [01;36m[Knote: [m[Kcandidate: geometry_msgs::msg::Point_<ContainerAllocator>::Type& geometry_msgs::msg::Point_<ContainerAllocator>::set__y(const double&) [with ContainerAllocator = std::allocator<void>; geometry_msgs::msg::Point_<ContainerAllocator>::Type = geometry_msgs::msg::Point_<std::allocator<void> >]
+[7.319s]    Type & [01;36m[Kset__y[m[K(
+[7.319s]           [01;36m[K^~~~~~[m[K
+[7.319s] [01m[K/opt/ros/eloquent/include/geometry_msgs/msg/point__struct.hpp:76:10:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[7.319s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:79:41:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kgeometry_msgs::msg::Point_<std::allocator<void> >::set__z()[m[K’
+[7.320s]      request->state.pose.position.set__z([01;31m[K)[m[K;
+[7.320s]                                          [01;31m[K^[m[K
+[7.320s] In file included from [01m[K/opt/ros/eloquent/include/geometry_msgs/msg/pose__struct.hpp:19:0[m[K,
+[7.320s]                  from [01m[K/opt/ros/eloquent/include/gazebo_msgs/msg/link_states__struct.hpp:19[m[K,
+[7.320s]                  from [01m[K/opt/ros/eloquent/include/gazebo_msgs/msg/link_states.hpp:7[m[K,
+[7.321s]                  from [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:3[m[K:
+[7.321s] [01m[K/opt/ros/eloquent/include/geometry_msgs/msg/point__struct.hpp:82:10:[m[K [01;36m[Knote: [m[Kcandidate: geometry_msgs::msg::Point_<ContainerAllocator>::Type& geometry_msgs::msg::Point_<ContainerAllocator>::set__z(const double&) [with ContainerAllocator = std::allocator<void>; geometry_msgs::msg::Point_<ContainerAllocator>::Type = geometry_msgs::msg::Point_<std::allocator<void> >]
+[7.321s]    Type & [01;36m[Kset__z[m[K(
+[7.321s]           [01;36m[K^~~~~~[m[K
+[7.321s] [01m[K/opt/ros/eloquent/include/geometry_msgs/msg/point__struct.hpp:82:10:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[7.322s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:74:38:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpx[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[7.322s]    void update_simulator_state(double [01;35m[Kpx[m[K, double py, double pz, double pitch, double yaw, double roll)
+[7.322s]                                       [01;35m[K^~[m[K
+[7.322s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:74:49:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpy[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[7.322s]    void update_simulator_state(double px, double [01;35m[Kpy[m[K, double pz, double pitch, double yaw, double roll)
+[7.323s]                                                  [01;35m[K^~[m[K
+[7.323s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:74:60:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpz[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[7.323s]    void update_simulator_state(double px, double py, double [01;35m[Kpz[m[K, double pitch, double yaw, double roll)
+[7.323s]                                                             [01;35m[K^~[m[K
+[7.630s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:[m[K In member function ‘[01m[Kvoid SubscriberNode::callbackGroundTruth(gazebo_msgs::msg::LinkStates_<std::allocator<void> >::SharedPtr)[m[K’:
+[7.631s] [01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/state_subscriber.cpp:615:74:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[7.631s]    void callbackGroundTruth(const gazebo_msgs::msg::LinkStates::SharedPtr [01;35m[Kmsg[m[K)
+[7.631s]                                                                           [01;35m[K^~~[m[K
+[12.804s] CMakeFiles/state_subscriber.dir/build.make:62: recipe for target 'CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o' failed
+[12.804s] make[2]: *** [CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o] Error 1
+[12.805s] CMakeFiles/Makefile2:99: recipe for target 'CMakeFiles/state_subscriber.dir/all' failed
+[12.805s] make[1]: *** [CMakeFiles/state_subscriber.dir/all] Error 2
+[12.805s] Makefile:140: recipe for target 'all' failed
+[12.805s] make: *** [all] Error 2
+[12.807s] Invoked command in '/home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zeiad/sonar_ws/install/ping360_sonar:/home/zeiad/sonar_ws/install/opencv_tests:/opt/ros/eloquent /usr/bin/cmake --build /home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg -- -j12 -l12
