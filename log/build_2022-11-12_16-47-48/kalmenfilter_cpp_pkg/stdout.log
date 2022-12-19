@@ -1,4 +1,0 @@
--- Configuring incomplete, errors occurred!
-See also "/home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg/CMakeFiles/CMakeOutput.log".
-See also "/home/zeiad/sensorfusion_ros2_ws/build/kalmenfilter_cpp_pkg/CMakeFiles/CMakeError.log".
-Makefile:266: recipe for target 'cmake_check_build_system' failed

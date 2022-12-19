@@ -1,6 +1,0 @@
-[ 33%] Built target cpp_node
-[35m[1mScanning dependencies of target subscriber[0m
-[ 50%] [32mBuilding CXX object CMakeFiles/subscriber.dir/src/subscriber.cpp.o[0m
-CMakeFiles/subscriber.dir/build.make:62: recipe for target 'CMakeFiles/subscriber.dir/src/subscriber.cpp.o' failed
-CMakeFiles/Makefile2:205: recipe for target 'CMakeFiles/subscriber.dir/all' failed
-Makefile:140: recipe for target 'all' failed

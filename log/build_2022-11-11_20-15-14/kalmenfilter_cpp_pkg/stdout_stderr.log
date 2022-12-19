@@ -1,6 +1,0 @@
-[35m[1mScanning dependencies of target state_subscriber[0m
-make[2]: *** No rule to make target 'CMakeFiles/state_subscriber.dir/build'.  Stop.
-CMakeFiles/Makefile2:99: recipe for target 'CMakeFiles/state_subscriber.dir/all' failed
-make[1]: *** [CMakeFiles/state_subscriber.dir/all] Error 2
-Makefile:140: recipe for target 'all' failed
-make: *** [all] Error 2

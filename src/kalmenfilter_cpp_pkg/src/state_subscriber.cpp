@@ -73,7 +73,7 @@ public:
           }
     RCLCPP_INFO(this->get_logger(), "client created");
     }
-  void update_simulator_state(double px, double py, double pz, double pitch, double yaw, double roll)
+  void update_simulator_state(double px, double py, double pz, double roll, double pitch, double yaw,double vx ,double vy ,double vz ,double vroll ,double vpitch , double vyaw)
   {
     auto request = std::make_shared<gazebo_msgs::srv::SetEntityState::Request>();
     request->state.pose.position.set__x(px);
@@ -82,7 +82,7 @@ public:
     request->state.set__name("submarine_z");
     tf2::Quaternion Q;
 
-    Q.setRPY(pitch, yaw, roll);
+    Q.setRPY(pitch,roll,yaw);
 
     Q = Q.normalize();
 
@@ -91,7 +91,20 @@ public:
     request->state.pose.orientation.set__y(Q.getY());
     request->state.pose.orientation.set__z(Q.getZ());
 
-    Client_->async_send_request(request);
+    state.pose.pose.orientation.set__w(Q.getW());
+    state.pose.pose.orientation.set__x(Q.getX());
+    state.pose.pose.orientation.set__y(Q.getY());
+    state.pose.pose.orientation.set__z(Q.getZ());
+    state.pose.pose.position.set__x(px);
+    state.pose.pose.position.set__y(py);
+    state.pose.pose.position.set__z(pz);
+    state.twist.twist.linear.set__x(vx *cos(yaw) -  vy *sin(yaw));
+    state.twist.twist.linear.set__y(vy *cos(yaw) +  vx *sin(yaw));
+    state.twist.twist.linear.set__z(vz);
+    state.twist.twist.angular.set__x(vroll);
+    state.twist.twist.angular.set__y(vpitch);
+    state.twist.twist.angular.set__z(vyaw);
+                          Client_->async_send_request(request);
   }
 
 protected:
@@ -300,8 +313,8 @@ private:
     F(1, 3) =  dt * sin(thetaz);
     F(1, 4) =  dt * cos(thetaz);
 
-    F(0, 6) = -dt*vx*sin(thetaz)-dt*vy*cos(thetaz);
-    F(1, 6) = -dt*vy*sin(thetaz)+dt*vx*cos(thetaz);
+    F(0, 8) = -dt*vx*sin(thetaz)-dt*vy*cos(thetaz);
+    F(1, 8) = -dt*vy*sin(thetaz)+dt*vx*cos(thetaz);
 
     F(2, 5) = dt;
     F(6, 9) = dt;
@@ -350,82 +363,80 @@ private:
     if (isInitialised())
     {
 
-      prediction_step_extended(msg);
+    prediction_step_extended(msg);
 
-      VectorXd current_state = getState();
-      MatrixXd current_cov = getCov();
-    
-      VectorXd z = Vector6d();
-      MatrixXd H = MatrixXd::Zero(6, 12);
-      MatrixXd R = Matrix6d::Zero();
+    VectorXd current_state = getState();
+    MatrixXd current_cov = getCov();
 
-      tf2::Quaternion q(
-          msg->orientation.x,
-          msg->orientation.y,
-          msg->orientation.z,
-          msg->orientation.w);
-      tf2::Matrix3x3 m(q);
-      double roll, pitch, yaw;
-      m.getRPY(roll, pitch, yaw);
+    VectorXd z = Vector6d();
+    MatrixXd H = MatrixXd::Zero(6, 12);
+    MatrixXd R = Matrix6d::Zero();
 
- 
+    tf2::Quaternion q(
+        msg->orientation.x,
+        msg->orientation.y,
+        msg->orientation.z,
+        msg->orientation.w);
+    tf2::Matrix3x3 m(q);
+    double roll, pitch, yaw;
+    m.getRPY(roll, pitch, yaw);
 
-      // double roll = msg->orientation.x;
-      // double pitch= msg->orientation.y;
-      // double yaw  = msg->orientation.z;
+    // double roll = msg->orientation.x;
+    // double pitch= msg->orientation.y;
+    // double yaw  = msg->orientation.z;
 
-      // std::cout << "roll:" << roll << " pitch:" << pitch << " yaw:" << yaw<<"\n";
+    // std::cout << "roll:" << roll << " pitch:" << pitch << " yaw:" << yaw<<"\n";
 
-      z<< wrapAngle(roll),
-          wrapAngle(pitch),
-          wrapAngle(yaw),
-          msg->angular_velocity.x,
-          msg->angular_velocity.y,
-          msg->angular_velocity.z;
+    z << wrapAngle(roll),
+        wrapAngle(pitch),
+        wrapAngle(yaw),
+        msg->angular_velocity.x,
+        msg->angular_velocity.y,
+        msg->angular_velocity.z;
 
-      // std::cout << "yaw speed:"<< msg->angular_velocity.z<<"\n";
+    // std::cout << "yaw speed:"<< msg->angular_velocity.z<<"\n";
 
-      H(0,  6) = 1;
-      H(1,  7) = 1;
-      H(2,  8) = 1;
-      H(3,  9) = 1;
-      H(4, 10) = 1;
-      H(5, 11) = 1;
+    H(0, 6) = 1;
+    H(1, 7) = 1;
+    H(2, 8) = 1;
+    H(3, 9) = 1;
+    H(4, 10) = 1;
+    H(5, 11) = 1;
 
-      R(0, 0) = IMU_STD * IMU_STD;
-      R(1, 1) = IMU_STD * IMU_STD;
-      R(2, 2) = IMU_STD * IMU_STD;
-      
-      //adding zeros to angular velocity stds to get direct feedback from readings
-      
-      R(3, 3) = 0 ;
-      R(4, 4) = 0 ;
-      R(5, 5) = 0 ;
+    R(0, 0) = IMU_STD * IMU_STD;
+    R(1, 1) = IMU_STD * IMU_STD;
+    R(2, 2) = IMU_STD * IMU_STD;
 
-      VectorXd z_hat = H * current_state;
-      VectorXd y = z - z_hat;
+    // adding zeros to angular velocity stds to get direct feedback from readings
 
-      y(0)=wrapAngle(y(0));
-      y(1)=wrapAngle(y(1));
-      y(2)=wrapAngle(y(2));
+    R(3, 3) = 0;
+    R(4, 4) = 0;
+    R(5, 5) = 0;
 
-      MatrixXd S = H * current_cov * H.transpose() + R;
-      MatrixXd K = current_cov * H.transpose() * S.inverse();
+    VectorXd z_hat = H * current_state;
+    VectorXd y = z - z_hat;
 
-      current_state = current_state + K * y;
-      current_cov = (MatrixXd::Identity(12, 12) - K * H) * current_cov;
+    y(0) = wrapAngle(y(0));
+    y(1) = wrapAngle(y(1));
+    y(2) = wrapAngle(y(2));
 
-      setState(current_state);
-      setCov(current_cov);
-   
-      // state.pose.pose.orientation.set__x(msg->orientation.x);
-      // state.pose.pose.orientation.set__y(msg->orientation.y);
-      // state.pose.pose.orientation.set__z(msg->orientation.z);
-      // state.pose.pose.orientation.set__w(msg->orientation.w);
+    MatrixXd S = H * current_cov * H.transpose() + R;
+    MatrixXd K = current_cov * H.transpose() * S.inverse();
 
-      // state.twist.twist.angular.set__x(msg->angular_velocity.x);
-      // state.twist.twist.angular.set__y(msg->angular_velocity.y);
-      // state.twist.twist.angular.set__z(msg->angular_velocity.z);
+    current_state = current_state + K * y;
+    current_cov = (MatrixXd::Identity(12, 12) - K * H) * current_cov;
+
+    setState(current_state);
+    setCov(current_cov);
+
+    // state.pose.pose.orientation.set__x(msg->orientation.x);
+    // state.pose.pose.orientation.set__y(msg->orientation.y);
+    // state.pose.pose.orientation.set__z(msg->orientation.z);
+    // state.pose.pose.orientation.set__w(msg->orientation.w);
+
+    // state.twist.twist.angular.set__x(msg->angular_velocity.x);
+    // state.twist.twist.angular.set__y(msg->angular_velocity.y);
+    // state.twist.twist.angular.set__z(msg->angular_velocity.z);
 
     }
     else
@@ -688,13 +699,19 @@ private:
                            state_vector(2),
                            state_vector(6),
                            state_vector(7),
-                           state_vector(8));
+                           state_vector(8),
+                           state_vector(3),
+                           state_vector(4),
+                           state_vector(5),
+                           state_vector(9),
+                           state_vector(10),
+                           state_vector(11) );
     // tf2::Quaternion myQuaternion;
 
     // myQuaternion.setRPY(state_vector(6), state_vector(7), state_vector(8));
 
     // myQuaternion = myQuaternion.normalize();
-
+  
     State_publisher_->publish(state);
   }
 

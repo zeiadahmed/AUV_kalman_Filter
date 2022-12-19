@@ -39,3 +39,6 @@ ros2 service call  /gazebo/set_entity_state gazebo_msgs/srv/SetEntityState 'stat
 command to move specian submarine to position:
 ros2 service call  /gazebo/set_entity_state gazebo_msgs/srv/SetEntityState 'state: {name: submarine_z, pose: { position: { x: 2, y: 2 ,z: -10 }, orientation: {x: 0, y: 1, z: 0, w: 0.870604813099 } }, twist: { linear: {x: 0.0 , y: 0 ,z: 0 } , angular: { x: 0.0 , y: 0 , z: 0.0 }}}'
 
+open rviz:
+rviz2
+

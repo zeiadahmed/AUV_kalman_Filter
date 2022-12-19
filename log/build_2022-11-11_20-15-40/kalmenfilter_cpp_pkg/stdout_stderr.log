@@ -1,5 +1,0 @@
-make[2]: *** No rule to make target 'CMakeFiles/state_subscriber.dir/build'.  Stop.
-CMakeFiles/Makefile2:99: recipe for target 'CMakeFiles/state_subscriber.dir/all' failed
-make[1]: *** [CMakeFiles/state_subscriber.dir/all] Error 2
-make: *** [all] Error 2
-Makefile:140: recipe for target 'all' failed

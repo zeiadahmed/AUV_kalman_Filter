@@ -1,9 +1,0 @@
-[35m[1mScanning dependencies of target state_subscriber[0m
-[ 50%] [32mBuilding CXX object CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o[0m
-[100%] [32m[1mLinking CXX executable state_subscriber[0m
-[100%] Built target state_subscriber
-[35m[1mScanning dependencies of target state_subscriber[0m
-[ 50%] [32mBuilding CXX object CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o[0m
-CMakeFiles/state_subscriber.dir/build.make:62: recipe for target 'CMakeFiles/state_subscriber.dir/src/state_subscriber.cpp.o' failed
-CMakeFiles/Makefile2:99: recipe for target 'CMakeFiles/state_subscriber.dir/all' failed
-Makefile:140: recipe for target 'all' failed

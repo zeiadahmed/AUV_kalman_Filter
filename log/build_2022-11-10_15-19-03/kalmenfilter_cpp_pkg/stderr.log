@@ -1,7 +1,0 @@
-[01m[K/home/zeiad/sensorfusion_ros2_ws/src/kalmenfilter_cpp_pkg/src/publisher.cpp:2:10:[m[K [01;31m[Kfatal error: [m[Kexample_interfaces/msg/string.hpp: No such file or directory
- #include [01;31m[K"example_interfaces/msg/string.hpp"[m[K
-          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
-compilation terminated.
-make[2]: *** [CMakeFiles/news_publisher.dir/src/publisher.cpp.o] Error 1
-make[1]: *** [CMakeFiles/news_publisher.dir/all] Error 2
-make: *** [all] Error 2
