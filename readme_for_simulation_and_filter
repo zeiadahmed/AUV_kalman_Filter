@@ -1,0 +1,44 @@
+open the world:
+ros2 launch uuv_gazebo_worlds ocean_waves.launch
+
+render rexrov:
+ros2 launch uuv_descriptions upload_rexrov.launch mode:=default x:=0 y:=0 z:=-10 namespace:=rexrov
+
+enable joystick control:
+ros2 launch uuv_control_cascaded_pid joy_velocity.launch uuv_name:=rexrov model_name:=rexrov joy_id:=0
+
+to show list of topics published:
+ros2 topic list
+
+to echo a topic in terminal:
+ros2 topic echo /topic_name
+
+to know type of topic:
+ros2 topic info /topic_name 
+
+
+handle imu messages:
+https://answers.ros.org/question/237090/subscribe-to-imu-solved/
+http://wiki.ros.org/evarobot_minimu9/Tutorials/indigo/Writing%20a%20Simple%20Subscriber%20for%20IMU
+
+
+to kill all gazebo processes:
+killall gzserver
+
+check xacro file:
+check_urdf <(xacro rexrov_sensors.xacro)
+
+command to get state of object in simulator with name:
+ros2 service call  /gazebo/set_entity_state gazebo_msgs/srv/GetEntityState '{name: rexrov}'
+
+
+command to move an object in simulator:
+ros2 service call  /gazebo/set_entity_state gazebo_msgs/srv/SetEntityState 'state: {name: rexrov, pose: { position: { x: 10, y: 0 ,z: -10 }, orientation: {x: 0, y: 0, z: 0, w: 0.870604813099 } }, twist: { linear: {x: 0.0 , y: 0 ,z: 0 } , angular: { x: 0.0 , y: 0 , z: 0.0 }}}'
+
+
+command to move specian submarine to position:
+ros2 service call  /gazebo/set_entity_state gazebo_msgs/srv/SetEntityState 'state: {name: submarine_z, pose: { position: { x: 2, y: 2 ,z: -10 }, orientation: {x: 0, y: 1, z: 0, w: 0.870604813099 } }, twist: { linear: {x: 0.0 , y: 0 ,z: 0 } , angular: { x: 0.0 , y: 0 , z: 0.0 }}}'
+
+open rviz:
+rviz2
+
