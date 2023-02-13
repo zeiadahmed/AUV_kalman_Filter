@@ -128,6 +128,23 @@ protected:
     velocityTransform(2,2)= cos(pitch) * cos(roll);
     return velocityTransform;
   }
+
+  MatrixXd TransformAngles(double roll, double pitch, double yaw)
+  {
+    Matrix3d angularTransform;
+
+    angularTransform(0, 0) = 1;
+    angularTransform(0, 1) = 0;
+    angularTransform(0, 2) = -sin(pitch);
+    angularTransform(1, 0) = 0;
+    angularTransform(1, 1) = cos(roll);
+    angularTransform(1, 2) = cos(pitch)*sin(roll);
+    angularTransform(2, 0) = 0;
+    angularTransform(2, 1) = -sin(roll);
+    angularTransform(2, 2) = cos(pitch)*cos(roll);
+    return angularTransform;
+  }
+
   double wrapAngle(double angle)
   {
     angle = fmod(angle, (2.0 * M_PI));
@@ -142,20 +159,19 @@ protected:
     return angle;
   }
 
-  double limit_angle(double angle)
+      double limit_angle(double angle)
   {
     if (angle > M_PI)
-    angle = M_PI;
+      angle = M_PI;
     else if(angle < -M_PI)
-    angle = -M_PI;
+      angle = -M_PI;
     return angle;
-  }
-double rounding(double n){
-  return(round(n*10000.0)/10000.0);
-}
-private:
+  } double rounding(double n)
+  {
+    return (round(n * 10000.0) / 10000.0);
+  } private :
 
-  const double INIT_POS_STD = 0;
+      const double INIT_POS_STD = 0;
   const double INIT_VEL_STD = 15;
   const double LINEAR_ACCEL_STD = 0.1;
   const double GPS_POS_STD = 0.0;
@@ -279,89 +295,161 @@ private:
 
 
 
-                    // tf2::Quaternion q(
-                    //     msg->orientation.x,
-                    //     msg->orientation.y,
-                    //     msg->orientation.z,
-                    //     msg->orientation.w);
-                    // tf2::Matrix3x3 m(q);
-                    // double roll, pitch, yaw;
-                    // m.getRPY(roll, pitch, yaw);
-                    // if (dt * vx * cos(thetaz) != 0){
-                    //   std::cout << "px_new       reading  :" << px + dt * vx * cos(thetaz) - dt * vy * sin(thetaz) << "\n";
-                    //   std::cout << "py_new       reading  :" << py + dt * vy * cos(thetaz) + dt * vx * sin(thetaz) << "\n";
-                    //   std::cout << "theta                 :" << thetaz<< "\n";
-                    // }
+    // tf2::Quaternion q(
+    //     msg->orientation.x,
+    //     msg->orientation.y,
+    //     msg->orientation.z,
+    //     msg->orientation.w);
+    // tf2::Matrix3x3 m(q);
+    // double roll, pitch, yaw;
+    // m.getRPY(roll, pitch, yaw);
+    // if (dt * vx * cos(thetaz) != 0){
+    //   std::cout << "px_new       reading  :" << px + dt * vx * cos(thetaz) - dt * vy * sin(thetaz) << "\n";
+    //   std::cout << "py_new       reading  :" << py + dt * vy * cos(thetaz) + dt * vx * sin(thetaz) << "\n";
+    //   std::cout << "theta                 :" << thetaz<< "\n";
+    // }
 
-                    double vx_new = vx + dt * LinearXAccel;
-                    double vy_new = vy + dt * LinearYAccel;
-                    double vz_new = vz;
+    double vx_new = vx + dt * LinearXAccel;
+    double vy_new = vy + dt * LinearYAccel;
+    double vz_new = vz;
 
-                    // assume vx , vy and vz 0 to debug the other trades of the filter
+    // assume vx , vy and vz 0 to debug the other trades of the filter
 
-                    // double vx_new = 0;
-                    // double vy_new = 0;
-                    // double vz_new = 0;
+    // double vx_new = 0;
+    // double vy_new = 0;
+    // double vz_new = 0;
+    VectorXd localAngularVelocities = Vector3d();
+    localAngularVelocities << msg->angular_velocity.x, msg->angular_velocity.y, msg->angular_velocity.z;
+    MatrixXd angleTranformationMatrix = TransformAngles(thetax, thetay, thetaz);
+    VectorXd globalAngularVelocities = angleTranformationMatrix * localAngularVelocities;
 
-                    double thetax_new = wrapAngle(thetax + dt * msg->angular_velocity.x);
-                    double thetay_new = wrapAngle(thetay + dt * msg->angular_velocity.y);
-                    double thetaz_new = wrapAngle(thetaz + dt * msg->angular_velocity.z);
+    // double thetax_new = wrapAngle(thetax + dt * msg->angular_velocity.x);
+    // double thetay_new = wrapAngle(thetay + dt * msg->angular_velocity.y);
+    // double thetaz_new = wrapAngle(thetaz + dt * msg->angular_velocity.z);
 
-                    current_state << px_new, py_new, pz_new,
-                        vx_new, vy_new, vz_new,
-                        thetax_new, thetay_new, thetaz_new,
-                        thetavx, thetavy, thetavz;
+    double thetax_new = wrapAngle(thetax + dt * globalAngularVelocities(0));
+    double thetay_new = wrapAngle(thetay + dt * globalAngularVelocities(1));
+    double thetaz_new = wrapAngle(thetaz + dt * globalAngularVelocities(2));
 
-                    MatrixXd F = Matrix12d::Zero();
-                    MatrixXd Q = Matrix12d::Zero();
+    current_state << px_new, py_new, pz_new,
+        vx_new, vy_new, vz_new,
+        thetax_new, thetay_new, thetaz_new,
+        thetavx, thetavy, thetavz;
 
-                    F(0, 0) = 1;
-                    F(1, 1) = 1;
-                    F(2, 2) = 1;
-                    F(3, 3) = 1;
-                    F(4, 4) = 1;
-                    F(5, 5) = 1;
-                    F(6, 6) = 1;
-                    F(7, 7) = 1;
-                    F(8, 8) = 1;
-                    F(9, 9) = 1;
-                    F(10, 10) = 1;
-                    F(11, 11) = 1;
+    MatrixXd F = Matrix12d::Zero();
+    MatrixXd Q = Matrix12d::Zero();
 
-                    F(0, 3) = dt * cos(thetaz);
-                    F(0, 4) = -dt * sin(thetaz);
 
-                    F(1, 3) = dt * sin(thetaz);
-                    F(1, 4) = dt * cos(thetaz);
+    // old f matrix :
 
-                    F(0, 8) = -dt * vx * sin(thetaz) - dt * vy * cos(thetaz);
-                    F(1, 8) = -dt * vy * sin(thetaz) + dt * vx * cos(thetaz);
+    // F(0, 0) = 1;
+    // F(1, 1) = 1;
+    // F(2, 2) = 1;
+    // F(3, 3) = 1;
+    // F(4, 4) = 1;
+    // F(5, 5) = 1;
+    // F(6, 6) = 1;
+    // F(7, 7) = 1;
+    // F(8, 8) = 1;
+    // F(9, 9) = 1;
+    // F(10, 10) = 1;
+    // F(11, 11) = 1;
 
-                    F(2, 5) = dt;
-                    F(6, 9) = dt;
-                    F(7, 10) = dt;
-                    F(8, 11) = dt;
+    // F(0, 3) = dt * cos(thetaz);
+    // F(0, 4) = -dt * sin(thetaz);
 
-                    Q(3, 3) = dt * dt * (LinearXAccel * LinearXAccel);
-                    Q(4, 4) = dt * dt * (LinearYAccel * LinearYAccel);
-                    Q(5, 5) = dt * dt * (LinearZAccel * LinearZAccel);
+    // F(1, 3) = dt * sin(thetaz);
+    // F(1, 4) = dt * cos(thetaz);
 
-                    Q(6, 6) = dt * dt * (ORIANTATION_STD * ORIANTATION_STD);
-                    Q(7, 7) = dt * dt * (ORIANTATION_STD * ORIANTATION_STD);
-                    Q(8, 8) = dt * dt * (ORIANTATION_STD * ORIANTATION_STD);
+    // F(0, 8) = -dt * vx * sin(thetaz) - dt * vy * cos(thetaz);
+    // F(1, 8) = -dt * vy * sin(thetaz) + dt * vx * cos(thetaz);
 
-                    Q(9, 9) = dt * dt * (ORIANTATION_STD * ORIANTATION_STD);
-                    Q(10, 10) = dt * dt * (ORIANTATION_STD * ORIANTATION_STD);
-                    Q(11, 11) = dt * dt * (ORIANTATION_STD * ORIANTATION_STD);
+    // F(2, 5) = dt;
+    // F(6, 9) = dt;
+    // F(7, 10) = dt;
+    // F(8, 11) = dt;
 
-                    current_cov = F * current_cov * F.transpose() + Q;
+    //advanced f matrix:
 
-                    // ----------------------------------------------------------------------- //
+    F(0, 0) = 1;
+    F(1, 1) = 1;
+    F(2, 2) = 1;
+    F(3, 3) = 1;
+    F(4, 4) = 1;
+    F(5, 5) = 1;
+    F(6, 6) = 1;
+    F(7, 7) = 1;
+    F(8, 8) = 1;
+    F(9, 9) = 1;
+    F(10, 10) = 1;
+    F(11, 11) = 1;
 
-                    setState(current_state);
-                    setCov(current_cov);
+    F(0, 3) = dt * ( cos(thetaz)*cos(thetay));
+    F(0, 4) = dt * (-sin(thetaz)*cos(thetax)+cos(thetaz)*sin(thetax)*sin(thetay));
+    F(0, 5) = dt * ( sin(thetaz)*sin(thetax)+cos(thetaz)*cos(thetax)*sin(thetay));
+    
+    F(0, 6) = dt * ( vy*( sin(thetaz)*sin(thetax)+cos(thetaz)*cos(thetax)*sin(thetay))
+                    +vz*( sin(thetaz)*sin(thetax)-cos(thetaz)*sin(thetax)*sin(thetay)));
+    
+    F(0, 7) = dt * ( vx*(-cos(thetaz)*sin(thetay))
+                    +vy*( cos(thetaz)*sin(thetax)*cos(thetay))
+                    +vz*( cos(thetax)*cos(thetay)*cos(thetaz)));
+    
+    F(0, 8) = dt * ( vx*(-sin(thetaz)*cos(thetay))
+                    +vy*(-cos(thetaz)*cos(thetax)-sin(thetaz)*sin(thetax)*sin(thetay))
+                    +vz*( cos(thetaz)*sin(thetax)-sin(thetaz)*cos(thetax)*sin(thetay)));
 
-                    // --------------------------------------
+    F(1, 3) = dt * ( sin(thetaz)*cos(thetay));
+    F(1, 4) = dt * ( cos(thetaz)*cos(thetax)+sin(thetax)*sin(thetay)*sin(thetaz));
+    F(1, 5) = dt * (-cos(thetaz)*sin(thetax)+sin(thetay)*sin(thetaz)*cos(thetax));
+    
+    F(1, 6) = dt * ( vy*(-sin(thetax)*cos(thetaz)+cos(thetax)*sin(thetay)*sin(thetaz))
+                    +vz*(-cos(thetaz)*cos(thetax)-sin(thetay)*sin(thetaz)*sin(thetax)));
+    
+    F(1, 7) = dt * ( vx*(-sin(thetay)*sin(thetaz))
+                    +vy*( cos(thetay)*sin(thetax)*sin(thetaz))
+                    +vz*( cos(thetay)*sin(thetaz)*cos(thetax)));
+    
+    F(1, 8) = dt * ( vx*( cos(thetaz)*cos(thetay))
+                    +vy*(-sin(thetaz)*cos(thetax)+cos(thetaz)*sin(thetax)*sin(thetay))
+                    +vz*( sin(thetaz)*sin(thetax)+sin(thetay)*cos(thetaz)*cos(thetax)));
+
+    F(2, 3) = dt * (-sin(thetay));
+    F(2, 4) = dt * ( cos(thetay)*sin(thetax));
+    F(2, 5) = dt * ( cos(thetay)*cos(thetax));
+    
+    F(2, 6) = dt * ( vy*( cos(thetax)*cos(thetay))
+                    +vz*(-sin(thetax)*cos(thetay)));
+    
+    F(2, 7) = dt * ( vx*(-cos(thetay))
+                    +vy*(-sin(thetay)*sin(thetax))
+                    +vz*(-sin(thetay)*cos(thetax)));
+    F(2, 8) = 0;
+
+    F(6, 9) = dt;
+    F(7, 10) = dt;
+    F(8, 11) = dt;
+
+    Q(3, 3) = dt * dt * (LinearXAccel * LinearXAccel);
+    Q(4, 4) = dt * dt * (LinearYAccel * LinearYAccel);
+    Q(5, 5) = dt * dt * (LinearZAccel * LinearZAccel);
+
+    Q(6, 6) = dt * dt * (ORIANTATION_STD * ORIANTATION_STD);
+    Q(7, 7) = dt * dt * (ORIANTATION_STD * ORIANTATION_STD);
+    Q(8, 8) = dt * dt * (ORIANTATION_STD * ORIANTATION_STD);
+
+    Q(9, 9) = dt * dt * (ORIANTATION_STD * ORIANTATION_STD);
+    Q(10, 10) = dt * dt * (ORIANTATION_STD * ORIANTATION_STD);
+    Q(11, 11) = dt * dt * (ORIANTATION_STD * ORIANTATION_STD);
+
+    current_cov = F * current_cov * F.transpose() + Q;
+
+    // ----------------------------------------------------------------------- //
+
+    setState(current_state);
+    setCov(current_cov);
+
+    // --------------------------------------
   }
 
   void callbackIMU(const sensor_msgs::msg::Imu::SharedPtr msg)
