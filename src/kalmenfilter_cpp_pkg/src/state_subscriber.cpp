@@ -5,7 +5,7 @@
 #include "gazebo_msgs/srv/set_entity_state.hpp"
 #include "sensor_msgs/msg/fluid_pressure.hpp"
 #include "nav_msgs/msg/odometry.hpp"
-
+#include "gazebo_msgs/msg/model_states.hpp"
 #include <tf2/LinearMath/Quaternion.h>
 #include <tf2/LinearMath/Matrix3x3.h>
 #include <Eigen/Dense>
@@ -15,7 +15,7 @@
 
 #define M_PI 3.14159265358979323846
 
-using Vector24d = Eigen::Matrix<double, 24, 1>;
+    using Vector24d = Eigen::Matrix<double, 24, 1>;
 using Vector12d = Eigen::Matrix<double, 12, 1>;
 using Vector6d = Eigen::Matrix<double, 6, 1>;
 using Vector3d = Eigen::Matrix<double, 3, 1>;
@@ -51,7 +51,7 @@ public:
                                                                                         std::bind(&SubscriberNode::callbackPressure, this, std::placeholders::_1));
     RCLCPP_INFO(this->get_logger(), "subscriber Pressure initialized");
 
-    Truth_subscriber_ = this->create_subscription<gazebo_msgs::msg::LinkStates>("/gazebo/link_states", 100,
+    Truth_subscriber_ = this->create_subscription<gazebo_msgs::msg::ModelStates>("/gazebo/model_states", 100,
 
                                                                                 std::bind(&SubscriberNode::callbackGroundTruth, this, std::placeholders::_1));
     RCLCPP_INFO(this->get_logger(), "subscriber ground truth initialized");
@@ -77,6 +77,7 @@ public:
   {
     auto request = std::make_shared<gazebo_msgs::srv::SetEntityState::Request>();
     request->state.pose.position.set__x(px);
+    
     request->state.pose.position.set__y(py);
     request->state.pose.position.set__z(pz);
     request->state.set__name("submarine_z");
@@ -98,12 +99,14 @@ public:
     state.pose.pose.position.set__x(px);
     state.pose.pose.position.set__y(py);
     state.pose.pose.position.set__z(pz);
+    
     state.twist.twist.linear.set__x(vx *cos(yaw) -  vy *sin(yaw));
     state.twist.twist.linear.set__y(vy *cos(yaw) +  vx *sin(yaw));
     state.twist.twist.linear.set__z(vz);
     state.twist.twist.angular.set__x(vroll);
     state.twist.twist.angular.set__y(vpitch);
     state.twist.twist.angular.set__z(vyaw);
+
     Client_->async_send_request(request);
   }
 
@@ -736,28 +739,40 @@ protected:
       }
       }
 
-  void callbackGroundTruth(const gazebo_msgs::msg::LinkStates::SharedPtr msg)
+  void callbackGroundTruth(const gazebo_msgs::msg::ModelStates::SharedPtr msg)
   {
+double x_position_error        = state_vector(0) - msg->pose[2].position.x;
+double y_position_error        = state_vector(1)- msg->pose[2].position.y;
+double z_position_error        = state_vector(2)- msg->pose[2].position.z;
+double x_orientation_error     = state_vector(6)- msg->pose[2].orientation.x;
+double y_orientation_error     = state_vector(7)- msg->pose[2].orientation.y;
+double z_orientation_error     = state_vector(8)- msg->pose[2].orientation.z;
+double x_linear_velocity_error = state_vector(3)- msg->twist[2].linear.x;
+double y_linear_velocity_error = state_vector(4)- msg->twist[2].linear.y;
+double z_linear_velocity_error = state_vector(5)- msg->twist[2].linear.z;
+double x_linear_angular_error  = state_vector(9)- msg->twist[2].angular.x;
+double y_linear_angular_error  = state_vector(10)-msg->twist[2].angular.y;
+double z_linear_angular_error  = state_vector(11)-msg->twist[2].angular.z;
 
-    // RCLCPP_INFO(this->get_logger(), "position in x:[%f], y: [%f], z: [%f] ",
-    //             msg->pose.data()->position.x,
-    //             msg->pose.data()->position.y,
-    //             msg->pose.data()->position.z);
+      RCLCPP_INFO(this->get_logger(), "error position in x:[%f], y: [%f], z: [%f] ",
+                  x_position_error,
+                  y_position_error,
+                  z_position_error);
 
-    // RCLCPP_INFO(this->get_logger(), "oriantation in x:[%f], y: [%f], z: [%f] ",
-    //             msg->pose.data()->orientation.x,
-    //             msg->pose.data()->orientation.y,
-    //             msg->pose.data()->orientation.z);
+      RCLCPP_INFO(this->get_logger(), "error oriantation in x:[%f], y: [%f], z: [%f] ",
+                  x_orientation_error,
+                  y_orientation_error,
+                  z_orientation_error);
 
-    // RCLCPP_INFO(this->get_logger(), "twist linear in x:[%f], y: [%f], z: [%f] ",
-    //             msg->twist.data()->linear.x,
-    //             msg->twist.data()->linear.y,
-    //             msg->twist.data()->linear.z);
+      RCLCPP_INFO(this->get_logger(), "error twist linear in x:[%f], y: [%f], z: [%f] ",
+                   x_linear_velocity_error,
+                   y_linear_velocity_error,
+                   z_linear_velocity_error);
 
-    // RCLCPP_INFO(this->get_logger(), "twist angular in x:[%f], y: [%f], z: [%f] ",
-    //             msg->twist.data()->angular.x,
-    //             msg->twist.data()->angular.y,
-    //             msg->twist.data()->angular.z);
+      RCLCPP_INFO(this->get_logger(), "error twist angular in x:[%f], y: [%f], z: [%f] ",
+                  x_linear_angular_error,
+                  y_linear_angular_error,
+                  z_linear_angular_error);
   }
   void publishNews()
   {
@@ -781,22 +796,22 @@ protected:
 
 
 
-    RCLCPP_INFO(this->get_logger(), "position      in x:[%f],y:[%f],z:[%f]",
-                state_vector(0),
-                state_vector(1),
-                state_vector(2));
-    RCLCPP_INFO(this->get_logger(), "linear twist    in x:[%f],y:[%f],z:[%f]",
-                state_vector(3),
-                state_vector(4),
-                state_vector(5));
-    RCLCPP_INFO(this->get_logger(), "oriantation  in x:[%f],y:[%f],z:[%f]",
-                state_vector(6),
-                state_vector(7),
-                state_vector(8));
-    RCLCPP_INFO(this->get_logger(), "angular twist in x:[%f],y:[%f],z:[%f]",
-                state_vector(9),
-                state_vector(10),
-                state_vector(11));
+    // RCLCPP_INFO(this->get_logger(), "position      in x:[%f],y:[%f],z:[%f]",
+    //             state_vector(0),
+    //             state_vector(1),
+    //             state_vector(2));
+    // RCLCPP_INFO(this->get_logger(), "linear twist    in x:[%f],y:[%f],z:[%f]",
+    //             state_vector(3),
+    //             state_vector(4),
+    //             state_vector(5));
+    // RCLCPP_INFO(this->get_logger(), "oriantation  in x:[%f],y:[%f],z:[%f]",
+    //             state_vector(6),
+    //             state_vector(7),
+    //             state_vector(8));
+    // RCLCPP_INFO(this->get_logger(), "angular twist in x:[%f],y:[%f],z:[%f]",
+    //             state_vector(9),
+    //             state_vector(10),
+    //             state_vector(11));
 
     update_simulator_state(state_vector(0),
                            state_vector(1),
@@ -829,7 +844,7 @@ protected:
   rclcpp::Subscription<sensor_msgs::msg::Imu>::SharedPtr IMU_subscriber_;
   rclcpp::Subscription<geometry_msgs::msg::TwistWithCovarianceStamped>::SharedPtr DVL_subscriber_;
   rclcpp::Subscription<sensor_msgs::msg::FluidPressure>::SharedPtr Pressure_subscriber_;
-  rclcpp::Subscription<gazebo_msgs::msg::LinkStates>::SharedPtr Truth_subscriber_;
+  rclcpp::Subscription<gazebo_msgs::msg::ModelStates>::SharedPtr Truth_subscriber_;
   rclcpp::Publisher<nav_msgs::msg::Odometry>::SharedPtr State_publisher_;
   rclcpp::TimerBase::SharedPtr timer_;
   rclcpp::TimerBase::SharedPtr timer_prediction_;
