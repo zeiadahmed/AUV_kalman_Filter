@@ -741,38 +741,42 @@ protected:
 
   void callbackGroundTruth(const gazebo_msgs::msg::ModelStates::SharedPtr msg)
   {
-double x_position_error        = state_vector(0) - msg->pose[2].position.x;
-double y_position_error        = state_vector(1)- msg->pose[2].position.y;
-double z_position_error        = state_vector(2)- msg->pose[2].position.z;
-double x_orientation_error     = state_vector(6)- msg->pose[2].orientation.x;
-double y_orientation_error     = state_vector(7)- msg->pose[2].orientation.y;
-double z_orientation_error     = state_vector(8)- msg->pose[2].orientation.z;
-double x_linear_velocity_error = state_vector(3)- msg->twist[2].linear.x;
-double y_linear_velocity_error = state_vector(4)- msg->twist[2].linear.y;
-double z_linear_velocity_error = state_vector(5)- msg->twist[2].linear.z;
-double x_linear_angular_error  = state_vector(9)- msg->twist[2].angular.x;
-double y_linear_angular_error  = state_vector(10)-msg->twist[2].angular.y;
-double z_linear_angular_error  = state_vector(11)-msg->twist[2].angular.z;
+      tf2::Quaternion q(
+          msg->pose[3].orientation.x,
+          msg->pose[3].orientation.y,
+          msg->pose[3].orientation.z,
+          msg->pose[3].orientation.w);
+      tf2::Matrix3x3 m(q);
+      double roll, pitch, yaw;
+      m.getRPY(roll, pitch, yaw);
 
-      RCLCPP_INFO(this->get_logger(), "error position in x:[%f], y: [%f], z: [%f] ",
-                  x_position_error,
-                  y_position_error,
-                  z_position_error);
+      x_position_error = state_vector(0) -        msg->pose[3].position.x;
+      y_position_error = state_vector(1) -        msg->pose[3].position.y;
+      z_position_error = state_vector(2) -        msg->pose[3].position.z;
+      x_orientation_error = state_vector(6) -     roll;
+      y_orientation_error = state_vector(7) -     pitch;
+      z_orientation_error = state_vector(8) -     yaw;
+      x_linear_velocity_error = state_vector(3) - msg->twist[3].linear.x;
+      y_linear_velocity_error = state_vector(4) - msg->twist[3].linear.y;
+      z_linear_velocity_error = state_vector(5) - msg->twist[3].linear.z;
+      x_linear_angular_error = state_vector(9) -  msg->twist[3].angular.x;
+      y_linear_angular_error = state_vector(10) - msg->twist[3].angular.y;
+      z_linear_angular_error = state_vector(11) - msg->twist[3].angular.z;
 
-      RCLCPP_INFO(this->get_logger(), "error oriantation in x:[%f], y: [%f], z: [%f] ",
-                  x_orientation_error,
-                  y_orientation_error,
-                  z_orientation_error);
+      real_x_position = msg->pose[3].position.x;
+      real_y_position = msg->pose[3].position.y;
+      real_z_position = msg->pose[3].position.z;
+      real_x_orientation = roll;
+      real_y_orientation = pitch;
+      real_z_orientation = yaw;
+      real_x_linear_velocity = msg->twist[3].linear.x;
+      real_y_linear_velocity = msg->twist[3].linear.y;
+      real_z_linear_velocity = msg->twist[3].linear.z;
+      real_x_linear_angular = msg->twist[3].angular.x;
+      real_y_linear_angular = msg->twist[3].angular.y;
+      real_z_linear_angular = msg->twist[3].angular.z;
 
-      RCLCPP_INFO(this->get_logger(), "error twist linear in x:[%f], y: [%f], z: [%f] ",
-                   x_linear_velocity_error,
-                   y_linear_velocity_error,
-                   z_linear_velocity_error);
 
-      RCLCPP_INFO(this->get_logger(), "error twist angular in x:[%f], y: [%f], z: [%f] ",
-                  x_linear_angular_error,
-                  y_linear_angular_error,
-                  z_linear_angular_error);
   }
   void publishNews()
   {
@@ -795,6 +799,7 @@ double z_linear_angular_error  = state_vector(11)-msg->twist[2].angular.z;
 
 
 
+    //printing estimated state 
 
     // RCLCPP_INFO(this->get_logger(), "position      in x:[%f],y:[%f],z:[%f]",
     //             state_vector(0),
@@ -813,25 +818,69 @@ double z_linear_angular_error  = state_vector(11)-msg->twist[2].angular.z;
     //             state_vector(10),
     //             state_vector(11));
 
-    update_simulator_state(state_vector(0),
-                           state_vector(1),
-                           state_vector(2),
-                           state_vector(6),
-                           state_vector(7),
-                           state_vector(8),
-                           state_vector(3),
-                           state_vector(4),
-                           state_vector(5),
-                           state_vector(9),
-                           state_vector(10),
-                           state_vector(11) );
-    // tf2::Quaternion myQuaternion;
 
-    // myQuaternion.setRPY(state_vector(6), state_vector(7), state_vector(8));
+    //printing real vs estimated state with error
 
-    // myQuaternion = myQuaternion.normalize();
-  
-    State_publisher_->publish(state);
+
+
+ RCLCPP_INFO(this->get_logger(), "real position          in x:[%f],y:[%f],z:[%f]",
+             real_x_position,
+             real_y_position,
+             real_z_position);
+
+ RCLCPP_INFO(this->get_logger(), "estimated position     in x:[%f],y:[%f],z:[%f]",
+             state_vector(0),
+             state_vector(1),
+             state_vector(2));
+
+ RCLCPP_INFO(this->get_logger(), "position error         in x:[%f],y:[%f],z:[%f]\n",
+             x_position_error,
+             y_position_error,
+             z_position_error);
+
+ RCLCPP_INFO(this->get_logger(), "real oriantation       in x:[%f],y:[%f],z:[%f]",
+             real_x_orientation,
+             real_y_orientation,
+             real_z_orientation);
+ RCLCPP_INFO(this->get_logger(), "estimated oriantation  in x:[%f],y:[%f],z:[%f]",
+             state_vector(6),
+             state_vector(7),
+             state_vector(8));
+
+ RCLCPP_INFO(this->get_logger(), "oriantation error      in x:[%f],y:[%f],z:[%f]\n",
+             x_orientation_error,
+             y_orientation_error,
+             z_orientation_error);
+
+ // RCLCPP_INFO(this->get_logger(), "error twist linear  in x:[%f],y:[%f],z:[%f]",
+ //             x_linear_velocity_error,
+ //             y_linear_velocity_error,
+ //             z_linear_velocity_error);
+
+ // RCLCPP_INFO(this->get_logger(), "error twist angular in x:[%f],y:[%f],z:[%f]",
+ //             x_linear_angular_error,
+ //             y_linear_angular_error,
+ //             z_linear_angular_error);
+
+ update_simulator_state(state_vector(0),
+                        state_vector(1),
+                        state_vector(2),
+                        state_vector(6),
+                        state_vector(7),
+                        state_vector(8),
+                        state_vector(3),
+                        state_vector(4),
+                        state_vector(5),
+                        state_vector(9),
+                        state_vector(10),
+                        state_vector(11));
+ // tf2::Quaternion myQuaternion;
+
+ // myQuaternion.setRPY(state_vector(6), state_vector(7), state_vector(8));
+
+ // myQuaternion = myQuaternion.normalize();
+
+ State_publisher_->publish(state);
   }
 
   nav_msgs::msg::Odometry state ;
@@ -840,6 +889,32 @@ double z_linear_angular_error  = state_vector(11)-msg->twist[2].angular.z;
   bool IMU_init =      false;
   bool DVL_init =      false;
   bool Pressure_init = false;
+
+double x_position_error        ; 
+double y_position_error        ;
+double z_position_error        ;
+double x_orientation_error     ;
+double y_orientation_error     ;
+double z_orientation_error     ;
+double x_linear_velocity_error ;
+double y_linear_velocity_error ;
+double z_linear_velocity_error ;
+double x_linear_angular_error  ;
+double y_linear_angular_error  ;
+double z_linear_angular_error  ;
+
+double real_x_position        ;
+double real_y_position        ;
+double real_z_position        ;
+double real_x_orientation     ;
+double real_y_orientation     ;
+double real_z_orientation     ;
+double real_x_linear_velocity ;
+double real_y_linear_velocity ;
+double real_z_linear_velocity ;
+double real_x_linear_angular  ;
+double real_y_linear_angular  ;
+double real_z_linear_angular  ;
   
   rclcpp::Subscription<sensor_msgs::msg::Imu>::SharedPtr IMU_subscriber_;
   rclcpp::Subscription<geometry_msgs::msg::TwistWithCovarianceStamped>::SharedPtr DVL_subscriber_;
