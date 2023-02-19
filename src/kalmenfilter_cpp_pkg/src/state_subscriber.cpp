@@ -13,6 +13,7 @@
 #include <Eigen/Core>
 
 
+
 #define M_PI 3.14159265358979323846
 
     using Vector24d = Eigen::Matrix<double, 24, 1>;
@@ -31,24 +32,24 @@ using MatrixXd = Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic>;
 class SubscriberNode : public rclcpp::Node
 {
 public:
+  std::string robot_name="swift";
   bool isInitialised() const { if(IMU_init && DVL_init && Pressure_init)return true; else return false ;}
   SubscriberNode() : Node("subscriber")
   {
                                                                 //      topic name        queue size
-    IMU_subscriber_ = this->create_subscription<sensor_msgs::msg::Imu>("/rexrov/imu",     100,
+    IMU_subscriber_ = this->create_subscription<sensor_msgs::msg::Imu>("/"+robot_name+"/imu",     100,
                                                                        //                 callback function           number of parameters
                                                                        std::bind(&SubscriberNode::callbackIMU, this, std::placeholders::_1));
     RCLCPP_INFO(this->get_logger(), "subscriber IMU initialized");
 
-
-    DVL_subscriber_ = this->create_subscription<geometry_msgs::msg::TwistWithCovarianceStamped>("/rexrov/dvl_twist", 100,
+    DVL_subscriber_ = this->create_subscription<geometry_msgs::msg::TwistWithCovarianceStamped>("/"+robot_name+"/dvl_twist", 100,
                                                                                                 std::bind(&SubscriberNode::callbackDVL, this, std::placeholders::_1));
 
     RCLCPP_INFO(this->get_logger(), "subscriber DVL initialized");
 
-    Pressure_subscriber_ = this->create_subscription<sensor_msgs::msg::FluidPressure>("/rexrov/pressure", 100,
+    Pressure_subscriber_ = this->create_subscription<sensor_msgs::msg::FluidPressure>("/"+robot_name+"/pressure", 100,
 
-                                                                                        std::bind(&SubscriberNode::callbackPressure, this, std::placeholders::_1));
+                                                                                      std::bind(&SubscriberNode::callbackPressure, this, std::placeholders::_1));
     RCLCPP_INFO(this->get_logger(), "subscriber Pressure initialized");
 
     Truth_subscriber_ = this->create_subscription<gazebo_msgs::msg::ModelStates>("/gazebo/model_states", 100,
@@ -80,7 +81,7 @@ public:
     
     request->state.pose.position.set__y(py);
     request->state.pose.position.set__z(pz);
-    request->state.set__name("submarine_z");
+    request->state.set__name("submarine_" + robot_name);
     tf2::Quaternion Q;
 
     Q.setRPY(roll,pitch,yaw);
