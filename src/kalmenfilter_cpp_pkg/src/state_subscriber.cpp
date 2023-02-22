@@ -880,7 +880,9 @@ protected:
  // myQuaternion.setRPY(state_vector(6), state_vector(7), state_vector(8));
 
  // myQuaternion = myQuaternion.normalize();
-
+ state.header.frame_id = "world";
+ state.child_frame_id = "swift/base_link";
+ state.header.stamp = this->get_clock()->now();
  State_publisher_->publish(state);
   }
 
